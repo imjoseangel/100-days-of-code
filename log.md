@@ -10,7 +10,7 @@
 
 1. [imjoseangel GitHub #100HoursOfCode](https://imjoseangel.github.io/100-hours-of-code)
 
-## Day 1: March 11, 2019 (Preparation)
+## Day 1: March 11, 2019
 
 **Today's Progress**: Prepare Python Script for Travis and Checking PyLint in all Python Files.
 
