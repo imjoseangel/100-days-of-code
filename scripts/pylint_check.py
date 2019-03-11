@@ -55,7 +55,8 @@ def main():
                     for line in iter(proc.stdout.readline, b''):
                         print(line.decode('UTF-8'))
 
-                    sys.exit(proc.returncode)
+                    if proc.returncode > 0:
+                        return_code = 1
 
                 except subprocess.CalledProcessError as exception:
                     print(exception.output)
