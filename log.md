@@ -19,3 +19,4 @@
 **Link to work:**
 
 1. [pylint_check.py](https://github.com/imjoseangel/100-days-of-code/blob/devel/scripts/pylint_check.py)
+2. [wargames Krypton Level0 -> Level1](http://overthewire.org/wargames/krypton/krypton0.html)
