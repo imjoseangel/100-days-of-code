@@ -9,3 +9,13 @@
 **Link to work:**
 
 1. [imjoseangel GitHub #100HoursOfCode](https://imjoseangel.github.io/100-hours-of-code)
+
+## Day 1: March 11, 2019 (Preparation)
+
+**Today's Progress**: Prepare Python Script for Travis and Checking PyLint in all Python Files.
+
+**Thoughts:** Unexpected script for Travis CI to check Lint in all Python Files in the Repo.
+
+**Link to work:**
+
+1. [pylint_check.py](https://github.com/imjoseangel/100-days-of-code/blob/devel/scripts/pylint_check.py)
