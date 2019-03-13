@@ -2,7 +2,7 @@
 
 ## Day 0: March 10, 2019 (Preparation)
 
-**Today's Progress**: Prepare GitHub Repo and Twitter, read documentation.
+**Today's Progress:** Prepare GitHub Repo and Twitter, read documentation.
 
 **Thoughts:** I will start with Python doing Master Python through building real-world applications but I would like to work on a PowerShell Module for Ansible.
 
@@ -12,7 +12,7 @@
 
 ## Day 1: March 11, 2019
 
-**Today's Progress**: Prepare Python Script for Travis and Checking PyLint in all Python Files.
+**Today's Progress:** Prepare Python Script for Travis and Checking PyLint in all Python Files.
 
 **Thoughts:** Unexpected script for Travis CI to check Lint in all Python Files in the Repo.
 
@@ -20,3 +20,13 @@
 
 1. [pylint_check.py](https://github.com/imjoseangel/100-days-of-code/blob/devel/scripts/pylint_check.py)
 2. [wargames Krypton Level0 -> Level1](http://overthewire.org/wargames/krypton/krypton0.html)
+
+## Day 2: March 13, 2019
+
+**Today's Progress:** Building an Interactive Dictionary.
+
+**Thoughts:** I have learn that instead of type, isinstance can be used in a conditional, also learning about the `difflib` library to manage words similarities.
+
+**Link to work:**
+
+1. [dictionary.py](https://github.com/imjoseangel/100-days-of-code/blob/devel/python/python/interactive-dictionary/dictionary.py)
