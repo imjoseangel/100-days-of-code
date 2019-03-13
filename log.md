@@ -29,4 +29,4 @@
 
 **Link to work:**
 
-1. [dictionary.py](https://github.com/imjoseangel/100-days-of-code/blob/devel/python/python/interactive-dictionary/dictionary.py)
+1. [dictionary.py](https://github.com/imjoseangel/100-days-of-code/blob/devel/python/interactive-dictionary/dictionary.py)
