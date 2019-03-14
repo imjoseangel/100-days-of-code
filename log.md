@@ -30,3 +30,19 @@
 **Link to work:**
 
 1. [dictionary.py](https://github.com/imjoseangel/100-days-of-code/blob/devel/python/interactive-dictionary/dictionary.py)
+
+## Day 3: March 14, 2019
+
+**Today's Progress:**
+
+1. Create Volcanos in the US Script and play with folium module
+2. Improve pylint_check.py script
+3. Improve PyLint to have better code
+4. Imporove Data Read in File Path
+
+**Thoughts:** Good Module to create maps (folium)
+
+**Link to work:**
+
+1. [map.py](https://github.com/imjoseangel/100-days-of-code/blob/devel/python/volcanoes-in-the-United-States/map.py)
+2. [map.py](https://github.com/imjoseangel/100-days-of-code/blob/devel/python/volcanoes-in-the-United-States/choropleth.py)
