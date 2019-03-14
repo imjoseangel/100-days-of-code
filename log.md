@@ -38,7 +38,7 @@
 1. Create Volcanos in the US Script and play with folium module
 2. Improve pylint_check.py script
 3. Improve PyLint to have better code
-4. Imporove Data Read in File Path
+4. Improve Data Read in File Path
 
 **Thoughts:** Good Module to create maps (folium)
 
