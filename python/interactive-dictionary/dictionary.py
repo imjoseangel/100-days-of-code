@@ -13,7 +13,7 @@ from difflib import get_close_matches
 WORK_DIR = os.path.dirname((os.path.realpath(__file__)))
 
 # Loading the json data as python dictionary
-DATA = json.load(open(WORK_DIR + "/dictionary.json"))
+DATA = json.load(open(WORK_DIR + "/data/dictionary.json"))
 
 
 def retrieve_definition(word):
