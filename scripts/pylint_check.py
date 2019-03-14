@@ -27,6 +27,17 @@ class WorkPath():
         return self._path
 
 
+def asterisks():
+    """Calculate Screen Size"""
+
+    rows, columns = os.popen('stty size', 'r').read().split()
+
+    if rows:
+        pass
+
+    print('*' * int(columns))
+
+
 def main():
     """Main Function"""
 
@@ -45,7 +56,7 @@ def main():
                 try:
 
                     print("Filename: %s" % pythonfile)
-                    print("-" * 69)
+                    asterisks()
 
                     proc = subprocess.Popen(
                         'pylint %s' % pythonfile,
