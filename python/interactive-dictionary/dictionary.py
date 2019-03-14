@@ -47,6 +47,8 @@ def retrieve_definition(word):
             return "The word doesn't exist, yet."
         else:
             return "We don't understand your entry. Apologies."
+    else:
+        return None
 
 
 # Input User

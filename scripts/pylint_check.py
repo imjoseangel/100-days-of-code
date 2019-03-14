@@ -43,6 +43,10 @@ def main():
             if filename.endswith('.py'):
                 pythonfile = os.path.join(dirpath, filename)
                 try:
+
+                    print("Filename: %s" % pythonfile)
+                    print("-" * 69)
+
                     proc = subprocess.Popen(
                         'pylint %s' % pythonfile,
                         shell=True,
