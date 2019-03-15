@@ -51,5 +51,5 @@ Day 3: March 14, 2019
 
 See `similar code, sans Requests <https://gist.github.com/973705>`_.
 
-1. See `map.py <https://github.com/imjoseangel/100-days-of-code/blob/devel/python/volcanoes-in-the-United-States/map.py>`
-2. See `choropleth.py <https://github.com/imjoseangel/100-days-of-code/blob/devel/python/volcanoes-in-the-United-States/choropleth.py>`
+1. See `map.py <https://github.com/imjoseangel/100-days-of-code/blob/devel/python/volcanoes-in-the-United-States/map.py>`_.
+2. See `choropleth.py <https://github.com/imjoseangel/100-days-of-code/blob/devel/python/volcanoes-in-the-United-States/choropleth.py>`_.
