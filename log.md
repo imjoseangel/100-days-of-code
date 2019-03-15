@@ -1,4 +1,4 @@
-# :100: Days Of Code - Log
+# 100 Days Of Code - Log
 
 ## Day 0: March 10, 2019 (Preparation)
 
@@ -41,6 +41,19 @@
 4. Improve Data Read in File Path
 
 **Thoughts:** Good Module to create maps (folium)
+
+**Link to work:**
+
+1. [map.py](https://github.com/imjoseangel/100-days-of-code/blob/devel/python/volcanoes-in-the-United-States/map.py)
+2. [choropleth.py](https://github.com/imjoseangel/100-days-of-code/blob/devel/python/volcanoes-in-the-United-States/choropleth.py)
+
+## Day 4: March 15, 2019
+
+**Today's Progress:**
+
+1. Create documentation with Sphinx and readthedocs.io
+
+**Thoughts:** Important for Company Projects and Documentation as Code
 
 **Link to work:**
 
