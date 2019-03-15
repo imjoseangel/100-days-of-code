@@ -40,6 +40,7 @@
 3. Improve PyLint to have better code
 4. Improve Data Read in File Path
 
+
 **Thoughts:** Good Module to create maps (folium)
 
 **Link to work:**
