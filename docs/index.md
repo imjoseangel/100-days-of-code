@@ -1,8 +1,6 @@
-:100: Days Of Code - Log
-========================
+# :100: Days Of Code - Log
 
-Day 0: March 10, 2019 (Preparation)
------------------------------------
+## Day 0: March 10, 2019 (Preparation)
 
 **Today's Progress:** Prepare GitHub Repo and Twitter, read documentation.
 
@@ -12,8 +10,7 @@ Day 0: March 10, 2019 (Preparation)
 
 1. [imjoseangel GitHub #100HoursOfCode](https://imjoseangel.github.io/100-hours-of-code)
 
-Day 1: March 11, 2019
----------------------
+## Day 1: March 11, 2019
 
 **Today's Progress:** Prepare Python Script for Travis and Checking PyLint in all Python Files.
 
@@ -24,8 +21,7 @@ Day 1: March 11, 2019
 1. [pylint_check.py](https://github.com/imjoseangel/100-days-of-code/blob/devel/scripts/pylint_check.py)
 2. [wargames Krypton Level0 -> Level1](http://overthewire.org/wargames/krypton/krypton0.html)
 
-Day 2: March 13, 2019
----------------------
+## Day 2: March 13, 2019
 
 **Today's Progress:** Building an Interactive Dictionary.
 
@@ -35,8 +31,7 @@ Day 2: March 13, 2019
 
 1. [dictionary.py](https://github.com/imjoseangel/100-days-of-code/blob/devel/python/interactive-dictionary/dictionary.py)
 
-Day 3: March 14, 2019
----------------------
+## Day 3: March 14, 2019
 
 **Today's Progress:**
 
