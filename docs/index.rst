@@ -3,8 +3,8 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Log - 100 Days Of Code
-======================
+Log: 100 Days Of Code
+=====================
 
 Day 0: March 10, 2019 (Preparation)
 -----------------------------------
