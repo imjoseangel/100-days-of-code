@@ -58,3 +58,17 @@ Day 3: March 14, 2019
 
 1. See `map.py <https://github.com/imjoseangel/100-days-of-code/blob/devel/python/volcanoes-in-the-United-States/map.py>`_
 2. See `choropleth.py <https://github.com/imjoseangel/100-days-of-code/blob/devel/python/volcanoes-in-the-United-States/choropleth.py>`_
+
+Day 4: March 15, 2019
+---------------------
+
+**Today's Progress:**
+
+1. Create documentation with Sphinx and readthedocs.io
+
+**Thoughts:** Important for Company Projects and Documentation as Code
+
+**Link to work:**
+
+1. See `100 Days of Code Documentation - Imjoseangel <https://100-days-of-code-imjoseangel.readthedocs.io>`_
+2. See `GitHub Documentation <https://github.com/imjoseangel/100-days-of-code/blob/devel/python/docs/>`_

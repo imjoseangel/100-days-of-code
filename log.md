@@ -1,4 +1,4 @@
-# 100 Days Of Code - Log
+# Log - 100 Days Of Code
 
 ## Day 0: March 10, 2019 (Preparation)
 
@@ -57,5 +57,5 @@
 
 **Link to work:**
 
-1. [map.py](https://github.com/imjoseangel/100-days-of-code/blob/devel/python/volcanoes-in-the-United-States/map.py)
-2. [choropleth.py](https://github.com/imjoseangel/100-days-of-code/blob/devel/python/volcanoes-in-the-United-States/choropleth.py)
+1. [100 Days of Code Documentation - Imjoseangel](https://100-days-of-code-imjoseangel.readthedocs.io)
+2. [docs](https://github.com/imjoseangel/100-days-of-code/blob/devel/python/docs/)
