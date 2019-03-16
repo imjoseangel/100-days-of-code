@@ -1,0 +1,10 @@
+---
+repos:
+  - repo: local
+    hooks:
+      - id: python-lint
+        name: Python-lint
+        description: This hook runs pylint.
+        entry: pylint
+        language: python
+        files: \.(py)$
