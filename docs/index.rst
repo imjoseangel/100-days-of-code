@@ -72,11 +72,20 @@ Day 5: March 16, 2019
 **Today's Progress:**
 
 1. Adding Pre-Commit to Project and Changing PyLint for Rating
+2. Creating Site Blocer for Working Hours
 TODO: Need to create more stable pre-commit based in score and not rc as in CI.
 
-**Thoughts:** Good way of CIing python by score.
+**Thoughts:** Good way of doing CI with python by score. Check the code:
+
+```python
+for line in CONTENT:
+    if not any(website in line for website in WEBSITE_LIST):
+```
+
+To find matches in lines iterating a list.
 
 **Link to work:**
 
 1. See `pylint_check.py <https://github.com/imjoseangel/100-days-of-code/blob/devel/scripts/pylint_check.py>`_
 2. See `pre-commit-config <https://github.com/imjoseangel/100-days-of-code/blob/devel/.pre-commit-config.yaml>`_
+3. See `webblocker.py <https://github.com/imjoseangel/100-days-of-code/blob/devel/python/website-blocker/webblocker.py>`_
