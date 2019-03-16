@@ -78,12 +78,10 @@ TODO: Need to create more stable pre-commit based in score and not rc as in CI.
 
 **Thoughts:** Good way of doing CI with python by score.
 
--------------------
+Check the following code to find matches in lines iterating a list:
 
-**Check the following code to find matches in lines iterating a list:**::
-
-for line in CONTENT:
-    if not any(website in line for website in WEBSITE_LIST):
+    >>> for line in CONTENT:
+    ...     if not any(website in line for website in WEBSITE_LIST):
 
 **Link to work:**
 
