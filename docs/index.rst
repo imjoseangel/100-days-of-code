@@ -1,8 +1,3 @@
-.. 100-days-of-code documentation master file, created by
-   sphinx-quickstart.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
-
 Log: 100 Days Of Code
 =====================
 
@@ -69,4 +64,4 @@ Day 4: March 15, 2019
 **Link to work:**
 
 1. See `100 Days of Code Documentation - Imjoseangel <https://100-days-of-code-imjoseangel.readthedocs.io>`_
-2. See `GitHub Documentation <https://github.com/imjoseangel/100-days-of-code/blob/devel/python/docs/>`_
+2. See `GitHub Documentation <https://github.com/imjoseangel/100-days-of-code/blob/devel/docs/>`_
