@@ -45,7 +45,7 @@ templates_path = ["_templates"]
 # -- Project information -----------------------------------------------------
 
 project = u'100-days-of-code'
-COPYRIGHT = u'MMXVIX. A <a href="https://imjoseangel.github.io">@imjoseangel</a> Project'
+copyright = u'MMXVIX. A <a href="https://imjoseangel.github.io">@imjoseangel</a> Project'
 author = u'imjoseangel'
 
 # The short X.Y version
@@ -312,7 +312,7 @@ texinfo_documents = [(
 epub_title = project
 epub_author = author
 epub_publisher = author
-epub_copyright = COPYRIGHT
+epub_copyright = copyright
 
 # The basename for the epub file. It defaults to the project name.
 # epub_basename = project
