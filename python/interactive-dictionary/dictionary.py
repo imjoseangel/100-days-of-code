@@ -5,11 +5,15 @@
 from __future__ import (division, absolute_import, print_function,
                         unicode_literals)
 
+import os
 import json
 from difflib import get_close_matches
 
+# Get File Directory
+WORK_DIR = os.path.dirname((os.path.realpath(__file__)))
+
 # Loading the json data as python dictionary
-DATA = json.load(open("dictionary.json"))
+DATA = json.load(open(WORK_DIR + "/data/dictionary.json"))
 
 
 def retrieve_definition(word):
@@ -47,6 +51,8 @@ def retrieve_definition(word):
             return "The word doesn't exist, yet."
         else:
             return "We don't understand your entry. Apologies."
+    else:
+        return None
 
 
 # Input User
