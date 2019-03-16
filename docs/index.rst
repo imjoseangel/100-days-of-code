@@ -74,7 +74,7 @@ Day 5: March 16, 2019
 1. Adding Pre-Commit to Project and Changing PyLint for Rating
 2. Creating Site Blocker for Working Hours
 
-TODO: Need to create more stable pre-commit based in score and not rc as in CI.
+.. note:: Need to create more stable pre-commit based in score and not rc as in CI.
 
 **Thoughts:** Good way of doing CI with python by score.
 
