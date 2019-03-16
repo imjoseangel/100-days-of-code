@@ -7,8 +7,8 @@ from __future__ import (division, absolute_import, print_function,
 
 import os
 import json
-import folium
 import pandas as pd
+import folium
 
 # Get File Directory
 WORK_DIR = os.path.dirname((os.path.realpath(__file__)))

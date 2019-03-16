@@ -6,9 +6,9 @@ from __future__ import (division, absolute_import, print_function,
                         unicode_literals)
 
 import os
+import pandas as pd
 import folium
 from folium.plugins import MarkerCluster
-import pandas as pd
 
 # Get File Directory
 WORK_DIR = os.path.dirname((os.path.realpath(__file__)))
