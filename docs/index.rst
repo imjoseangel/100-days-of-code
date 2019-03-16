@@ -79,4 +79,4 @@ TODO: Need to create more stable pre-commit based in score and not rc as in CI.
 **Link to work:**
 
 1. See `pylint_check.py <https://github.com/imjoseangel/100-days-of-code/blob/devel/scripts/pylint_check.py>`_
-2. See `pylint_check.py <https://github.com/imjoseangel/100-days-of-code/blob/devel/.pre-commit-config.yaml>`_
+2. See `pre-commit-config <https://github.com/imjoseangel/100-days-of-code/blob/devel/.pre-commit-config.yaml>`_
