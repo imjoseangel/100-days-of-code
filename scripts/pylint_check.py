@@ -6,6 +6,7 @@ from __future__ import (division, absolute_import, print_function,
                         unicode_literals)
 import os
 import sys
+import re
 import subprocess
 from subprocess import STDOUT, PIPE
 
@@ -35,7 +36,7 @@ def asterisks():
     if rows:
         pass
 
-    print('*' * int(columns))
+    print('-' * int(columns))
 
 
 def main():
@@ -68,9 +69,14 @@ def main():
                     proc.wait()
 
                     for line in iter(proc.stdout.readline, b''):
-                        print(line.decode('UTF-8'))
 
-                    if proc.returncode > 0:
+                        score = re.search(r"(?P<score>\d?\d\.\d\d)",
+                                          line.decode('UTF-8'))
+                        if score:
+                            print(line.decode('UTF-8'))
+                            rate = float(score.group('score'))
+
+                    if rate < 9.0:
                         return_code = 1
 
                 except subprocess.CalledProcessError as exception:
