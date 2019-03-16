@@ -65,3 +65,18 @@ Day 4: March 15, 2019
 
 1. See `100 Days of Code Documentation - Imjoseangel <https://100-days-of-code-imjoseangel.readthedocs.io>`_
 2. See `GitHub Documentation <https://github.com/imjoseangel/100-days-of-code/blob/devel/docs/>`_
+
+Day 5: March 16, 2019
+---------------------
+
+**Today's Progress:**
+
+1. Adding Pre-Commit to Project and Changing PyLint for Rating
+TODO: Need to create more stable pre-commit based in score and not rc as in CI.
+
+**Thoughts:** Good way of CIing python by score.
+
+**Link to work:**
+
+1. See `pylint_check.py <https://github.com/imjoseangel/100-days-of-code/blob/devel/scripts/pylint_check.py>`_
+2. See `pylint_check.py <https://github.com/imjoseangel/100-days-of-code/blob/devel/.pre-commit-config.yaml>`_
