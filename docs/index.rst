@@ -95,9 +95,11 @@ Day 6: March 17, 2019
 **Today's Progress:**
 
 1. Studying about `decorators <http://book.pythontips.com/en/latest/decorators.html>`_
+2. Continuing Improving pylint_check.py utility
 
 **Thoughts:** Now clearer how using them, but still need to use them more frequently (Logging and Flask)
 
 **Link to work:**
 
 1. See `decorators <https://github.com/imjoseangel/100-days-of-code/blob/devel/python/decorators>`_
+2. See `pylint_check.py <https://github.com/imjoseangel/100-days-of-code/blob/devel/scripts/pylint_check.py>`_
