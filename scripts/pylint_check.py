@@ -54,33 +54,30 @@ def main():
         for filename in filenames:
             if filename.endswith('.py'):
                 pythonfile = os.path.join(dirpath, filename)
-                try:
 
-                    print("Filename: %s" % pythonfile)
-                    asterisks()
+                print("Filename: %s" % pythonfile)
+                asterisks()
 
-                    proc = subprocess.Popen(
-                        'pylint %s' % pythonfile,
-                        shell=True,
-                        executable="/bin/bash",
-                        stdin=None,
-                        stdout=PIPE,
-                        stderr=STDOUT)
-                    proc.wait()
+                proc = subprocess.Popen(
+                    'pylint %s' % pythonfile,
+                    shell=True,
+                    executable="/bin/bash",
+                    stdin=None,
+                    stdout=PIPE,
+                    stderr=STDOUT)
+                proc.wait()
 
-                    for line in iter(proc.stdout.readline, b''):
+                for line in iter(proc.stdout.readline, b''):
 
-                        score = re.search(r"(?P<score>\d?\d\.\d\d)",
-                                          line.decode('UTF-8'))
-                        if score:
-                            print(line.decode('UTF-8'))
-                            rate = float(score.group('score'))
+                    score = re.search(r"(?P<score>\d?\d\.\d\d)",
+                                      line.decode('UTF-8'))
+                    if score:
+                        print(line.decode('UTF-8'))
+                        rate = float(score.group('score'))
+                    else:
+                        rate = float(10.0)
 
-                    if rate < 9.0:
-                        return_code = 1
-
-                except subprocess.CalledProcessError as exception:
-                    print(exception.output)
+                if rate < 9.0:
                     return_code = 1
 
     sys.exit(return_code)

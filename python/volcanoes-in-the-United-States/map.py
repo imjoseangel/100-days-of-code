@@ -26,10 +26,9 @@ def color_change(elev):
 
     if elev < 1000:
         return 'green'
-    elif 1000 <= elev < 3000:
+    if 1000 <= elev < 3000:
         return 'orange'
-    else:
-        return 'red'
+    return 'red'
 
 
 #Create base map
