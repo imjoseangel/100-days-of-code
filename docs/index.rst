@@ -88,3 +88,16 @@ Check the following code to find matches in lines iterating a list:
 1. See `pylint_check.py <https://github.com/imjoseangel/100-days-of-code/blob/devel/scripts/pylint_check.py>`_
 2. See `pre-commit-config <https://github.com/imjoseangel/100-days-of-code/blob/devel/.pre-commit-config.yaml>`_
 3. See `webblocker.py <https://github.com/imjoseangel/100-days-of-code/blob/devel/python/website-blocker/webblocker.py>`_
+
+Day 6: March 17, 2019
+---------------------
+
+**Today's Progress:**
+
+1. Studying about `decorators <http://book.pythontips.com/en/latest/decorators.html>`_
+
+**Thoughts:** Now clearer how using them, but still need to use them more frequently (Logging and Flask)
+
+**Link to work:**
+
+1. See `decorators <https://github.com/imjoseangel/100-days-of-code/blob/devel/python/decorators>`_

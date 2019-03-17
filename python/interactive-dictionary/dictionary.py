@@ -31,9 +31,9 @@ def retrieve_definition(word):
 
     if word in DATA:
         return DATA[word]
-    elif word.title() in DATA:
+    if word.title() in DATA:
         return DATA[word.title()]
-    elif word.upper() in DATA:
+    if word.upper() in DATA:
         return DATA[word.upper()]
 
     #3rd elif: To find a similar word
@@ -41,18 +41,18 @@ def retrieve_definition(word):
     #-- In the return statement, the last [0] represents the
     # first element from the list of close matches
 
-    elif guessed:
+    if guessed:
         action = input("Did you mean %s instead? [y or n]: " %
                        get_close_matches(word, DATA.keys())[0])
         #-- If the answers is yes, retrive definition of suggested word
         if action in ('y', 'Y'):
             return DATA[get_close_matches(word, DATA.keys())[0]]
-        elif action in ('n', 'N'):
+        if action in ('n', 'N'):
             return "The word doesn't exist, yet."
-        else:
-            return "We don't understand your entry. Apologies."
-    else:
-        return None
+
+        return "We don't understand your entry. Apologies."
+
+    return None
 
 
 # Input User
