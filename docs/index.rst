@@ -103,3 +103,17 @@ Day 6: March 17, 2019
 
 1. See `decorators <https://github.com/imjoseangel/100-days-of-code/blob/devel/python/decorators>`_
 2. See `pylint_check.py <https://github.com/imjoseangel/100-days-of-code/blob/devel/scripts/pylint_check.py>`_
+
+Day 7: March 20, 2019
+---------------------
+
+**Today's Progress:**
+
+1. Using Flake8 also for Pre-Commit and Fixing Other Lint Issues
+2. Adding Code Complexity to Travis (Just Reporting)
+
+**Thoughts:** Still need to work with py.test and unittest to understand better different scenarios. Adding radon for Code Complexity
+
+**Link to work:**
+
+1. See `radon_check.py <https://github.com/imjoseangel/100-days-of-code/blob/devel/scripts/radon_check.py>`_

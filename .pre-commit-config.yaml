@@ -8,3 +8,9 @@ repos:
         entry: pylint
         language: python
         files: \.(py)$
+      - id: python-flake8
+        name: Python Flake8
+        description: This hook runs Flake8
+        entry: flake8 --statistics
+        language: python
+        files: \.(py)$

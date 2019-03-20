@@ -17,10 +17,10 @@ WORK_DIR = os.path.dirname((os.path.realpath(__file__)))
 GEO_DATA = json.load(open(WORK_DIR + "/data/us-states.json"))
 EMP_DATA = pd.read_csv(WORK_DIR + "/data/us-unemployment.csv")
 
-#Create base map
+# Create base map
 MAP = folium.Map(location=[37.0902, -100.7129], zoom_start=4)
 
-#Method to create Choropleth map, All parameters are mandatory
+# Method to create Choropleth map, All parameters are mandatory
 folium.Choropleth(
     geo_data=GEO_DATA,
     data=EMP_DATA,
@@ -32,5 +32,5 @@ folium.Choropleth(
     line_opacity=0.2,
     legend_name='Unemployment Rate (%)').add_to(MAP)
 
-#Save the map
+# e the map
 MAP.save("choropleth.html")
