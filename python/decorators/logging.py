@@ -87,6 +87,7 @@ class LoggitClass:
     def notify(self):
         """ logit only logs, no more """
 
+
 class EmailLogit(LoggitClass):
     """
     A logit implementation for sending emails to admins
@@ -103,8 +104,10 @@ class EmailLogit(LoggitClass):
     def anothermethod(self):
         """ Another Method """
 
+
 @LoggitClass
 def myfunc3():
     """ MyFunc2 """
+
 
 myfunc3()

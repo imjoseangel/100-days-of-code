@@ -20,7 +20,7 @@ LON = DATA['LON']
 ELEVATION = DATA['ELEV']
 
 
-#Function to change colors
+# Function to change colors
 def color_change(elev):
     """Change Color depending on Mountain Elevation"""
 
@@ -31,16 +31,16 @@ def color_change(elev):
     return 'red'
 
 
-#Create base map
+# Create base map
 MAP = folium.Map(
     location=[37.296933, -121.9574983],
     zoom_start=5,
     tiles="CartoDB dark_matter")
 
-#Create Cluster
+# Create Cluster
 MARKER_CLUSTER = MarkerCluster().add_to(MAP)
 
-#Plot Markers
+# Plot Markers
 for LAT, LON, ELEVATION in zip(LAT, LON, ELEVATION):
     folium.CircleMarker(
         location=[LAT, LON],
@@ -50,5 +50,5 @@ for LAT, LON, ELEVATION in zip(LAT, LON, ELEVATION):
         color="gray",
         fill_opacity=0.9).add_to(MARKER_CLUSTER)
 
-#Save the map
+# ave the map
 MAP.save("map.html")
