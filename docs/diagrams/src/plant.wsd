@@ -1,0 +1,62 @@
+@startuml mydiagram
+
+start
+
+   :first activity;
+
+   :second activity
+    with a multiline
+    and rather long description;
+
+   :another activity;
+
+   note right
+     After this activity,
+     are two 'if-then-else' examples.
+   end note
+
+   if (do optional activity?) then (yes)
+      :optional activity;
+   else (no)
+
+      if (want to exit?) then (right now!)
+         stop
+      else (not really)
+
+      endif
+
+   endif
+
+   :third activity;
+
+   note left
+     After this activity,
+     parallel activities will occur.
+   end note
+
+   fork
+      :Concurrent activity A;
+   fork again
+      :Concurrent activity B1;
+      :Concurrent activity B2;
+   fork again
+      :Concurrent activity C;
+      fork
+      :Nested C1;
+      fork again
+      :Nested C2;
+      end fork
+   end fork
+
+   repeat
+      :repetitive activity;
+   repeat while (again?)
+
+   while (continue?) is (yes, of course)
+     :first activity inside the while loop;
+     :second activity inside the while loop;
+   endwhile (no)
+
+   stop
+
+   @enduml
