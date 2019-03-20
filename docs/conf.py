@@ -45,8 +45,7 @@ templates_path = ["_templates"]
 # -- Project information -----------------------------------------------------
 
 project = u'100-days-of-code'
-copyright = u'MMXVIX. A \
-    <a href="https://imjoseangel.github.io">@imjoseangel</a> Project'
+copyright = u'MMXVIX. A <a href="https://imjoseangel.github.io">@imjoseangel</a> Project'
 
 author = u'imjoseangel'
 
