@@ -117,3 +117,16 @@ Day 7: March 20, 2019
 **Link to work:**
 
 1. See `radon_check.py <https://github.com/imjoseangel/100-days-of-code/blob/devel/scripts/radon_check.py>`_
+
+Day 8: March 21, 2019
+---------------------
+
+**Today's Progress:**
+
+1. Flask Tutorial Completed
+
+**Thoughts:** Need to work more with Flask to understand better its complexity
+
+**Link to work:**
+
+1. See `radon_check.py <https://github.com/imjoseangel/100-days-of-code/blob/devel/python/flask-tutorial>`_
