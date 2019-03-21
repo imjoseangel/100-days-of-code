@@ -5,7 +5,7 @@ repos:
       - id: python-lint
         name: Python-lint
         description: This hook runs pylint.
-        entry: pylint
+        entry: pylint --exit-zero
         language: python
         files: \.(py)$
       - id: python-flake8

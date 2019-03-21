@@ -18,14 +18,26 @@ sandbox/
 .pe_build
 *.dpkg-dist
 *.rpmnew
-*.pyc
 
 ### PyCharm ###
 .idea/
 
 ### Python ###
+venv/
+
+*.pyc
+__pycache__/
+
+instance/
+
+.pytest_cache/
 .mypy_cache/
-.pytest_cache
+.coverage
+htmlcov/
+
+dist/
+build/
+*.egg-info/
 
 ### Ansible ###
 *.retry
