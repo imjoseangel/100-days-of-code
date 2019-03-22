@@ -1,3 +1,10 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+"""Test Blog"""
+
+from __future__ import (division, absolute_import, print_function,
+                        unicode_literals)
+
 import pytest
 from flaskr.db import get_db
 

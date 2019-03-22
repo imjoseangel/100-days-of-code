@@ -51,9 +51,7 @@ def retrieve_definition(word):
         if action in ('n', 'N'):
             return "The word doesn't exist, yet."
 
-        return "We don't understand your entry. Apologies."
-
-    return None
+    return "We don't understand your entry. Apologies."
 
 
 # Input User

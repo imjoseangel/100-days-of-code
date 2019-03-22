@@ -1,3 +1,10 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+"""Test DB"""
+
+from __future__ import (division, absolute_import, print_function,
+                        unicode_literals)
+
 import sqlite3
 
 import pytest
@@ -16,7 +23,7 @@ def test_get_close_db(app):
 
 
 def test_init_db_command(runner, monkeypatch):
-    class Recorder(object):
+    class Recorder():
         called = False
 
     def fake_init_db():

@@ -1,3 +1,10 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+"""DB Implementation"""
+
+from __future__ import (division, absolute_import, print_function,
+                        unicode_literals)
+
 import sqlite3
 
 import click
@@ -13,8 +20,7 @@ def get_db():
     if 'db' not in g:
         g.db = sqlite3.connect(
             current_app.config['DATABASE'],
-            detect_types=sqlite3.PARSE_DECLTYPES
-        )
+            detect_types=sqlite3.PARSE_DECLTYPES)
         g.db.row_factory = sqlite3.Row
 
     return g.db
@@ -24,6 +30,8 @@ def close_db(e=None):
     """If this request connected to the database, close the
     connection.
     """
+    if e:
+        pass
     db = g.pop('db', None)
 
     if db is not None:

@@ -1,3 +1,9 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+"""Create Secret Key for Flask"""
+
+from __future__ import (division, absolute_import, print_function,
+                        unicode_literals)
 import os
 
 from flask import Flask
@@ -8,7 +14,7 @@ def create_app(test_config=None):
     app = Flask(__name__, instance_relative_config=True)
     app.config.from_mapping(
         # a default secret that should be overridden by instance config
-        SECRET_KEY='dev',
+        SECRET_KEY='NCAzxulqkNzQlNzpl+6WOA==',
         # store the database in the instance folder
         DATABASE=os.path.join(app.instance_path, 'flaskr.sqlite'),
     )
@@ -25,10 +31,6 @@ def create_app(test_config=None):
         os.makedirs(app.instance_path)
     except OSError:
         pass
-
-    @app.route('/hello')
-    def hello():
-        return 'Hello, World!'
 
     # register the database commands
     from flaskr import db

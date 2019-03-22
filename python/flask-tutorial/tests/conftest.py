@@ -1,3 +1,11 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+"""Configuration Test"""
+# pylint: disable=redefined-outer-name
+
+from __future__ import (division, absolute_import, print_function,
+                        unicode_literals)
+
 import os
 import tempfile
 
@@ -45,15 +53,16 @@ def runner(app):
     return app.test_cli_runner()
 
 
-class AuthActions(object):
+class AuthActions():
     def __init__(self, client):
         self._client = client
 
     def login(self, username='test', password='test'):
         return self._client.post(
-            '/auth/login',
-            data={'username': username, 'password': password}
-        )
+            '/auth/login', data={
+                'username': username,
+                'password': password
+            })
 
     def logout(self):
         return self._client.get('/auth/logout')
