@@ -14,7 +14,6 @@ with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as mysocket:
     mysocket.bind((HOST, PORT))
     mysocket.listen()
     connection, address = mysocket.accept()
-    print(connection, address)
     with connection:
         print('Connected by', address)
         while True:
