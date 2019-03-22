@@ -129,4 +129,4 @@ Day 8: March 21, 2019
 
 **Link to work:**
 
-1. See `radon_check.py <https://github.com/imjoseangel/100-days-of-code/blob/devel/python/flask-tutorial>`_
+1. See `Flask Tutorial <https://github.com/imjoseangel/100-days-of-code/blob/devel/python/flask-tutorial>`_
