@@ -1,3 +1,9 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+"""Create Secret Key for Flask"""
+
+from __future__ import (division, absolute_import, print_function,
+                        unicode_literals)
 import os
 
 from flask import Flask

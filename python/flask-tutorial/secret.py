@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-"""Defining functions within functions"""
+"""Create Secret Key for Flask"""
 
 from __future__ import (division, absolute_import, print_function,
                         unicode_literals)
@@ -8,7 +8,7 @@ from __future__ import (division, absolute_import, print_function,
 from base64 import b64encode
 from os import urandom
 
-random_bytes = urandom(16)
-token = b64encode(random_bytes).decode('utf-8')
+RANDOM_BYTES = urandom(16)
+TOKEN = b64encode(RANDOM_BYTES).decode('utf-8')
 
-print(token)
+print(TOKEN)
