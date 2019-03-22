@@ -11,6 +11,7 @@
 #
 # All configuration values have a default; values that are commented out
 # serve to show the default.
+# pylint: disable=W0622
 
 import sys
 import os
