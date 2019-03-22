@@ -1,3 +1,11 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+"""Configuration Test"""
+# pylint: disable=redefined-outer-name
+
+from __future__ import (division, absolute_import, print_function,
+                        unicode_literals)
+
 import os
 import tempfile
 
