@@ -130,3 +130,16 @@ Day 8: March 21, 2019
 **Link to work:**
 
 1. See `Flask Tutorial <https://github.com/imjoseangel/100-days-of-code/blob/devel/python/flask-tutorial>`_
+
+Day 9: March 22, 2019
+---------------------
+
+**Today's Progress:**
+
+1. Working with sockets. Creating Basic Client and Server
+
+**Thoughts:** Basic Socket Connectivity and Fixing Linters and some bugs in the Linting Script. Learning about how to skip a specific pylint in a specific file.
+
+**Link to work:**
+
+1. See `Basic Socket Client and Server <https://github.com/imjoseangel/100-days-of-code/blob/devel/python/socket_programming>`_
