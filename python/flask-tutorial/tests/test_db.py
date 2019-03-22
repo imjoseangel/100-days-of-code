@@ -1,3 +1,10 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+"""Test DB"""
+
+from __future__ import (division, absolute_import, print_function,
+                        unicode_literals)
+
 import sqlite3
 
 import pytest

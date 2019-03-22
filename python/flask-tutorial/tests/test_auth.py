@@ -1,3 +1,10 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+"""Test Auth"""
+
+from __future__ import (division, absolute_import, print_function,
+                        unicode_literals)
+
 import pytest
 from flask import g, session
 from flaskr.db import get_db
