@@ -77,8 +77,8 @@ def main():
                     else:
                         rate = float(10.0)
 
-                if rate < 9.0:
-                    return_code = 1
+                    if rate < 9.0:
+                        return_code = 1
 
     sys.exit(return_code)
 
