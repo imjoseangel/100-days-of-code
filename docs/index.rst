@@ -143,3 +143,16 @@ Day 9: March 22, 2019
 **Link to work:**
 
 1. See `Basic Socket Client and Server <https://github.com/imjoseangel/100-days-of-code/blob/devel/python/socket_programming>`_
+
+Day 10: March 23, 2019
+---------------------
+
+**Today's Progress:**
+
+1. Working with sockets. Creating Advanced Client and Server
+
+**Thoughts:** Need to study more about sockets and focus on how to apply on infra and network debugging tools
+
+**Link to work:**
+
+1. See `Advanced Socket Client and Server <https://github.com/imjoseangel/100-days-of-code/blob/devel/python/socket_programming>`_
