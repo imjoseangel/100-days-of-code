@@ -16,10 +16,9 @@ import fbprophet
 WORK_DIR = os.path.dirname((os.path.realpath(__file__)))
 
 # Loading the json data as python dictionary
-
-DATA = pd.read_csv(WORK_DIR + "/data/forecast_orders.csv")
+DATA = pd.read_csv(WORK_DIR + "/data/daily_orders.csv")
 DATA['y'], lam = boxcox(DATA['value'])
-DATA = DATA.drop(columns='value')
+DATA['ds'] = DATA['date']
 
 MYFORECAST = fbprophet.Prophet(daily_seasonality=True)
 MYFORECAST.fit(DATA)
@@ -33,7 +32,7 @@ FORECAST[['yhat', 'yhat_upper', 'yhat_lower']] = FORECAST[[
     'yhat', 'yhat_upper', 'yhat_lower'
 ]].apply(lambda x: inv_boxcox(x, lam))
 
-MYFORECAST.plot(FORECAST, uncertainty=False)
-# MYFORECAST.plot_components(FORECAST)
+MYFORECAST.plot(FORECAST, uncertainty=False, xlabel='date')
+MYFORECAST.plot_components(FORECAST)
 
 plt.show()

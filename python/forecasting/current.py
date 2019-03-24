@@ -14,14 +14,12 @@ from scipy.stats import boxcox
 WORK_DIR = os.path.dirname((os.path.realpath(__file__)))
 
 # Loading the json data as python dictionary
-
 DATA = pd.read_csv(WORK_DIR + "/data/daily_orders.csv")
 DATA.date = pd.to_datetime(DATA['date'], format='%Y-%m-%d %H:%M:%S')
 DATA['boxcox'], lam = boxcox(DATA['value'])
 
 # inplace is mandatory here. Have to assign back to dataframe
 # (because it is a new copy)
-
 DATA.set_index('date', inplace=True)
 
 # Print DATA
