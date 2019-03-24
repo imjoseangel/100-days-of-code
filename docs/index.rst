@@ -156,3 +156,17 @@ Day 10: March 23, 2019
 **Link to work:**
 
 1. See `Advanced Socket Client and Server <https://github.com/imjoseangel/100-days-of-code/blob/devel/python/socket_programming>`_
+
+Day 11: March 24, 2019
+---------------------
+
+**Today's Progress:**
+
+1. Playing with fbprophet, Forecast from Facebook
+
+**Thoughts:** Nice one to understand how to play with dates and Pandas and doing some data forecasting with Python
+
+**Link to work:**
+
+1. See `Python Code <https://github.com/imjoseangel/100-days-of-code/blob/devel/python/forecasting>`_
+2. See `URL with some tips and data <https://mode.com/example-gallery/forecasting_prophet_python_cookbook/>`_
