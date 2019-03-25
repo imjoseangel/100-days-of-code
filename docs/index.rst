@@ -170,3 +170,18 @@ Day 11: March 24, 2019
 
 1. See `Python Code <https://github.com/imjoseangel/100-days-of-code/blob/devel/python/forecasting>`_
 2. See `URL with some tips and data <https://mode.com/example-gallery/forecasting_prophet_python_cookbook/>`_
+
+Day 12: March 25, 2019
+---------------------
+
+**Today's Progress:**
+
+1. Docker Creation for Data Science
+2. Matplotlib Tutorial
+
+**Thoughts:** Good Docker to Play with DataScience and Jupyter without breaking my environment
+
+**Link to work:**
+
+1. See `Matplotlib Tutorial <https://github.com/imjoseangel/100-days-of-code/blob/devel/python/plotting>`_
+2. See `Docker DataScience <https://github.com/imjoseangel/docker-data-science>`_
