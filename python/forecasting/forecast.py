@@ -20,6 +20,7 @@ DATA = pd.read_csv(WORK_DIR + "/data/daily_orders.csv")
 DATA['y'], lam = boxcox(DATA['value'])
 DATA['ds'] = DATA['date']
 
+# Creating Forecast
 MYFORECAST = fbprophet.Prophet(daily_seasonality=True)
 MYFORECAST.fit(DATA)
 FUTURE = MYFORECAST.make_future_dataframe(periods=365)
@@ -32,6 +33,7 @@ FORECAST[['yhat', 'yhat_upper', 'yhat_lower']] = FORECAST[[
     'yhat', 'yhat_upper', 'yhat_lower'
 ]].apply(lambda x: inv_boxcox(x, lam))
 
+# Plot Forecast
 MYFORECAST.plot(FORECAST, uncertainty=False, xlabel='date')
 MYFORECAST.plot_components(FORECAST)
 
