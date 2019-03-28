@@ -185,3 +185,16 @@ Day 12: March 25, 2019
 
 1. See `Matplotlib Tutorial <https://github.com/imjoseangel/100-days-of-code/blob/devel/python/plotting>`_
 2. See `Docker DataScience <https://github.com/imjoseangel/docker-data-science>`_
+
+Day 13: March 28, 2019
+---------------------
+
+**Today's Progress:**
+
+1. Created Speech Recognition Script with Command Execution
+
+**Thoughts:** Google Speech Recognition works fine. Probably quite slow if you are impatient ;)
+
+**Link to work:**
+
+1. See `Speech Recognition <https://github.com/imjoseangel/100-days-of-code/blob/devel/python/speech>`_
