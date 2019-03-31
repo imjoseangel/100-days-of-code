@@ -7,6 +7,7 @@ from __future__ import (division, absolute_import, print_function,
 
 import random
 import time
+import os
 
 TIMEPEEING = 1
 STALLS = 10
@@ -48,6 +49,8 @@ def main():
     while len(LIST_UNTAKEN) > 0:
 
         take_stall()
+        os.system('clear')
+        print('\n')
         for item in STALL_PRINT:
             print(item, end=' ', flush=True)
         time.sleep(1)
@@ -58,7 +61,7 @@ def main():
         else:
             peeing -= 1
 
-        print("\n")
+        print('\n')
 
 
 if __name__ == '__main__':
