@@ -31,6 +31,7 @@ def take_stall():
 
 
 def leave_stall():
+    # Pee done
     if len(LIST_TAKEN) > 0:
         old_stall = LIST_TAKEN[0]
         LIST_TAKEN.remove(old_stall)
