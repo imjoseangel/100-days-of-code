@@ -198,3 +198,16 @@ Day 13: March 28, 2019
 **Link to work:**
 
 1. See `Speech Recognition <https://github.com/imjoseangel/100-days-of-code/blob/devel/python/speech>`_
+
+Day 14: March 31, 2019
+---------------------
+
+**Today's Progress:**
+
+1. Created Men Restroom Algorithm
+
+**Thoughts:** Idea from `Reddit <https://www.reddit.com/r/learnpython/comments/b7kq94/men_restroom_algorithm/>`_
+
+**Link to work:**
+
+1. See `Speech Recognition <https://github.com/imjoseangel/100-days-of-code/blob/devel/python/menrestroom>`_
