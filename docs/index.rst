@@ -211,3 +211,16 @@ Day 14: March 31, 2019
 **Link to work:**
 
 1. See `Men RestRoom Python <https://github.com/imjoseangel/100-days-of-code/blob/devel/python/menrestroom>`_
+
+Day 15: April 1, 2019
+---------------------
+
+**Today's Progress:**
+
+1. Adding Threading and Average to Men Restroom Algorithm
+
+**Thoughts:** Investigating Threading although not easy to stop process when list is full. Needs further investigation
+
+**Link to work:**
+
+1. See `Men RestRoom Python <https://github.com/imjoseangel/100-days-of-code/blob/devel/python/menrestroom>`_
