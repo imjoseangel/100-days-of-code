@@ -224,3 +224,16 @@ Day 15: April 1, 2019
 **Link to work:**
 
 1. See `Men RestRoom Python <https://github.com/imjoseangel/100-days-of-code/blob/devel/python/menrestroom>`_
+
+Day 16: April 1, 2019
+---------------------
+
+**Today's Progress:**
+
+1. Fixing Wifi and Code for Python 3 for DisplayOtronHat from Pimoroni
+
+**Thoughts:** Wifi Display didn't work in Python3 due to the map/list difference
+
+**Link to work:**
+
+1. See `Pull Request on Pimoroni <https://github.com/pimoroni/displayotron/pull/59/files>`_
