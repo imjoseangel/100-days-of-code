@@ -14,9 +14,22 @@ TIMEPEEING = 30
 STALLS = 10
 LIST_UNTAKEN = list(range(0, STALLS))
 LIST_TAKEN = []
+ODD_LIST = []
+EVEN_LIST = []
 STR_EMPTY = "\U0001F6BD"
 STR_TAKEN = "\U0001F6B6"
 STALL_PRINT = list(STR_EMPTY * STALLS)
+
+
+def oddeven_list(takenlist):
+    for number in takenlist:
+        # checking condition
+        if number % 2 != 0:
+            ODD_LIST.append(number)
+        else:
+            EVEN_LIST.append(number)
+
+    return ODD_LIST, EVEN_LIST
 
 
 def take_stall():
@@ -26,6 +39,10 @@ def take_stall():
             new_stall = round(sum(LIST_UNTAKEN) / len(LIST_UNTAKEN) + .5)
         else:
             new_stall = random.choice(LIST_UNTAKEN)
+            # if (new_stall + 1) or (new_stall - 1) in LIST_TAKEN:
+            #     print(new_stall)
+            #     new_stall = random.choice(LIST_UNTAKEN)
+            #     print(new_stall)
         LIST_UNTAKEN.remove(new_stall)
         LIST_TAKEN.append(new_stall)
 
