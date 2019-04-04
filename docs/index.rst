@@ -252,3 +252,17 @@ Day 17: April 3, 2019
 1. See `Men RestRoom Python <https://github.com/imjoseangel/100-days-of-code/blob/devel/python/menrestroom>`_
 2. See `InkyTest <https://github.com/imjoseangel/100-days-of-code/tree/devel/python/pimoroni>`_
 3. See `WifiTest <https://github.com/imjoseangel/100-days-of-code/tree/devel/python/wifi>`_
+
+Day 18: April 4, 2019
+---------------------
+
+**Today's Progress:**
+
+1. Starting Machine Learning Project Walk-Through in Python
+
+**Thoughts:** Nice one to settle ML knowledge.
+
+**Link to work:**
+
+1. See `Machine Learning Walk-Through <https://github.com/imjoseangel/100-days-of-code/tree/devel/python/machine-learning>`_
+2. See `Original Project <https://morioh.com/p/b56ae6b04ffc/a-complete-machine-learning-project-walk-through-in-python>`_
