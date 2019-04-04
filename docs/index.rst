@@ -225,7 +225,7 @@ Day 15: April 1, 2019
 
 1. See `Men RestRoom Python <https://github.com/imjoseangel/100-days-of-code/blob/devel/python/menrestroom>`_
 
-Day 16: April 1, 2019
+Day 16: April 2, 2019
 ---------------------
 
 **Today's Progress:**
@@ -237,3 +237,18 @@ Day 16: April 1, 2019
 **Link to work:**
 
 1. See `Pull Request on Pimoroni <https://github.com/pimoroni/displayotron/pull/59/files>`_
+
+Day 17: April 3, 2019
+---------------------
+
+**Today's Progress:**
+
+1. Adding Some Wifi and Inky from Pimoroni examples and Thinking about some Men Restroom algorithm changes
+
+**Thoughts:** Not easy to split men in stall. Need some thoughts to distribute them.
+
+**Link to work:**
+
+1. See `Men RestRoom Python <https://github.com/imjoseangel/100-days-of-code/blob/devel/python/menrestroom>`_
+2. See `InkyTest <https://github.com/imjoseangel/100-days-of-code/tree/devel/python/pimoroni>`_
+3. See `WifiTest <https://github.com/imjoseangel/100-days-of-code/tree/devel/python/wifi>`_
