@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 """ML Walk-Through"""
-# pylint: disable=R0916
+# pylint: disable=R0916, W0104
 
 from __future__ import (division, absolute_import, print_function,
                         unicode_literals)
@@ -114,6 +114,40 @@ plt.ylabel('Number of Buildings')
 plt.title('Energy Star Score Distribution')
 plt.show()
 
+# Histogram Plot of Site EUI
+figsize(8, 8)
+plt.hist(data['Site EUI (kBtu/ft²)'].dropna(), bins=20, edgecolor='black')
+plt.xlabel('Site EUI')
+plt.ylabel('Count')
+plt.title('Site EUI Distribution')
+plt.show()
+
+print(data['Site EUI (kBtu/ft²)'].describe())
+
+print(data['Site EUI (kBtu/ft²)'].dropna().sort_values().tail(10))
+
+# One building is clearly far above the rest.
+data.loc[data['Site EUI (kBtu/ft²)'] == 869265, :]
+
+# Calculate first and third quartile
+first_quartile = data['Site EUI (kBtu/ft²)'].describe()['25%']
+third_quartile = data['Site EUI (kBtu/ft²)'].describe()['75%']
+
+# Interquartile range
+iqr = third_quartile - first_quartile
+
+# Remove outliers
+data = data[(data['Site EUI (kBtu/ft²)'] > (first_quartile - 3 * iqr))
+            & (data['Site EUI (kBtu/ft²)'] < (third_quartile + 3 * iqr))]
+
+# Histogram Plot of Site EUI
+figsize(8, 8)
+plt.hist(data['Site EUI (kBtu/ft²)'].dropna(), bins=20, edgecolor='black')
+plt.xlabel('Site EUI')
+plt.ylabel('Count')
+plt.title('Site EUI Distribution')
+plt.show()
+
 # Create a list of buildings with more than 100 measurements
 types = data.dropna(subset=['score'])
 types = types['Largest Property Use Type'].value_counts()
@@ -166,3 +200,113 @@ print(correlations_data.head(15), '\n')
 
 # Print the most positive correlations
 print(correlations_data.tail(15))
+
+# Select the numeric columns
+numeric_subset = data.select_dtypes('number')
+
+# Create columns with square root and log of numeric columns
+for col in numeric_subset.columns:
+    # Skip the Energy Star Score column
+    if col == 'score':
+        next
+    else:
+        numeric_subset['sqrt_' + col] = np.sqrt(numeric_subset[col])
+        numeric_subset['log_' + col] = np.log(numeric_subset[col])
+
+# Select the categorical columns
+categorical_subset = data[['Borough', 'Largest Property Use Type']]
+
+# One hot encode
+categorical_subset = pd.get_dummies(categorical_subset)
+
+# Join the two dataframes using concat
+# Make sure to use axis = 1 to perform a column bind
+features = pd.concat([numeric_subset, categorical_subset], axis=1)
+
+# Drop buildings without an energy star score
+features = features.dropna(subset=['score'])
+
+# Find correlations with the score
+correlations = features.corr()['score'].dropna().sort_values()
+
+# Display most negative correlations
+print(correlations.head(15))
+
+# Display most positive correlations
+print(correlations.tail(15))
+
+figsize(12, 10)
+
+# Extract the building types
+features['Largest Property Use Type'] = data.dropna(
+    subset=['score'])['Largest Property Use Type']
+
+# Limit to building types with more than 100 observations (from previous code)
+features = features[features['Largest Property Use Type'].isin(types)]
+
+# Use seaborn to plot a scatterplot of Score vs Log Source EUI
+sns.lmplot(
+    'Site EUI (kBtu/ft²)',
+    'score',
+    hue='Largest Property Use Type',
+    data=features,
+    scatter_kws={
+        'alpha': 0.8,
+        's': 60
+    },
+    fit_reg=False,
+    size=12,
+    aspect=1.2)
+
+# Plot labeling
+plt.xlabel("Site EUI", size=28)
+plt.ylabel('Energy Star Score', size=28)
+plt.title('Energy Star Score vs Site EUI', size=36)
+plt.show()
+
+# Extract the columns to  plot
+plot_data = features[[
+    'score', 'Site EUI (kBtu/ft²)', 'Weather Normalized Source EUI (kBtu/ft²)',
+    'log_Total GHG Emissions (Metric Tons CO2e)'
+]]
+
+# Replace the inf with nan
+plot_data = plot_data.replace({np.inf: np.nan, -np.inf: np.nan})
+
+# Rename columns
+plot_data = plot_data.rename(
+    columns={
+        'Site EUI (kBtu/ft²)': 'Site EUI',
+        'Weather Normalized Source EUI (kBtu/ft²)': 'Weather Norm EUI',
+        'log_Total GHG Emissions (Metric Tons CO2e)': 'log GHG Emissions'
+    })
+
+# Drop na values
+plot_data = plot_data.dropna()
+
+
+# Function to calculate correlation coefficient between two columns
+def corr_func(x, y):
+    r = np.corrcoef(x, y)[0][1]
+    ax = plt.gca()
+    ax.annotate(
+        "r = {:.2f}".format(r), xy=(.2, .8), xycoords=ax.transAxes, size=20)
+
+
+# Create the pairgrid object
+grid = sns.PairGrid(data=plot_data, size=3)
+
+# Upper is a scatter plot
+grid.map_upper(plt.scatter, color='red', alpha=0.6)
+
+# Diagonal is a histogram
+grid.map_diag(plt.hist, color='red', edgecolor='black')
+
+# Bottom is correlation and density plot
+grid.map_lower(corr_func)
+grid.map_lower(sns.kdeplot, cmap=plt.cm.Reds)
+
+# Title for entire plot
+plt.suptitle('Pairs Plot of Energy Data', size=36, y=1.02)
+
+plt.show()
