@@ -266,3 +266,17 @@ Day 18: April 4, 2019
 
 1. See `Machine Learning Walk-Through <https://github.com/imjoseangel/100-days-of-code/tree/devel/python/machine-learning>`_
 2. See `Original Project <https://morioh.com/p/b56ae6b04ffc/a-complete-machine-learning-project-walk-through-in-python>`_
+
+Day 19: April 6, 2019
+---------------------
+
+**Today's Progress:**
+
+1. Continuing with Machine Learning Project Walk-Through in Python
+
+**Thoughts:** Need to focus in the two variables plot as from there the data is not properly working. I will investigate how to fix it.
+
+**Link to work:**
+
+1. See `Machine Learning Walk-Through <https://github.com/imjoseangel/100-days-of-code/tree/devel/python/machine-learning>`_
+2. See `Original Project <https://morioh.com/p/b56ae6b04ffc/a-complete-machine-learning-project-walk-through-in-python>`_
