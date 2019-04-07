@@ -20,27 +20,24 @@ class Menpeeing:
         self.emo_empty = "\U0001F6BD"
         self.emo_taken = "\U0001F6B6"
         self.stall_print = list(self.emo_empty * stalls)
-        self.odds = []
-        self.evens = []
 
-        self.oddsevens(self.untaken)
         self.take_stall()
         self.leave_stall()
 
-    def oddsevens(self, stalls):
-        for number in stalls:
-            # checking condition
-            if number % 2 != 0:
-                self.odds.append(number)
-            else:
-                self.evens.append(number)
+    # def oddsevens(self, stalls):
+    #     for number in stalls:
+    #         # checking condition
+    #         if number % 2 != 0:
+    #             self.odds.append(number)
+    #         else:
+    #             self.evens.append(number)
 
-        if self.new_stall % 2 != 0:
-            self.odds.remove(self.new_stall)
-            self.new_stallisodd = True
-        else:
-            self.evens.remove(self.new_stall)
-            self.new_stallisodd = False
+    #     if self.new_stall % 2 != 0:
+    #         self.odds.remove(self.new_stall)
+    #         self.stallisodd = True
+    #     else:
+    #         self.evens.remove(self.new_stall)
+    #         self.stallisodd = False
 
     def take_stall(self):
         # Check if there is any empty stall
