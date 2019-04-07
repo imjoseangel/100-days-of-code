@@ -16,30 +16,37 @@ class Menpeeing:
         self.timepeeing = random.randint(10, 30)
         self.untaken = list(range(0, stalls))
         self.taken = []
-        self.odds = []
-        self.evens = []
+        self.new_stall = round(sum(self.untaken) / len(self.untaken) + .5)
         self.emo_empty = "\U0001F6BD"
         self.emo_taken = "\U0001F6B6"
         self.stall_print = list(self.emo_empty * stalls)
+        self.odds = []
+        self.evens = []
 
+        self.oddsevens(self.untaken)
         self.take_stall()
         self.leave_stall()
 
-    def oddeven_list(self, taken):
-        for number in taken:
+    def oddsevens(self, stalls):
+        for number in stalls:
             # checking condition
             if number % 2 != 0:
                 self.odds.append(number)
             else:
                 self.evens.append(number)
 
-        return self.odds, self.evens
+        if self.new_stall % 2 != 0:
+            self.odds.remove(self.new_stall)
+            self.new_stallisodd = True
+        else:
+            self.evens.remove(self.new_stall)
+            self.new_stallisodd = False
 
     def take_stall(self):
         # Check if there is any empty stall
         if len(self.untaken) > 0:
             if not self.taken:
-                new_stall = round(sum(self.untaken) / len(self.untaken) + .5)
+                new_stall = self.new_stall
             else:
                 new_stall = random.choice(self.untaken)
             self.untaken.remove(new_stall)
