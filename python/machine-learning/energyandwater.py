@@ -315,3 +315,43 @@ grid.map_lower(sns.kdeplot, cmap=plt.cm.Reds)
 plt.suptitle('Pairs Plot of Energy Data', size=36, y=1.02)
 
 plt.show()
+
+# Copy the original data
+features = data.copy()
+
+# Select the numeric columns
+numeric_subset = data.select_dtypes('number')
+
+# Create columns with log of numeric columns
+for col in numeric_subset.columns:
+    # Skip the Energy Star Score column
+    if col == 'score':
+        next
+    else:
+        numeric_subset['log_' + col] = np.log(numeric_subset[col])
+
+# Select the categorical columns
+categorical_subset = data[['Borough', 'Largest Property Use Type']]
+
+# One hot encode
+categorical_subset = pd.get_dummies(categorical_subset)
+
+# Join the two dataframes using concat
+# Make sure to use axis = 1 to perform a column bind
+features = pd.concat([numeric_subset, categorical_subset], axis=1)
+
+print(features.shape)
+
+plot_data = data[[
+    'Weather Normalized Site EUI (kBtu/ft²)', 'Site EUI (kBtu/ft²)'
+]].dropna()
+
+plt.plot(plot_data['Site EUI (kBtu/ft²)'],
+         plot_data['Weather Normalized Site EUI (kBtu/ft²)'], 'bo')
+plt.xlabel('Site EUI')
+plt.ylabel('Weather Norm EUI')
+plt.title('Weather Norm EUI vs Site EUI, R = %0.4f' % np.corrcoef(
+    data[['Weather Normalized Site EUI (kBtu/ft²)', 'Site EUI (kBtu/ft²)'
+          ]].dropna(),
+    rowvar=False)[0][1])
+plt.show()
