@@ -17,6 +17,8 @@ class Menpeeing:
         self.untaken = list(range(0, stalls))
         self.taken = []
         self.new_stall = round(sum(self.untaken) / len(self.untaken) + .5)
+        self.left = self.untaken[1:self.new_stall:2]
+        self.right = self.untaken[self.new_stall + 2::2]
         self.emo_empty = "\U0001F6BD"
         self.emo_taken = "\U0001F6B6"
         self.stall_print = list(self.emo_empty * stalls)
@@ -24,28 +26,21 @@ class Menpeeing:
         self.take_stall()
         self.leave_stall()
 
-    # def oddsevens(self, stalls):
-    #     for number in stalls:
-    #         # checking condition
-    #         if number % 2 != 0:
-    #             self.odds.append(number)
-    #         else:
-    #             self.evens.append(number)
-
-    #     if self.new_stall % 2 != 0:
-    #         self.odds.remove(self.new_stall)
-    #         self.stallisodd = True
-    #     else:
-    #         self.evens.remove(self.new_stall)
-    #         self.stallisodd = False
-
     def take_stall(self):
         # Check if there is any empty stall
-        if len(self.untaken) > 0:
+        if self.untaken:
             if not self.taken:
                 new_stall = self.new_stall
             else:
-                new_stall = random.choice(self.untaken)
+                if self.left:
+                    new_stall = random.choice(self.left)
+                    self.left.remove(new_stall)
+                elif self.right:
+                    new_stall = random.choice(self.right)
+                    self.right.remove(new_stall)
+                else:
+                    new_stall = random.choice(self.untaken)
+
             self.untaken.remove(new_stall)
             self.taken.append(new_stall)
 
