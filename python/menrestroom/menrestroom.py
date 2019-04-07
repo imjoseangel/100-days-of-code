@@ -11,9 +11,16 @@ import threading
 
 
 class Menpeeing:
-    def __init__(self, stalls=10, stallfreq=1):
+    def __init__(self,
+                 stalls=10,
+                 stallfreq=2,
+                 mintimepeeing=1,
+                 maxtimepeeing=10):
         self.stallfreq = stallfreq
-        self.timepeeing = random.randint(10, 30)
+        self.mintimepeeing = mintimepeeing
+        self.maxtimepeeing = maxtimepeeing
+        self.timepeeing = random.randint(self.mintimepeeing,
+                                         self.maxtimepeeing)
         self.untaken = list(range(0, stalls))
         self.taken = []
         self.new_stall = round(sum(self.untaken) / len(self.untaken) + .5)
@@ -21,7 +28,8 @@ class Menpeeing:
         self.right = self.untaken[self.new_stall + 2::2]
         self.emo_empty = "\U0001F6BD"
         self.emo_taken = "\U0001F6B6"
-        self.stall_print = list(self.emo_empty * stalls)
+        self.emo_door = "\U0001F6AA"
+        self.stall_print = list(self.emo_empty * stalls + self.emo_door)
 
         self.take_stall()
         self.leave_stall()
@@ -53,12 +61,14 @@ class Menpeeing:
 
     def leave_stall(self):
         # Pee done
-        if len(self.taken) > 0:
+        if self.taken:
             old_stall = self.taken[0]
             self.taken.remove(old_stall)
             self.untaken.append(old_stall)
             self.stall_print.pop(old_stall)
             self.stall_print.insert(old_stall, self.emo_empty)
+            self.timepeeing = random.randint(self.mintimepeeing,
+                                             self.maxtimepeeing)
 
         threading.Timer(self.timepeeing, self.leave_stall).start()
 
@@ -69,7 +79,7 @@ def main():
 
     newpee = Menpeeing(stalls=10, stallfreq=1)
 
-    while len(newpee.untaken) > 0:
+    while newpee.untaken:
         for item in newpee.stall_print:
             print(item, end=' ', flush=True)
 
