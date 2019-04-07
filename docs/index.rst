@@ -280,3 +280,21 @@ Day 19: April 6, 2019
 
 1. See `Machine Learning Walk-Through <https://github.com/imjoseangel/100-days-of-code/tree/devel/python/machine-learning>`_
 2. See `Original Project <https://morioh.com/p/b56ae6b04ffc/a-complete-machine-learning-project-walk-through-in-python>`_
+
+Day 20: April 7, 2019
+---------------------
+
+**Today's Progress:**
+
+1. Continuing with Machine Learning Project Walk-Through in Python
+2. Finishing Men Restroom Algorithm. Now supporting taking alternate further stalls to the door
+
+**Thoughts:** Fully Working Projects Now. Need to finish Voice Recognition with API, Swagger and SQLLite
+
+.. note:: NFor the ML, only first part
+
+**Link to work:**
+
+1. See `Machine Learning Walk-Through <https://github.com/imjoseangel/100-days-of-code/tree/devel/python/machine-learning>`_
+2. See `Original Project <https://morioh.com/p/b56ae6b04ffc/a-complete-machine-learning-project-walk-through-in-python>`_
+3. See `Men RestRoom Python <https://github.com/imjoseangel/100-days-of-code/blob/devel/python/menrestroom>`_
