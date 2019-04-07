@@ -291,7 +291,7 @@ Day 20: April 7, 2019
 
 **Thoughts:** Fully Working Projects Now. Need to finish Voice Recognition with API, Swagger and SQLLite
 
-.. note:: NFor the ML, only first part
+.. note:: For the ML Project, only finished first part
 
 **Link to work:**
 
