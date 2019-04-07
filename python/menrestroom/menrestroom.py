@@ -44,10 +44,6 @@ class Menpeeing:
                     sum(self.list_untaken) / len(self.list_untaken) + .5)
             else:
                 new_stall = random.choice(self.list_untaken)
-                # if (new_stall + 1) or (new_stall - 1) in LIST_TAKEN:
-                #     print(new_stall)
-                #     new_stall = random.choice(LIST_UNTAKEN)
-                #     print(new_stall)
             self.list_untaken.remove(new_stall)
             self.list_taken.append(new_stall)
 
