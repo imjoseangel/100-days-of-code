@@ -9,76 +9,81 @@ import random
 import time
 import threading
 
-STALLFREQ = 1
-TIMEPEEING = 30
-STALLS = 10
-LIST_UNTAKEN = list(range(0, STALLS))
-LIST_TAKEN = []
-ODD_LIST = []
-EVEN_LIST = []
-STR_EMPTY = "\U0001F6BD"
-STR_TAKEN = "\U0001F6B6"
-STALL_PRINT = list(STR_EMPTY * STALLS)
 
+class Menpeeing:
+    def __init__(self,
+                 stalls=10,
+                 stallfreq=2,
+                 mintimepeeing=1,
+                 maxtimepeeing=10):
+        self.stallfreq = stallfreq
+        self.mintimepeeing = mintimepeeing
+        self.maxtimepeeing = maxtimepeeing
+        self.timepeeing = random.randint(self.mintimepeeing,
+                                         self.maxtimepeeing)
+        self.untaken = list(range(0, stalls))
+        self.taken = []
+        self.new_stall = round(sum(self.untaken) / len(self.untaken) + .5)
+        self.left = self.untaken[1:self.new_stall:2]
+        self.right = self.untaken[self.new_stall + 2::2]
+        self.emo_empty = "\U0001F6BD"
+        self.emo_taken = "\U0001F6B6"
+        self.emo_door = "\U0001F6AA"
+        self.stall_print = list(self.emo_empty * stalls + self.emo_door)
 
-def oddeven_list(takenlist):
-    for number in takenlist:
-        # checking condition
-        if number % 2 != 0:
-            ODD_LIST.append(number)
-        else:
-            EVEN_LIST.append(number)
+        self.take_stall()
+        self.leave_stall()
 
-    return ODD_LIST, EVEN_LIST
+    def take_stall(self):
+        # Check if there is any empty stall
+        if self.untaken:
+            if not self.taken:
+                new_stall = self.new_stall
+            else:
+                if self.left:
+                    new_stall = random.choice(self.left)
+                    self.left.remove(new_stall)
+                elif self.right:
+                    new_stall = random.choice(self.right)
+                    self.right.remove(new_stall)
+                else:
+                    new_stall = random.choice(self.untaken)
 
+            self.untaken.remove(new_stall)
+            self.taken.append(new_stall)
 
-def take_stall():
-    # Check if there is any empty stall
-    if len(LIST_UNTAKEN) > 0:
-        if not LIST_TAKEN:
-            new_stall = round(sum(LIST_UNTAKEN) / len(LIST_UNTAKEN) + .5)
-        else:
-            new_stall = random.choice(LIST_UNTAKEN)
-            # if (new_stall + 1) or (new_stall - 1) in LIST_TAKEN:
-            #     print(new_stall)
-            #     new_stall = random.choice(LIST_UNTAKEN)
-            #     print(new_stall)
-        LIST_UNTAKEN.remove(new_stall)
-        LIST_TAKEN.append(new_stall)
+        self.stall_print.pop(self.taken[-1])
+        self.stall_print.insert(self.taken[-1], self.emo_taken)
 
-    STALL_PRINT.pop(LIST_TAKEN[-1])
-    STALL_PRINT.insert(LIST_TAKEN[-1], STR_TAKEN)
+        threading.Timer(self.stallfreq, self.take_stall).start()
 
-    threading.Timer(STALLFREQ, take_stall).start()
+        return self.untaken, self.taken, self.stall_print
 
-    return LIST_UNTAKEN, LIST_TAKEN, STALL_PRINT
+    def leave_stall(self):
+        # Pee done
+        if self.taken:
+            old_stall = self.taken[0]
+            self.taken.remove(old_stall)
+            self.untaken.append(old_stall)
+            self.stall_print.pop(old_stall)
+            self.stall_print.insert(old_stall, self.emo_empty)
+            self.timepeeing = random.randint(self.mintimepeeing,
+                                             self.maxtimepeeing)
 
+        threading.Timer(self.timepeeing, self.leave_stall).start()
 
-def leave_stall():
-    # Pee done
-    if len(LIST_TAKEN) > 0:
-        old_stall = LIST_TAKEN[0]
-        LIST_TAKEN.remove(old_stall)
-        LIST_UNTAKEN.append(old_stall)
-        STALL_PRINT.pop(old_stall)
-        STALL_PRINT.insert(old_stall, STR_EMPTY)
-
-    threading.Timer(TIMEPEEING, leave_stall).start()
-
-    return LIST_UNTAKEN, LIST_TAKEN, STALL_PRINT
+        return self.untaken, self.taken, self.stall_print
 
 
 def main():
 
-    # peeing = threading.Timer(5.0, leave_stall)
-    take_stall()
-    leave_stall()
+    newpee = Menpeeing(stalls=10, stallfreq=1)
 
-    while len(LIST_UNTAKEN) > 0:
-        for item in STALL_PRINT:
+    while newpee.untaken:
+        for item in newpee.stall_print:
             print(item, end=' ', flush=True)
 
-        time.sleep(STALLFREQ)
+        time.sleep(newpee.stallfreq)
         print('\n')
 
 
