@@ -11,10 +11,9 @@ import threading
 
 
 class Menpeeing:
-    def __init__(self):
-        self.stallfreq = 1
+    def __init__(self, stalls=10, stallfreq=1):
+        self.stallfreq = stallfreq
         self.timepeeing = random.randint(10, 30)
-        stalls = 10
         self.list_untaken = list(range(0, stalls))
         self.list_taken = []
         self.odd_list = []
@@ -70,7 +69,7 @@ class Menpeeing:
 
 def main():
 
-    newpee = Menpeeing()
+    newpee = Menpeeing(stalls=10, stallfreq=1)
 
     while len(newpee.list_untaken) > 0:
         for item in newpee.stall_print:
