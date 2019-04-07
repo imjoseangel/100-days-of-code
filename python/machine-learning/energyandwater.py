@@ -1,10 +1,12 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 """ML Walk-Through"""
-# pylint: disable=R0916, W0104
+# pylint: disable=R0916, W0104, unused-argument
 
 from __future__ import (division, absolute_import, print_function,
                         unicode_literals)
+
+import os
 
 # Pandas and numpy for data manipulation
 import pandas as pd
@@ -31,9 +33,12 @@ plt.rcParams['font.size'] = 24
 # Seaborn Font Size
 sns.set(font_scale=2)
 
+# Get File Directory
+WORK_DIR = os.path.dirname((os.path.realpath(__file__)))
+
 # Read in data into a dataframe
-data = pd.read_csv('data/Energy_and_Water_Data_Disclosure_for\
-_Local_Law_84_2017__Data_for_Calendar_Year_2016_.csv')
+data = pd.read_csv(WORK_DIR + "/data/Energy_and_Water_Data_Disclosure_for\
+_Local_Law_84_2017__Data_for_Calendar_Year_2016_.csv")
 
 # Display top of dataframe
 print(data.head())
@@ -286,7 +291,7 @@ plot_data = plot_data.dropna()
 
 
 # Function to calculate correlation coefficient between two columns
-def corr_func(x, y):
+def corr_func(x, y, **kargs):
     r = np.corrcoef(x, y)[0][1]
     ax = plt.gca()
     ax.annotate(
