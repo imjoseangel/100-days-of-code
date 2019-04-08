@@ -298,3 +298,20 @@ Day 20: April 7, 2019
 1. See `Machine Learning Walk-Through <https://github.com/imjoseangel/100-days-of-code/tree/devel/python/machine-learning>`_
 2. See `Original Project <https://morioh.com/p/b56ae6b04ffc/a-complete-machine-learning-project-walk-through-in-python>`_
 3. See `Men RestRoom Python <https://github.com/imjoseangel/100-days-of-code/blob/devel/python/menrestroom>`_
+
+Day 21: April 8, 2019
+---------------------
+
+**Today's Progress:**
+
+1. How to Generate FiveThirtyEight Graphs in Python
+2. Understanding Data Wrangling
+
+**Thoughts:** Find the way to create beautiful plots with Python
+
+**Link to work:**
+
+1. See `Machine Learning Walk-Through <https://github.com/imjoseangel/100-days-of-code/tree/devel/python/fivethirtyeight>`_
+2. See `Original Documentation from DataQuest <https://www.dataquest.io/blog/making-538-plots/>`_
+3. See `A Comprehensive Introduction to Data Wrangling <https://www.springboard.com/blog/data-wrangling/>`_
+4. See `Data Wrangling Code <https://github.com/imjoseangel/100-days-of-code/tree/devel/python/datawrangling>`_
