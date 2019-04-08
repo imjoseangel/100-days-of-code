@@ -8,6 +8,7 @@ from __future__ import (division, absolute_import, print_function,
 import random
 import time
 import threading
+import os
 
 
 class Menpeeing:
@@ -80,11 +81,16 @@ def main():
     newpee = Menpeeing(stalls=10, stallfreq=1)
 
     while newpee.untaken:
+        os.system('clear')
         for item in newpee.stall_print:
             print(item, end=' ', flush=True)
 
         time.sleep(newpee.stallfreq)
         print('\n')
+
+    os.system('clear')
+    for item in newpee.stall_print:
+        print(item, end=' ', flush=True)
 
 
 if __name__ == '__main__':
