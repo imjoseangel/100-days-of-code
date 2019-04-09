@@ -1,6 +1,5 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-"""Forecasting in Python with Prophet"""
 
 from __future__ import (division, absolute_import, print_function,
                         unicode_literals)
