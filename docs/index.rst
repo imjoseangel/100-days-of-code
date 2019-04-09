@@ -315,3 +315,17 @@ Day 21: April 8, 2019
 2. See `Original Documentation from DataQuest <https://www.dataquest.io/blog/making-538-plots/>`_
 3. See `A Comprehensive Introduction to Data Wrangling <https://www.springboard.com/blog/data-wrangling/>`_
 4. See `Data Wrangling Code <https://github.com/imjoseangel/100-days-of-code/tree/devel/python/datawrangling>`_
+
+Day 22: April 9, 2019
+---------------------
+
+**Today's Progress:**
+
+1. How to Build a Python GUI Application With wxPython
+
+**Thoughts:** Easy to implement, issues with Mac OSX (Class FIFinderSyncExtensionHost)
+
+**Link to work:**
+
+1. See `GUI With wxPython <https://github.com/imjoseangel/100-days-of-code/tree/devel/python/mp3player>`_
+2. See `Original Documentation from Real Python <https://realpython.com/python-gui-with-wxpython/>`_
