@@ -355,5 +355,5 @@ Day 24: April 11, 2019
 
 **Link to work:**
 
-1. See `Code <https://github.com/imjoseangel/100-days-of-code/tree/devel/python/thread`_
+1. See `Code <https://github.com/imjoseangel/100-days-of-code/tree/devel/python/threads`_
 2. See `Original Documentation from Real Python <https://realpython.com/intro-to-python-threading/>`_
