@@ -329,3 +329,31 @@ Day 22: April 9, 2019
 
 1. See `GUI With wxPython <https://github.com/imjoseangel/100-days-of-code/tree/devel/python/mp3player>`_
 2. See `Original Documentation from Real Python <https://realpython.com/python-gui-with-wxpython/>`_
+
+Day 23: April 10, 2019
+---------------------
+
+**Today's Progress:**
+
+1. Interactive Data Visualization in Python With Bokeh
+
+**Thoughts:** First Part of the Tutorial from Real Python
+
+**Link to work:**
+
+1. See `Code <https://github.com/imjoseangel/100-days-of-code/tree/devel/python/interactive-data`_
+2. See `Original Documentation from Real Python <https://realpython.com/python-data-visualization-bokeh/>`_
+
+Day 24: April 11, 2019
+---------------------
+
+**Today's Progress:**
+
+1. An Intro to Threading in Python
+
+**Thoughts:** Tutorial from Real Python. Need to check how to launch two threads from outside the function in the MensRoom Algorithm
+
+**Link to work:**
+
+1. See `Code <https://github.com/imjoseangel/100-days-of-code/tree/devel/python/thread`_
+2. See `Original Documentation from Real Python <https://realpython.com/intro-to-python-threading/>`_
