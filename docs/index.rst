@@ -364,10 +364,13 @@ Day 25: April 10, 2019
 **Today's Progress:**
 
 1. Interactive Data Visualization in Python With Bokeh
+2. Adding FileSystem Magic
 
-**Thoughts:** Second Part of the Tutorial from Real Python
+**Thoughts:** Second Part of Bokeh Tutorial from Real Python. Also added Util Filesystem examples
 
 **Link to work:**
 
-1. See `Code <https://github.com/imjoseangel/100-days-of-code/tree/devel/python/interactive-data`_
-2. See `Original Documentation from Real Python <https://realpython.com/python-data-visualization-bokeh/>`_
+1. See `Bokeh Data Visualization Code <https://github.com/imjoseangel/100-days-of-code/tree/devel/python/interactive-data`_
+2. See `Original Bokeh Documentation from Real Python <https://realpython.com/python-data-visualization-bokeh/>`_
+3. See `FileSystem Magic Code <https://github.com/imjoseangel/100-days-of-code/tree/devel/python/filesystem-magic`_
+4. See `Original FileSystem Magic Documentation from Will Mcgugan <https://www.willmcgugan.com/blog/tech/post/filesystem-magic-with-python/>`_
