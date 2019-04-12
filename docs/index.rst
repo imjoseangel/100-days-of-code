@@ -331,7 +331,7 @@ Day 22: April 9, 2019
 2. See `Original Documentation from Real Python <https://realpython.com/python-gui-with-wxpython/>`_
 
 Day 23: April 10, 2019
----------------------
+----------------------
 
 **Today's Progress:**
 
@@ -345,7 +345,7 @@ Day 23: April 10, 2019
 2. See `Original Documentation from Real Python <https://realpython.com/python-data-visualization-bokeh/>`_
 
 Day 24: April 11, 2019
----------------------
+----------------------
 
 **Today's Progress:**
 
@@ -357,3 +357,17 @@ Day 24: April 11, 2019
 
 1. See `Code <https://github.com/imjoseangel/100-days-of-code/tree/devel/python/threads`_
 2. See `Original Documentation from Real Python <https://realpython.com/intro-to-python-threading/>`_
+
+Day 25: April 10, 2019
+----------------------
+
+**Today's Progress:**
+
+1. Interactive Data Visualization in Python With Bokeh
+
+**Thoughts:** Second Part of the Tutorial from Real Python
+
+**Link to work:**
+
+1. See `Code <https://github.com/imjoseangel/100-days-of-code/tree/devel/python/interactive-data`_
+2. See `Original Documentation from Real Python <https://realpython.com/python-data-visualization-bokeh/>`_
