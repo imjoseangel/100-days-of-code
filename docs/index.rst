@@ -387,4 +387,4 @@ Day 26: April 13, 2019
 
 **Link to work:**
 
-1. See `Bokeh Data Visualization Code <https://github.com/imjoseangel/100-days-of-code/tree/devel/python/mlcookbook>`_
+1. See `Machine Learning Cookbook Code <https://github.com/imjoseangel/100-days-of-code/tree/devel/python/mlcookbook>`_
