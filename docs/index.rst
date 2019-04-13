@@ -23,6 +23,7 @@ Day 1: March 11, 2019
 
 1. See `pylint_check.py <https://github.com/imjoseangel/100-days-of-code/blob/devel/scripts/pylint_check.py>`_
 2. See `wargames Krypton Level0 -> Level1 <http://overthewire.org/wargames/krypton/krypton0.html>`_
+3. See `WarGames Code <https://github.com/imjoseangel/100-days-of-code/blob/devel/python/wargames/>`_
 
 Day 2: March 13, 2019
 ---------------------
@@ -264,7 +265,7 @@ Day 18: April 4, 2019
 
 **Link to work:**
 
-1. See `Machine Learning Walk-Through <https://github.com/imjoseangel/100-days-of-code/tree/devel/python/machine-learning>`_
+1. See `Machine Learning Walk-Through <https://github.com/imjoseangel/100-days-of-code/tree/devel/python/mlenergyandwater>`_
 2. See `Original Project <https://morioh.com/p/b56ae6b04ffc/a-complete-machine-learning-project-walk-through-in-python>`_
 
 Day 19: April 6, 2019
@@ -278,7 +279,7 @@ Day 19: April 6, 2019
 
 **Link to work:**
 
-1. See `Machine Learning Walk-Through <https://github.com/imjoseangel/100-days-of-code/tree/devel/python/machine-learning>`_
+1. See `Machine Learning Walk-Through <https://github.com/imjoseangel/100-days-of-code/tree/devel/python/mlenergyandwater>`_
 2. See `Original Project <https://morioh.com/p/b56ae6b04ffc/a-complete-machine-learning-project-walk-through-in-python>`_
 
 Day 20: April 7, 2019
@@ -295,7 +296,7 @@ Day 20: April 7, 2019
 
 **Link to work:**
 
-1. See `Machine Learning Walk-Through <https://github.com/imjoseangel/100-days-of-code/tree/devel/python/machine-learning>`_
+1. See `Machine Learning Walk-Through <https://github.com/imjoseangel/100-days-of-code/tree/devel/python/mlenergyandwater>`_
 2. See `Original Project <https://morioh.com/p/b56ae6b04ffc/a-complete-machine-learning-project-walk-through-in-python>`_
 3. See `Men RestRoom Python <https://github.com/imjoseangel/100-days-of-code/blob/devel/python/menrestroom>`_
 
@@ -358,7 +359,7 @@ Day 24: April 11, 2019
 1. See `Threading Code <https://github.com/imjoseangel/100-days-of-code/tree/devel/python/threads>`_
 2. See `Original Documentation from Real Python <https://realpython.com/intro-to-python-threading/>`_
 
-Day 25: April 10, 2019
+Day 25: April 12, 2019
 ----------------------
 
 **Today's Progress:**
@@ -374,3 +375,16 @@ Day 25: April 10, 2019
 2. See `Original Bokeh Documentation from Real Python <https://realpython.com/python-data-visualization-bokeh/>`_
 3. See `FileSystem Magic Code <https://github.com/imjoseangel/100-days-of-code/tree/devel/python/filesystem-magic>`_
 4. See `Original FileSystem Magic Documentation from Will Mcgugan <https://www.willmcgugan.com/blog/tech/post/filesystem-magic-with-python/>`_
+
+Day 25: April 13, 2019
+----------------------
+
+**Today's Progress:**
+
+1. Machine Learning CookBook. Understanding Basics
+
+**Thoughts:** Creating Plots to understand the different ML Algorithms and when to use them
+
+**Link to work:**
+
+1. See `Bokeh Data Visualization Code <https://github.com/imjoseangel/100-days-of-code/tree/devel/python/mlcookbook>`_
