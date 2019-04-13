@@ -376,7 +376,7 @@ Day 25: April 12, 2019
 3. See `FileSystem Magic Code <https://github.com/imjoseangel/100-days-of-code/tree/devel/python/filesystem-magic>`_
 4. See `Original FileSystem Magic Documentation from Will Mcgugan <https://www.willmcgugan.com/blog/tech/post/filesystem-magic-with-python/>`_
 
-Day 26  : April 13, 2019
+Day 26: April 13, 2019
 ----------------------
 
 **Today's Progress:**
