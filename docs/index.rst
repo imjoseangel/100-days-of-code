@@ -23,6 +23,7 @@ Day 1: March 11, 2019
 
 1. See `pylint_check.py <https://github.com/imjoseangel/100-days-of-code/blob/devel/scripts/pylint_check.py>`_
 2. See `wargames Krypton Level0 -> Level1 <http://overthewire.org/wargames/krypton/krypton0.html>`_
+3. See `WarGames Code <https://github.com/imjoseangel/100-days-of-code/blob/devel/python/wargames/>`_
 
 Day 2: March 13, 2019
 ---------------------
@@ -264,7 +265,7 @@ Day 18: April 4, 2019
 
 **Link to work:**
 
-1. See `Machine Learning Walk-Through <https://github.com/imjoseangel/100-days-of-code/tree/devel/python/machine-learning>`_
+1. See `Machine Learning Walk-Through <https://github.com/imjoseangel/100-days-of-code/tree/devel/python/mlenergyandwater>`_
 2. See `Original Project <https://morioh.com/p/b56ae6b04ffc/a-complete-machine-learning-project-walk-through-in-python>`_
 
 Day 19: April 6, 2019
@@ -278,7 +279,7 @@ Day 19: April 6, 2019
 
 **Link to work:**
 
-1. See `Machine Learning Walk-Through <https://github.com/imjoseangel/100-days-of-code/tree/devel/python/machine-learning>`_
+1. See `Machine Learning Walk-Through <https://github.com/imjoseangel/100-days-of-code/tree/devel/python/mlenergyandwater>`_
 2. See `Original Project <https://morioh.com/p/b56ae6b04ffc/a-complete-machine-learning-project-walk-through-in-python>`_
 
 Day 20: April 7, 2019
@@ -295,7 +296,7 @@ Day 20: April 7, 2019
 
 **Link to work:**
 
-1. See `Machine Learning Walk-Through <https://github.com/imjoseangel/100-days-of-code/tree/devel/python/machine-learning>`_
+1. See `Machine Learning Walk-Through <https://github.com/imjoseangel/100-days-of-code/tree/devel/python/mlenergyandwater>`_
 2. See `Original Project <https://morioh.com/p/b56ae6b04ffc/a-complete-machine-learning-project-walk-through-in-python>`_
 3. See `Men RestRoom Python <https://github.com/imjoseangel/100-days-of-code/blob/devel/python/menrestroom>`_
 
