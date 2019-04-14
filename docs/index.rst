@@ -388,3 +388,17 @@ Day 26: April 13, 2019
 **Link to work:**
 
 1. See `Machine Learning Cookbook Code <https://github.com/imjoseangel/100-days-of-code/tree/devel/python/mlcookbook>`_
+
+Day 26: April 14, 2019
+----------------------
+
+**Today's Progress:**
+
+1. Machine Learning CookBook. Outliers
+2. 200 Python Problems 
+
+**Thoughts:** Creating Plots to understand the different ML Algorithms and when to use them
+
+**Link to work:**
+
+1. See `Machine Learning Cookbook Code <https://github.com/imjoseangel/100-days-of-code/tree/devel/python/mlcookbook>`_
