@@ -22,7 +22,7 @@ print('Target Vector\n', target[:3])
 
 # Use Style
 plt.style.use('fivethirtyeight')
-plt.title('Make Regression')
+plt.title('Make Blobs')
 
 # View plot
 plt.scatter(features[:, 0], features[:, 1], c=target)
