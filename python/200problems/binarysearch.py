@@ -24,8 +24,7 @@ def binary_search(listsearch, item):
 
 def main():
     my_list = [1, 3, 5, 7, 9]
-    search = binary_search(my_list, 3)
-    print(search)
+    print(binary_search(my_list, 3))
 
 
 if __name__ == '__main__':
