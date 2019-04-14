@@ -19,6 +19,7 @@ asteriskno = 5
 
 
 def main():
+
     for asterisk in range(1, asteriskno):
         print(asterisk * '* ')
     for asterisk in reversed(range(1, asteriskno + 1)):

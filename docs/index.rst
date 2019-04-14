@@ -395,10 +395,14 @@ Day 26: April 14, 2019
 **Today's Progress:**
 
 1. Machine Learning CookBook. Outliers
-2. 200 Python Problems 
+2. 200 Python Problems
 
-**Thoughts:** Creating Plots to understand the different ML Algorithms and when to use them
+.. note:: IMHO, for the 200 Python Problems in Udacity there are better solutions than the exposed. I keep mine in the code as I consider easier to implement in some cases and more accurate in others.
+
+**Thoughts:** Learning about Outliers and Continuing Playing with Python Challengues
 
 **Link to work:**
 
 1. See `Machine Learning Cookbook Code <https://github.com/imjoseangel/100-days-of-code/tree/devel/python/mlcookbook>`_
+2. See `200 Python Problems Code <https://github.com/imjoseangel/100-days-of-code/tree/devel/python/200problems>`_
+3. See `200 Python Problems Site <https://www.udemy.com/python-handon>`_
