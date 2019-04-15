@@ -4,6 +4,32 @@
 from __future__ import (division, absolute_import, print_function,
                         unicode_literals)
 
+# def timing(original_function):
+#     from functools import wraps
+#     from time import time
+
+#     @wraps(original_function)
+#     def wrapper(*args, **kwargs):
+#         start = time()
+#         result = original_function(*args, **kwargs)
+#         end = time()
+#         print('Elapsed time: {}'.format(end - start))
+#         return result
+
+#     return wrapper
+
+
+def time_this(original_function):
+    def timer(*args, **kwargs):
+        import datetime
+        before = datetime.datetime.now()
+        time = original_function(*args, **kwargs)
+        after = datetime.datetime.now()
+        print("Elapsed Time = {0}".format(after - before))
+        return time
+
+    return timer
+
 
 def binary_search(listsearch, item):
     low = 0
@@ -22,9 +48,10 @@ def binary_search(listsearch, item):
     return None
 
 
+@time_this
 def main():
-    my_list = [1, 3, 5, 7, 9]
-    print(binary_search(my_list, 3))
+    my_list = list(range(1, 10000000))
+    print(binary_search(my_list, 9999))
 
 
 if __name__ == '__main__':
