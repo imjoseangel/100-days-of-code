@@ -389,7 +389,7 @@ Day 26: April 13, 2019
 
 1. See `Machine Learning Cookbook Code <https://github.com/imjoseangel/100-days-of-code/tree/devel/python/mlcookbook>`_
 
-Day 26: April 14, 2019
+Day 27: April 14, 2019
 ----------------------
 
 **Today's Progress:**
@@ -406,3 +406,17 @@ Day 26: April 14, 2019
 1. See `Machine Learning Cookbook Code <https://github.com/imjoseangel/100-days-of-code/tree/devel/python/mlcookbook>`_
 2. See `200 Python Problems Code <https://github.com/imjoseangel/100-days-of-code/tree/devel/python/200problems>`_
 3. See `200 Python Problems Site <https://www.udemy.com/python-handon>`_
+
+Day 28: April 15, 2019
+----------------------
+
+**Today's Progress:**
+
+1. Couple of Py, one to understand Binary Search and Decorator for Time Measurement
+
+**Thoughts:** Very useful decorator for future Python Code.
+
+**Link to work:**
+
+1. See `Binary Search <https://github.com/imjoseangel/100-days-of-code/tree/devel/python/200problems/binarysearch.py>`_
+2. See `Time Decorator <https://github.com/imjoseangel/100-days-of-code/tree/devel/python/decorators/timescript.py>`_
