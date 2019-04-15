@@ -4,20 +4,6 @@
 from __future__ import (division, absolute_import, print_function,
                         unicode_literals)
 
-# def timing(original_function):
-#     from functools import wraps
-#     from time import time
-
-#     @wraps(original_function)
-#     def wrapper(*args, **kwargs):
-#         start = time()
-#         result = original_function(*args, **kwargs)
-#         end = time()
-#         print('Elapsed time: {}'.format(end - start))
-#         return result
-
-#     return wrapper
-
 
 def time_this(original_function):
     def timer(*args, **kwargs):
