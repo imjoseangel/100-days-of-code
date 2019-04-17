@@ -420,3 +420,17 @@ Day 28: April 15, 2019
 
 1. See `Binary Search <https://github.com/imjoseangel/100-days-of-code/tree/devel/python/200problems/binarysearch.py>`_
 2. See `Time Decorator <https://github.com/imjoseangel/100-days-of-code/tree/devel/python/decorators/timescript.py>`_
+
+Day 29: April 17, 2019
+----------------------
+
+**Today's Progress:**
+
+1. Playing With Python Types, Part 1
+
+**Thoughts:** Python 3 Types. Annotations and Comments
+
+**Link to work:**
+
+1. See `Code (Cards Game) <https://github.com/imjoseangel/100-days-of-code/tree/devel/python/cardsdeck/game.py>`_
+2. See `Documentation in Real Python <https://realpython.com/python-type-checking/>`_
