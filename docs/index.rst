@@ -432,5 +432,19 @@ Day 29: April 17, 2019
 
 **Link to work:**
 
-1. See `Code (Cards Game) <https://github.com/imjoseangel/100-days-of-code/tree/devel/python/cardsdeck/game.py>`_
+1. See `Code (Cards Deck) <https://github.com/imjoseangel/100-days-of-code/tree/devel/python/cardsdeck/game.py>`_
+2. See `Documentation in Real Python <https://realpython.com/python-type-checking/>`_
+
+Day 30: April 18, 2019
+----------------------
+
+**Today's Progress:**
+
+1. Playing With Python Types, Part 2
+
+**Thoughts:** Python 3 Types. Annotations and Comments. Cards Deck
+
+**Link to work:**
+
+1. See `Code (Cards Deck) <https://github.com/imjoseangel/100-days-of-code/tree/devel/python/cardsdeck/cards.py>`_
 2. See `Documentation in Real Python <https://realpython.com/python-type-checking/>`_
