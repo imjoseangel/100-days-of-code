@@ -13,7 +13,8 @@ from __future__ import (division, absolute_import, print_function,
 
 
 def countdigitletters(mytext):
-    letters = digits = 0
+    letters = 0
+    digits = 0
     for item in mytext:
         if item.isalpha():
             letters += 1
