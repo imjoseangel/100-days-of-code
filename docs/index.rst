@@ -448,3 +448,18 @@ Day 30: April 18, 2019
 
 1. See `Code (Cards Deck) <https://github.com/imjoseangel/100-days-of-code/tree/devel/python/cardsdeck/cards.py>`_
 2. See `Documentation in Real Python <https://realpython.com/python-type-checking/>`_
+
+Day 31: April 28, 2019
+----------------------
+
+**Today's Progress:**
+
+1. Continuing with 200 Problems and Adding Recursive Example from Grokking Algorithms Book
+
+**Thoughts:** One of the best Algorithm Books and with Python Concepts and Examples
+
+**Link to work:**
+
+1. See `Recursive Examples <https://github.com/imjoseangel/100-days-of-code/tree/devel/python/200problems/recursive.py>`_
+2. See `200 Python Problems Code <https://github.com/imjoseangel/100-days-of-code/tree/devel/python/200problems>`_
+3. See `200 Python Problems Site <https://www.udemy.com/python-handon>`_
