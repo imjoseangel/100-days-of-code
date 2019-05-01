@@ -463,3 +463,17 @@ Day 31: April 28, 2019
 1. See `Recursive Examples <https://github.com/imjoseangel/100-days-of-code/tree/devel/python/200problems/recursive.py>`_
 2. See `200 Python Problems Code <https://github.com/imjoseangel/100-days-of-code/tree/devel/python/200problems>`_
 3. See `200 Python Problems Site <https://www.udemy.com/python-handon>`_
+
+Day 32: May 1, 2019
+----------------------
+
+**Today's Progress:**
+
+1. Supercharge Your Classes With Python super()
+
+**Thoughts:** Too complicated in complex code. Be careful using it
+
+**Link to work:**
+
+1. See `Code <https://github.com/imjoseangel/100-days-of-code/tree/devel/python/super/shapes.py>`_
+2. See `Documentation in Real Python <https://realpython.com/python-super/>`_
