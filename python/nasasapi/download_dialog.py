@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+# pylint: disable=W0613
 
 from __future__ import (division, absolute_import, print_function,
                         unicode_literals, annotations)
@@ -41,7 +42,7 @@ class DownloadDialog(wx.Dialog):
             image_urls = []
         return image_urls
 
-    def on_save(self):
+    def on_save(self, event):
         selection = self.list_box.GetSelection()
         if selection != -1:
             with wx.FileDialog(self,

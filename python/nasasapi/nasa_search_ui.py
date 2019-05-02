@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+# pylint: disable=W0613
 
 from __future__ import (division, absolute_import, print_function,
                         unicode_literals, annotations)
@@ -75,7 +76,7 @@ class MainPanel(wx.Panel):
 
         self.SetSizer(main_sizer)
 
-    def on_download(self):
+    def on_download(self, event):
         selection = self.search_results_olv.GetSelectedObject()
         if selection:
             with DownloadDialog(selection) as dlg:
@@ -99,7 +100,7 @@ class MainPanel(wx.Panel):
                     self.search_results.append(result)
             self.update_search_results()
 
-    def on_selection(self):
+    def on_selection(self, event):
         selection = self.search_results_olv.GetSelectedObject()
         self.title.SetValue(f'{selection.title}')
         if selection.thumbnail:
