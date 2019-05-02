@@ -477,3 +477,17 @@ Day 32: May 1, 2019
 
 1. See `Code <https://github.com/imjoseangel/100-days-of-code/tree/devel/python/super/shapes.py>`_
 2. See `Documentation in Real Python <https://realpython.com/python-super/>`_
+
+Day 33: May 2, 2019
+----------------------
+
+**Today's Progress:**
+
+1. Creating a GUI Application for NASA’s API with wxPython
+
+**Thoughts:** Learning Code. Although finished, I will take another day studying it
+
+**Link to work:**
+
+1. See `Code <https://github.com/imjoseangel/100-days-of-code/tree/devel/python/nasasapi/>`_
+2. See `Documentation Mouse vs Python <https://www.blog.pythonlibrary.org/2019/04/18/creating-a-gui-application-for-nasas-api-with-wxpython/>`_
