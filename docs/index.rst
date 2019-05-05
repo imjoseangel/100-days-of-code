@@ -491,3 +491,17 @@ Day 33: May 2, 2019
 
 1. See `Code <https://github.com/imjoseangel/100-days-of-code/tree/devel/python/nasasapi/>`_
 2. See `Documentation Mouse vs Python <https://www.blog.pythonlibrary.org/2019/04/18/creating-a-gui-application-for-nasas-api-with-wxpython/>`_
+
+Day 34: May 2, 2019
+----------------------
+
+**Today's Progress:**
+
+1. Working with functions and decorators
+
+**Thoughts:** Continuing with Complex Decorators and Functions
+
+**Link to work:**
+
+1. See `Code <https://github.com/imjoseangel/100-days-of-code/tree/devel/python/decorators/>`_
+2. See `Documentation in Real Python <https://realpython.com/primer-on-python-decorators/>`_
