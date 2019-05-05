@@ -41,6 +41,11 @@ def greet(name):
     print(f"Hello {name}")
 
 
+@decorators.repeat(num_times=4)
+def greet2(name):
+    print(f"Hello {name}")
+
+
 @decorators.do_twice
 def return_greeting(name):
     print("Creating greeting")
@@ -85,6 +90,7 @@ def main():
     math.factorial = decorators.debug(math.factorial)
     approximate_e(5)
     countdown(3)
+    greet2("World")
 
 
 if __name__ == '__main__':

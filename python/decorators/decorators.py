@@ -16,6 +16,17 @@ def do_twice(func):
     return wrapper_do_twice
 
 
+def repeat(num_times):
+    def decorator_repeat(func):
+        @functools.wraps(func)
+        def wrapper_repeat(*args, **kwargs):
+            for _ in range(num_times):
+                value = func(*args, **kwargs)
+            return value
+        return wrapper_repeat
+    return decorator_repeat
+
+
 def decorator(func):
     @functools.wraps(func)
     def wrapper_decorator(*args, **kwargs):
