@@ -74,8 +74,8 @@ def main():
     # Call the outer function.
     print(factorial(4))
 
-    raise_dos = generate_power(2)
-    print(raise_dos(4))
+    raise_three = generate_power(3)
+    print(raise_three(4))
 
     print(raise_two(5))
 
