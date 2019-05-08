@@ -7,7 +7,10 @@ from __future__ import (division, absolute_import, print_function,
 from datetime import datetime
 import math
 import functools
+from flask import Flask, request
 import decorators
+
+app = Flask(__name__)
 
 
 def not_during_the_night(func):
@@ -126,6 +129,14 @@ def volume(radius, height):
 @decorators.use_unit("meters per second")
 def average_speed(distance, duration):
     return distance / duration
+
+
+@app.route("/grade", methods=["POST"])
+@decorators.validate_json("student_id")
+def update_grade():
+    json_data = request.get_json()
+    # Update database.
+    return json_data
 
 
 def main():

@@ -6,6 +6,7 @@ from __future__ import (division, absolute_import, print_function,
 
 import functools
 import time
+from flask import request, abort
 import pint
 
 
@@ -177,3 +178,16 @@ def use_unit(unit):
             return value * use_unit.ureg(unit)
         return wrapper_use_unit
     return decorator_use_unit
+
+
+def validate_json(*expected_args):
+    def decorator_validate_json(func):
+        @functools.wraps(func)
+        def wrapper_validate_json(*args, **kwargs):
+            json_object = request.get_json()
+            for expected_arg in expected_args:
+                if expected_arg not in json_object:
+                    abort(400)
+            return func(*args, **kwargs)
+        return wrapper_validate_json
+    return decorator_validate_json
