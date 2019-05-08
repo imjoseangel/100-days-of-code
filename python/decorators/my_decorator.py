@@ -6,7 +6,11 @@ from __future__ import (division, absolute_import, print_function,
 
 from datetime import datetime
 import math
+import functools
+from flask import Flask, request
 import decorators
+
+app = Flask(__name__)
 
 
 def not_during_the_night(func):
@@ -70,13 +74,69 @@ def approximate_e(terms=18):
     return sum(1 / math.factorial(n) for n in range(terms))
 
 
-@decorators.slow_down
+@decorators.slow_down(rate=2)
 def countdown(from_number):
     if from_number < 1:
         print("Liftoff!")
     else:
         print(from_number)
         countdown(from_number - 1)
+
+
+@decorators.count_calls
+def say_whee2():
+    print("Whee!")
+
+
+@decorators.CountCalls
+def say_whee3():
+    print("Whee!")
+
+
+@decorators.singleton
+class TheOne:
+    pass
+
+
+@decorators.cache
+@decorators.count_calls
+def fibonacci(num):
+    if num < 2:
+        return num
+    return fibonacci(num - 1) + fibonacci(num - 2)
+
+
+@decorators.count_calls
+def nocache_fibonacci(num):
+    if num < 2:
+        return num
+    return fibonacci(num - 1) + fibonacci(num - 2)
+
+
+@functools.lru_cache(maxsize=4)
+def fibonaccifunc(num):
+    print(f"Calculating fibonacci({num})")
+    if num < 2:
+        return num
+    return fibonacci(num - 1) + fibonacci(num - 2)
+
+
+@decorators.set_unit("cm^3")
+def volume(radius, height):
+    return math.pi * radius**2 * height
+
+
+@decorators.use_unit("meters per second")
+def average_speed(distance, duration):
+    return distance / duration
+
+
+@app.route("/grade", methods=["POST"])
+@decorators.validate_json("student_id")
+def update_grade():
+    json_data = request.get_json()
+    # Update database.
+    return json_data
 
 
 def main():
@@ -91,6 +151,36 @@ def main():
     approximate_e(5)
     countdown(3)
     greet2("World")
+    say_whee2()
+    say_whee2()
+    print(say_whee2.num_calls)
+    counter = decorators.Counter()
+    counter()
+    counter()
+    say_whee3()
+    say_whee3()
+    print(say_whee3.num_calls)
+    first_one = TheOne()
+    another_one = TheOne()
+    print(id(first_one))
+    print(id(another_one))
+    print(first_one is another_one)
+    nocache_fibonacci(10)
+    print(nocache_fibonacci.num_calls)
+    print(fibonacci(10))
+    print(fibonacci(8))
+    fibonaccifunc(10)
+    fibonaccifunc(8)
+    fibonaccifunc(5)
+    fibonaccifunc(8)
+    fibonaccifunc(5)
+    print(fibonaccifunc.cache_info())
+    print(volume(3, 5))
+    print(volume.unit)
+    bolt = average_speed(100, 9.58)
+    print(bolt)
+    print(bolt.to("km per hour"))
+    print(bolt.to("mph").m)
 
 
 if __name__ == '__main__':

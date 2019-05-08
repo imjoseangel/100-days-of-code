@@ -519,3 +519,17 @@ Day 35: May 6, 2019
 
 1. See `Code <https://github.com/imjoseangel/100-days-of-code/tree/devel/python/functions/encapsulation.py>`_
 2. See `Documentation in Real Python <https://realpython.com/inner-functions-what-are-they-good-for/>`_
+
+Day 36: May 8, 2019
+----------------------
+
+**Today's Progress:**
+
+1. Finalizing decorators
+
+**Thoughts:** Continuing with Complex Decorators and Classes Decorators
+
+**Link to work:**
+
+1. See `Code <https://github.com/imjoseangel/100-days-of-code/tree/devel/python/decorators/>`_
+2. See `Documentation in Real Python <https://realpython.com/primer-on-python-decorators/>`_
