@@ -533,3 +533,17 @@ Day 36: May 8, 2019
 
 1. See `Code <https://github.com/imjoseangel/100-days-of-code/tree/devel/python/decorators/>`_
 2. See `Documentation in Real Python <https://realpython.com/primer-on-python-decorators/>`_
+
+Day 37: May 9, 2019
+----------------------
+
+**Today's Progress:**
+
+1. Thinking Recursively
+
+**Thoughts:** Recursive Functions as learned in Grokking Algorithms Book
+
+**Link to work:**
+
+1. See `Code <https://github.com/imjoseangel/100-days-of-code/tree/devel/python/recursive/>`_
+2. See `Documentation in Real Python <https://realpython.com/python-thinking-recursively/>`_
