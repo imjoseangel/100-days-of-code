@@ -547,3 +547,17 @@ Day 37: May 9, 2019
 
 1. See `Code <https://github.com/imjoseangel/100-days-of-code/tree/devel/python/recursive/>`_
 2. See `Documentation in Real Python <https://realpython.com/python-thinking-recursively/>`_
+
+Day 38: May 12, 2019
+----------------------
+
+**Today's Progress:**
+
+1. Lambda, Args and Kwargs exercises
+
+**Thoughts:** Really easy so far to understand. Now is the time to play with these concepts and understand them quickly
+
+**Link to work:**
+
+1. See `Code <https://github.com/imjoseangel/100-days-of-code/tree/devel/python/argskwargs/>`_
+2. See `Code <https://github.com/imjoseangel/100-days-of-code/tree/devel/python/lambda/>`_
