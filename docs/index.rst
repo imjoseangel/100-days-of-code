@@ -561,3 +561,20 @@ Day 38: May 12, 2019
 
 1. See `Code <https://github.com/imjoseangel/100-days-of-code/tree/devel/python/argskwargs/>`_
 2. See `Code <https://github.com/imjoseangel/100-days-of-code/tree/devel/python/lambda/>`_
+
+Day 39: May 17, 2019
+----------------------
+
+**Today's Progress:**
+
+1. Sammy’s Generators in Python
+2. Things you’re probably not using in Python 3 – but should
+
+**Thoughts:** One pending from long time ago, another cool one about Python 3
+
+**Link to work:**
+
+1. See `Code <https://github.com/imjoseangel/100-days-of-code/tree/devel/python/generators/>`_
+2. See `Documentation in Medium <https://medium.com/canopy-tax/sammys-generators-in-python-57e43386b89e>`_
+3. See `Code <https://github.com/imjoseangel/100-days-of-code/tree/devel/python/python3should/>`_
+4. See `Documentation in Data, what now? <https://datawhatnow.com/things-you-are-probably-not-using-in-python-3-but-should/>`_
