@@ -578,3 +578,17 @@ Day 39: May 17, 2019
 2. See `Documentation in Medium <https://medium.com/canopy-tax/sammys-generators-in-python-57e43386b89e>`_
 3. See `Code <https://github.com/imjoseangel/100-days-of-code/tree/devel/python/python3should/>`_
 4. See `Documentation in Data, what now? <https://datawhatnow.com/things-you-are-probably-not-using-in-python-3-but-should/>`_
+
+Day 40: May 18, 2019
+----------------------
+
+**Today's Progress:**
+
+1. Faster Parallel Python with ray
+
+**Thoughts:** Ray is really nice one to give it a try. Easy to install and implement.
+
+**Link to work:**
+
+1. See `Code <https://github.com/imjoseangel/100-days-of-code/tree/devel/python/fasterparallel/>`_
+2. See `Documentation in Medium <https://towardsdatascience.com/10x-faster-parallel-python-without-python-multiprocessing-e5017c93cce1>`_
