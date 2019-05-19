@@ -592,3 +592,17 @@ Day 40: May 18, 2019
 
 1. See `Code <https://github.com/imjoseangel/100-days-of-code/tree/devel/python/fasterparallel/>`_
 2. See `Documentation in Medium <https://towardsdatascience.com/10x-faster-parallel-python-without-python-multiprocessing-e5017c93cce1>`_
+
+Day 41: May 19, 2019
+----------------------
+
+**Today's Progress:**
+
+1. Speed Up Your Python Program With Concurrency
+
+**Thoughts:** Threading, AsyncIO and Multiprocessing
+
+**Link to work:**
+
+1. See `Code <https://github.com/imjoseangel/100-days-of-code/tree/devel/python/concurrency/>`_
+2. See `Documentation in Real Python <https://realpython.com/python-concurrency/>`_
