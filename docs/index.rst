@@ -606,3 +606,19 @@ Day 41: May 19, 2019
 
 1. See `Code <https://github.com/imjoseangel/100-days-of-code/tree/devel/python/concurrency/>`_
 2. See `Documentation in Real Python <https://realpython.com/python-concurrency/>`_
+
+Day 42: May 25, 2019
+----------------------
+
+**Today's Progress:**
+
+1. Web Scraping with Scrapy: Advanced Examples
+
+.. note:: Whole week busy reviewing Python for Games Book.
+
+**Thoughts:** Nice to see but doesn't add inmediate value to my projects. Most of the examples found are incompleted or not properly documented.
+
+**Link to work:**
+
+1. See `Code <https://github.com/imjoseangel/100-days-of-code/tree/devel/python/webscrapping/>`_
+2. See `Documentation in Kite.com <https://kite.com/blog/python/web-scraping-scrapy>`_
