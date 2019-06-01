@@ -5,8 +5,8 @@ from __future__ import (division, absolute_import, print_function,
                         unicode_literals)
 
 # Load library
-import pandas as pd
 import numpy as np
+import pandas as pd
 
 # Create DataFrame
 houses = pd.DataFrame()

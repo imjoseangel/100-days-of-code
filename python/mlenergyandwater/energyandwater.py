@@ -9,8 +9,8 @@ from __future__ import (division, absolute_import, print_function,
 import os
 
 # Pandas and numpy for data manipulation
-import pandas as pd
 import numpy as np
+import pandas as pd
 
 # Seaborn for visualization
 import seaborn as sns
@@ -253,18 +253,17 @@ features['Largest Property Use Type'] = data.dropna(
 features = features[features['Largest Property Use Type'].isin(types)]
 
 # Use seaborn to plot a scatterplot of Score vs Log Source EUI
-sns.lmplot(
-    'Site EUI (kBtu/ft²)',
-    'score',
-    hue='Largest Property Use Type',
-    data=features,
-    scatter_kws={
-        'alpha': 0.8,
-        's': 60
-    },
-    fit_reg=False,
-    size=12,
-    aspect=1.2)
+sns.lmplot('Site EUI (kBtu/ft²)',
+           'score',
+           hue='Largest Property Use Type',
+           data=features,
+           scatter_kws={
+               'alpha': 0.8,
+               's': 60
+           },
+           fit_reg=False,
+           size=12,
+           aspect=1.2)
 
 # Plot labeling
 plt.xlabel("Site EUI", size=28)
@@ -297,8 +296,10 @@ plot_data = plot_data.dropna()
 def corr_func(x, y, **kargs):
     r = np.corrcoef(x, y)[0][1]
     ax = plt.gca()
-    ax.annotate(
-        "r = {:.2f}".format(r), xy=(.2, .8), xycoords=ax.transAxes, size=20)
+    ax.annotate("r = {:.2f}".format(r),
+                xy=(.2, .8),
+                xycoords=ax.transAxes,
+                size=20)
 
 
 # Create the pairgrid object
@@ -436,8 +437,10 @@ targets = pd.DataFrame(score['score'])
 features = features.replace({np.inf: np.nan, -np.inf: np.nan})
 
 # Split into 70% training and 30% testing set
-X, X_test, y, y_test = train_test_split(
-    features, targets, test_size=0.3, random_state=42)
+X, X_test, y, y_test = train_test_split(features,
+                                        targets,
+                                        test_size=0.3,
+                                        random_state=42)
 
 print(X.shape)
 print(X_test.shape)
@@ -453,8 +456,8 @@ def mae(y_true, y_pred):
 baseline_guess = np.median(y)
 
 print('The baseline guess is a score of %0.2f' % baseline_guess)
-print("Baseline Performance on the test set: MAE = %0.4f" % mae(
-    y_test, baseline_guess))
+print("Baseline Performance on the test set: MAE = %0.4f" %
+      mae(y_test, baseline_guess))
 
 # Save the no scores, training, and testing data
 no_score.to_csv(WORK_DIR + '/data/no_score.csv', index=False)
