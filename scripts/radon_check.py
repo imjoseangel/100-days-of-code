@@ -54,13 +54,12 @@ def main():
             if filename.endswith('.py'):
                 pythonfile = os.path.join(dirpath, filename)
                 try:
-                    proc = subprocess.Popen(
-                        'radon cc %s' % pythonfile,
-                        shell=True,
-                        executable="/bin/bash",
-                        stdin=None,
-                        stdout=PIPE,
-                        stderr=STDOUT)
+                    proc = subprocess.Popen('radon cc %s' % pythonfile,
+                                            shell=True,
+                                            executable="/bin/bash",
+                                            stdin=None,
+                                            stdout=PIPE,
+                                            stderr=STDOUT)
                     proc.wait()
 
                     asterisks()

@@ -622,3 +622,24 @@ Day 42: May 25, 2019
 
 1. See `Code <https://github.com/imjoseangel/100-days-of-code/tree/devel/python/webscrapping/>`_
 2. See `Documentation in Kite.com <https://kite.com/blog/python/web-scraping-scrapy>`_
+
+
+Day 43: June 1, 2019
+----------------------
+
+**Today's Progress:**
+
+1. Logging, Setter and Pointers Like in Python
+2. Change Travis Version to 3.7
+
+.. note:: Whole week busy reviewing Python for Games Book.
+
+**Thoughts:** Still checking logging. Need to find a better way to setup Travis CI for only commited files
+
+**Link to work:**
+
+1. See `Code for Logging <https://github.com/imjoseangel/100-days-of-code/tree/devel/python/logging/>`_
+2. See `Code for Pointers <https://github.com/imjoseangel/100-days-of-code/tree/devel/python/pointers/>`_
+3. See `Code for Decorators <https://github.com/imjoseangel/100-days-of-code/tree/devel/python/decorators/>`_
+4. See `Logging Documentation in Real Python <https://realpython.com/python-logging-source-code/>`_
+5. See `Pointers Documentation in Real Python <https://realpython.com/pointers-in-python//>`_

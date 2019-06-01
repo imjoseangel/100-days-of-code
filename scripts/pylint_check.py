@@ -58,13 +58,12 @@ def main():
                 print("Filename: %s" % pythonfile)
                 asterisks()
 
-                proc = subprocess.Popen(
-                    'pylint %s' % pythonfile,
-                    shell=True,
-                    executable="/bin/bash",
-                    stdin=None,
-                    stdout=PIPE,
-                    stderr=STDOUT)
+                proc = subprocess.Popen('pylint %s' % pythonfile,
+                                        shell=True,
+                                        executable="/bin/bash",
+                                        stdin=None,
+                                        stdout=PIPE,
+                                        stderr=STDOUT)
                 proc.wait()
 
                 for line in iter(proc.stdout.readline, b''):
