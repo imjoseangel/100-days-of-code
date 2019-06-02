@@ -5,9 +5,9 @@
 from __future__ import (division, absolute_import, print_function,
                         unicode_literals)
 
+import numpy as np
 from mpl_toolkits.axes_grid1.axes_divider import make_axes_locatable
 import matplotlib.pyplot as plt
-import numpy as np
 
 x = np.diag(np.arange(2, 12))[::-1]
 x[np.diag_indices_from(x[::-1])] = np.arange(2, 12)

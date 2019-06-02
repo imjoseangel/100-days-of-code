@@ -623,7 +623,6 @@ Day 42: May 25, 2019
 1. See `Code <https://github.com/imjoseangel/100-days-of-code/tree/devel/python/webscrapping/>`_
 2. See `Documentation in Kite.com <https://kite.com/blog/python/web-scraping-scrapy>`_
 
-
 Day 43: June 1, 2019
 ----------------------
 
@@ -643,3 +642,24 @@ Day 43: June 1, 2019
 3. See `Code for Decorators <https://github.com/imjoseangel/100-days-of-code/tree/devel/python/decorators/>`_
 4. See `Logging Documentation in Real Python <https://realpython.com/python-logging-source-code/>`_
 5. See `Pointers Documentation in Real Python <https://realpython.com/pointers-in-python//>`_
+
+Day 44: June 2, 2019
+----------------------
+
+**Today's Progress:**
+
+1. Functional programming from Julien Danjou Blog
+2. Custom Exceptions from Dan Bader
+3. Logging Debugging
+4. Some Linter Fixing
+
+**Thoughts:** Nice to see but doesn't add inmediate value to my projects. Most of the examples found are incompleted or not properly documented.
+
+**Link to work:**
+
+1. See `Code for Functional Programming <https://github.com/imjoseangel/100-days-of-code/tree/devel/python/functionalprog/>`_
+2. See `Code for Custom Exceptions <https://github.com/imjoseangel/100-days-of-code/tree/devel/python/customexceptions/>`_
+3. See `Code for Logging <https://github.com/imjoseangel/100-days-of-code/tree/devel/python/logging/>`_
+4. See `Documentation in julien.danjou.info for Functional Programming <https://julien.danjou.info/python-and-functional-programming/>`_
+5. See `Documentation in dbader.org for Custom Exceptions <https://dbader.org/blog/python-custom-exceptions/>`_
+6. See `Logging Documentation in Real Python <https://realpython.com/python-logging-source-code/>`_
