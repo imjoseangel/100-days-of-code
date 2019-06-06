@@ -663,3 +663,17 @@ Day 44: June 2, 2019
 4. See `Documentation in julien.danjou.info for Functional Programming <https://julien.danjou.info/python-and-functional-programming/>`_
 5. See `Documentation in dbader.org for Custom Exceptions <https://dbader.org/blog/python-custom-exceptions/>`_
 6. See `Logging Documentation in Real Python <https://realpython.com/python-logging-source-code/>`_
+
+Day 45: June 6, 2019
+----------------------
+
+**Today's Progress:**
+
+1. Prometheus and ML for Kubernetes Scale
+
+**Thoughts:** Good Linux Academy Training to understand Prometheus API and reinforce ML Concepts for Linear Regression.
+
+**Link to work:**
+
+1. See `Code <https://github.com/imjoseangel/100-days-of-code/tree/devel/python/prometheus/>`_
+2. See `Course on Linux Academy <https://linuxacademy.com/cp/modules/view/id/304>`_
