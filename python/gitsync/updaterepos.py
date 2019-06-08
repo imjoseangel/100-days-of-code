@@ -14,9 +14,9 @@ class runupdate():
     def __init__(self):
 
         self.commands = {
-            "remote prunte origin": "Pruning branches for {0}",
-            "pull origin develop": "Pulling new code on {0}",
-            "fetch -t": "Updating tags for {0}"
+            "remote prune origin": "* Pruning branches",
+            "pull origin develop": "* Pulling new code",
+            "fetch -t": "* Updating tags\n"
         }
 
         # Parse arguments passed at cli
@@ -29,24 +29,31 @@ class runupdate():
     def get_directories(directory):
         return next(os.walk(directory))[1]
 
+    @staticmethod
+    def asterisks(title):
+
+        _, columns = os.popen('stty size', 'r').read().split()
+        print('[{0}]'.format(title),
+              '*' * (int(columns) - int(len(title)) - 3) + '\n')
+
     def update_git(self):
-        for command in self.commands:
-            print(self.commands[command])
 
         directories = self.get_directories(self.args.basedir)
         for directory in directories:
             dir_fullpath = self.args.basedir + '/' + directory
             subdirs = self.get_directories(dir_fullpath)
             if '.git' in subdirs:
-                proc = subprocess.Popen("git remote prune origin",
-                                        shell=True,
-                                        executable="/bin/bash",
-                                        cwd=dir_fullpath,
-                                        stdin=None,
-                                        stdout=subprocess.PIPE,
-                                        stderr=subprocess.STDOUT)
-                proc.wait()
-                print("Pruning branches for {0}".format(directory))
+                self.asterisks(directory)
+                for command in self.commands:
+                    proc = subprocess.Popen("git {0}".format(command),
+                                            shell=True,
+                                            executable="/bin/bash",
+                                            cwd=dir_fullpath,
+                                            stdin=None,
+                                            stdout=subprocess.PIPE,
+                                            stderr=subprocess.STDOUT)
+                    proc.wait()
+                    print(self.commands[command])
 
     def parse_arguments(self):
         parser = argparse.ArgumentParser(description='Update Git Repositories')
