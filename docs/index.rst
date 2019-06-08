@@ -677,3 +677,16 @@ Day 45: June 6, 2019
 
 1. See `Code <https://github.com/imjoseangel/100-days-of-code/tree/devel/python/prometheus/>`_
 2. See `Course on Linux Academy <https://linuxacademy.com/cp/modules/view/id/304>`_
+
+Day 46: June 8, 2019
+----------------------
+
+**Today's Progress:**
+
+1. Script to Update Git Repositories given a path
+
+**Thoughts:** I have used git commands instead git module to use standard libraries
+
+**Link to work:**
+
+1. See `Code <https://github.com/imjoseangel/100-days-of-code/tree/devel/python/gitsync/>`_
