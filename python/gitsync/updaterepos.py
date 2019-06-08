@@ -13,8 +13,16 @@ fallback_args = dict(basedir=os.path.dirname((os.path.realpath(__file__))))
 class runupdate():
     def __init__(self):
 
+        self.commands = {
+            "remote prunte origin": "Pruning branches for {0}",
+            "pull origin develop": "Pulling new code on {0}",
+            "fetch -t": "Updating tags for {0}"
+        }
+
         # Parse arguments passed at cli
         self.parse_arguments()
+
+        # Update Git Directories
         self.update_git()
 
     @staticmethod
@@ -22,6 +30,9 @@ class runupdate():
         return next(os.walk(directory))[1]
 
     def update_git(self):
+        for command in self.commands:
+            print(self.commands[command])
+
         directories = self.get_directories(self.args.basedir)
         for directory in directories:
             dir_fullpath = self.args.basedir + '/' + directory
@@ -35,8 +46,7 @@ class runupdate():
                                         stdout=subprocess.PIPE,
                                         stderr=subprocess.STDOUT)
                 proc.wait()
-                for line in iter(proc.stdout.readline, b''):
-                    print(line)
+                print("Pruning branches for {0}".format(directory))
 
     def parse_arguments(self):
         parser = argparse.ArgumentParser(description='Update Git Repositories')
