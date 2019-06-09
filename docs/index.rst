@@ -690,3 +690,17 @@ Day 46: June 8, 2019
 **Link to work:**
 
 1. See `Code <https://github.com/imjoseangel/100-days-of-code/tree/devel/python/gitsync/>`_
+
+Day 47: June 9, 2019
+----------------------
+
+**Today's Progress:**
+
+1. Refresh some ML Concepts - Linear Regression
+
+**Thoughts:** Good to remember some concepts and code as this is not in my daily tasks
+
+**Link to work:**
+
+1. See `Code <https://github.com/imjoseangel/100-days-of-code/tree/devel/python/mltraining/>`_
+2. See `Training on GitHub <https://github.com/machinelearningmindset/machine-learning-course>`_
