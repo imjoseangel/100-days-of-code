@@ -704,3 +704,17 @@ Day 47: June 9, 2019
 
 1. See `Code <https://github.com/imjoseangel/100-days-of-code/tree/devel/python/mltraining/>`_
 2. See `Training on GitHub <https://github.com/machinelearningmindset/machine-learning-course>`_
+
+Day 48: June 10, 2019
+----------------------
+
+**Today's Progress:**
+
+1. Python Curses Tutorial. Wrapper and CleanUp added to *centertext.py*
+
+**Thoughts:** Nice tutorial to implement in shell scripts. I will modify yesterday's script for better output
+
+**Link to work:**
+
+1. See `Code <https://github.com/imjoseangel/100-days-of-code/tree/devel/python/cursesprog/>`_
+2. See `Document on Dev_Dungeon <https://www.devdungeon.com/content/curses-programming-python>`_
