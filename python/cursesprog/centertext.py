@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+# pylint: disable=unused-argument
 
 from __future__ import (division, absolute_import, print_function,
                         unicode_literals, annotations)
@@ -27,7 +28,7 @@ def print_center(message):
     screen.refresh()
 
 
-def main():
+def main(main_screen):
 
     print_center("Hello from the center!")
 
