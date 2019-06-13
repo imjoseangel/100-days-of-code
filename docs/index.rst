@@ -718,3 +718,17 @@ Day 48: June 10, 2019
 
 1. See `Code <https://github.com/imjoseangel/100-days-of-code/tree/devel/python/cursesprog/>`_
 2. See `Document on Dev_Dungeon <https://www.devdungeon.com/content/curses-programming-python>`_
+
+Day 49: June 13, 2019
+----------------------
+
+**Today's Progress:**
+
+1. Refresh some ML Concepts - Regularization
+
+**Thoughts:** New Concepts Ridge and Lasso to avoid Overfitting
+
+**Link to work:**
+
+1. See `Code <https://github.com/imjoseangel/100-days-of-code/tree/devel/python/mltraining/>`_
+2. See `Training on GitHub <https://github.com/machinelearningmindset/machine-learning-course>`_
