@@ -732,3 +732,19 @@ Day 49: June 13, 2019
 
 1. See `Code <https://github.com/imjoseangel/100-days-of-code/tree/devel/python/mltraining/>`_
 2. See `Training on GitHub <https://github.com/machinelearningmindset/machine-learning-course>`_
+
+Day 50: June 14, 2019
+----------------------
+
+**Today's Progress:**
+
+1. Learning and Refreshing some ML Concepts - Cross Validation and Decision Trees
+
+**Thoughts:** Cool Maths explaining Decision Trees and Gini Index
+
+**Link to work:**
+
+1. See `Code <https://github.com/imjoseangel/100-days-of-code/tree/devel/python/mltraining/>`_
+2. See `Training on GitHub <https://github.com/machinelearningmindset/machine-learning-course>`_
+3. See `Decision Trees <http://www.cs.cmu.edu/~bhiksha/courses/10-601/decisiontrees/>`_
+4. See `A visual introduction to machine learning <http://www.r2d3.us/visual-intro-to-machine-learning-part-1/>`_
