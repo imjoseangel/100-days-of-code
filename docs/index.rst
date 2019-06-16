@@ -748,3 +748,18 @@ Day 50: June 14, 2019
 2. See `Training on GitHub <https://github.com/machinelearningmindset/machine-learning-course>`_
 3. See `Decision Trees <http://www.cs.cmu.edu/~bhiksha/courses/10-601/decisiontrees/>`_
 4. See `A visual introduction to machine learning <http://www.r2d3.us/visual-intro-to-machine-learning-part-1/>`_
+
+Day 51: June 16, 2019
+----------------------
+
+**Today's Progress:**
+
+1. Python Concepts Classes, Instances and Static Methods
+
+**Thoughts:** Studying  Different Python Concepts and Tricks
+
+**Link to work:**
+
+1. See `Code <https://github.com/imjoseangel/100-days-of-code/tree/devel/python/baseclasses/>`_
+2. See `Code <https://github.com/imjoseangel/100-days-of-code/tree/devel/python/classvsinstancevars/>`_
+3. See `Code <https://github.com/imjoseangel/100-days-of-code/tree/devel/python/instanceclassstatic/>`_
