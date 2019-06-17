@@ -763,3 +763,17 @@ Day 51: June 16, 2019
 1. See `Code <https://github.com/imjoseangel/100-days-of-code/tree/devel/python/baseclasses/>`_
 2. See `Code <https://github.com/imjoseangel/100-days-of-code/tree/devel/python/classvsinstancevars/>`_
 3. See `Code <https://github.com/imjoseangel/100-days-of-code/tree/devel/python/instanceclassstatic/>`_
+
+Day 52: June 17, 2019
+----------------------
+
+**Today's Progress:**
+
+1. Creating Twitter Bot
+
+**Thoughts:** Create Toy to play with Twitter API
+
+**Link to work:**
+
+1. See `Code <https://github.com/imjoseangel/100-days-of-code/tree/devel/python/twitter/>`_
+2. See `First part of the Twitter Bot Documentation in Real Python <https://realpython.com/twitter-bot-python-tweepy/>`_
