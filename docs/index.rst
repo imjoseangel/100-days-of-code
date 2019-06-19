@@ -777,3 +777,19 @@ Day 52: June 17, 2019
 
 1. See `Code <https://github.com/imjoseangel/100-days-of-code/tree/devel/python/twitter/>`_
 2. See `First part of the Twitter Bot Documentation in Real Python <https://realpython.com/twitter-bot-python-tweepy/>`_
+
+Day 53: June 19, 2019
+----------------------
+
+**Today's Progress:**
+
+1. Continue with Twitter Bot
+
+**Thoughts:** Continue with Toy to play with Twitter API
+
+.. note:: Got the Docker properly working as there is a missing line in the Documentation.
+
+**Link to work:**
+
+1. See `Code <https://github.com/imjoseangel/100-days-of-code/tree/devel/python/twitter/>`_
+2. See `Second part of the Twitter Bot Documentation in Real Python <https://realpython.com/twitter-bot-python-tweepy/>`_

@@ -1,12 +1,25 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+# pylint: disable=arguments-differ,super-init-not-called
 
 from __future__ import (division, absolute_import, print_function,
                         unicode_literals)
+
 import ast
 import os
 import tweepy
-# pip install PySocks oauthlib tweepy
+
+
+class MyStreamListener(tweepy.StreamListener):
+    def __init__(self, api):
+        self.api = api
+        self.me = api.me()
+
+    def on_status(self, tweet):
+        print(f"{tweet.user.name}:{tweet.text}")
+
+    def on_error(self, status):
+        print(f"Error detected: {status}")
 
 
 def asterisks(title):
@@ -95,6 +108,25 @@ def main():
     for trend in trends_result[0]["trends"]:
         print(trend["name"])
     print("\n")
+
+    # Cursors
+    asterisks("Cursors")
+    for tweet in tweepy.Cursor(api.home_timeline).items(100):
+        print(f"{tweet.user.name} said: {tweet.text}")
+    print("\n")
+
+    # Streaming
+    asterisks("Streaming")
+    tweets_listener = MyStreamListener(api)
+    stream = tweepy.Stream(api.auth, tweets_listener)
+    stream.filter(track=["Python", "Django", "Tweepy", "thorne"],
+                  languages=["en"])
+
+    # # Follow and Favorite
+    # tweets = api.mentions_timeline()
+    # for tweet in tweets:
+    #     tweet.favorite()
+    #     tweet.user.follow()
 
 
 if __name__ == '__main__':

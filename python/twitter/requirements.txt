@@ -1,0 +1,10 @@
+six>=1.10.0
+requests-oauthlib>=0.7.0
+requests>=2.11.1
+PySocks>=1.5.7
+oauthlib>=3.0.0
+chardet<3.1.0,>=3.0.2
+urllib3<1.25,>=1.21.1
+idna<2.9,>=2.5
+certifi>=2017.4.17
+tweepy==3.7.0
