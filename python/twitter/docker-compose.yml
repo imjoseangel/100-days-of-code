@@ -6,9 +6,9 @@ services:
     stdin_open: true
     image: "fav-retweet-bot"
     environment:
-      - CONSUMER_KEY="gMlsKSd4RxxhxB5ai2kBIrkFX"
-      - CONSUMER_SECRET="h6uJCXE5Qqd06sctQbhij0fNCfm7IHqqQxRaFhh8ZxOBwOlMmU"
-      - ACCESS_TOKEN="1068010966904905728-NNa7kZp38OVJFwyOlwXllr1ggYBZ1T"
-      - ACCESS_TOKEN_SECRET="xjp9oOBT1qmzLIqNcDA0E2Mn71g1HXBpNYytDGQGjqDpC"
+      - CONSUMER_KEY=""
+      - CONSUMER_SECRET=""
+      - ACCESS_TOKEN=""
+      - ACCESS_TOKEN_SECRET=""
     labels:
       - "Twitter Bot"
