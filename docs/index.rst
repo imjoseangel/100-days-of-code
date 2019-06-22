@@ -799,7 +799,7 @@ Day 54: June 22, 2019
 
 **Today's Progress:**
 
-1. OOP with Python
+1. OOP with Python vs Java
 
 **Thoughts:** Few refreshes and some new cool concepts for Python OOP
 
