@@ -793,3 +793,17 @@ Day 53: June 19, 2019
 
 1. See `Code <https://github.com/imjoseangel/100-days-of-code/tree/devel/python/twitter/>`_
 2. See `Second part of the Twitter Bot Documentation in Real Python <https://realpython.com/twitter-bot-python-tweepy/>`_
+
+Day 54: June 22, 2019
+----------------------
+
+**Today's Progress:**
+
+1. OOP with Python vs Java
+
+**Thoughts:** Few refreshes and some new cool concepts for Python OOP
+
+**Link to work:**
+
+1. See `Code <https://github.com/imjoseangel/100-days-of-code/tree/devel/python/ooppython/>`_
+2. See `Documentation in Real Python <https://realpython.com/oop-in-python-vs-java/>`_
