@@ -807,3 +807,17 @@ Day 54: June 22, 2019
 
 1. See `Code <https://github.com/imjoseangel/100-days-of-code/tree/devel/python/ooppython/>`_
 2. See `Documentation in Real Python <https://realpython.com/oop-in-python-vs-java/>`_
+
+Day 55: June 25, 2019
+----------------------
+
+**Today's Progress:**
+
+1. ML Concepts - K-Nearest Neighbors and Naive Bayes
+
+**Thoughts:** Good to remember some concepts and code as this is not in my daily tasks
+
+**Link to work:**
+
+1. See `Code <https://github.com/imjoseangel/100-days-of-code/tree/devel/python/mltraining/>`_
+2. See `Training on GitHub <https://github.com/machinelearningmindset/machine-learning-course>`_
