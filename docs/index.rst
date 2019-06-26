@@ -821,3 +821,18 @@ Day 55: June 25, 2019
 
 1. See `Code <https://github.com/imjoseangel/100-days-of-code/tree/devel/python/mltraining/>`_
 2. See `Training on GitHub <https://github.com/machinelearningmindset/machine-learning-course>`_
+
+Day 56: June 26, 2019
+----------------------
+
+**Today's Progress:**
+
+1. ML Concepts - Logistic Regression
+
+**Thoughts:** Tomorrow I will check more code and more tutorials about this ML Topic
+
+**Link to work:**
+
+1. See `Code <https://github.com/imjoseangel/100-days-of-code/tree/devel/python/mltraining/>`_
+2. See `Training on GitHub <https://github.com/machinelearningmindset/machine-learning-course>`_
+3. See `Medium Article about LR <https://towardsdatascience.com/5-reasons-logistic-regression-should-be-the-first-thing-you-learn-when-become-a-data-scientist-fcaae46605c4>`_
