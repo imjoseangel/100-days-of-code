@@ -31,7 +31,7 @@ target = dataCancer.target
 # You can find the other parameters at
 # https://scikit-learn.org/stable/modules/generated/sklearn.svm.SVC.html
 # =============================================================================
-model = svm.SVC(kernel='linear', C=10000)
+model = svm.SVC(kernel='rbf', C=10000)
 model.fit(data, target)
 
 # plots the points
