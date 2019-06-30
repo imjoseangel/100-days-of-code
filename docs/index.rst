@@ -836,3 +836,19 @@ Day 56: June 26, 2019
 1. See `Code <https://github.com/imjoseangel/100-days-of-code/tree/devel/python/mltraining/>`_
 2. See `Training on GitHub <https://github.com/machinelearningmindset/machine-learning-course>`_
 3. See `Medium Article about LR <https://towardsdatascience.com/5-reasons-logistic-regression-should-be-the-first-thing-you-learn-when-become-a-data-scientist-fcaae46605c4>`_
+
+Day 57: June 30, 2019
+----------------------
+
+**Today's Progress:**
+
+1. ML Concepts - Logistic Regression and SVM
+
+**Thoughts:** Checking more Tutorials about LR, needs to study even more
+
+**Link to work:**
+
+1. See `Code <https://github.com/imjoseangel/100-days-of-code/tree/devel/python/mltraining/>`_
+2. See `Training on GitHub <https://github.com/machinelearningmindset/machine-learning-course>`_
+3. See `Medium Article about LR <https://blog.goodaudience.com/classifying-flowers-using-logistic-regression-in-sci-kit-learn-38262416e4c6>`_
+4. See `Code <https://github.com/imjoseangel/100-days-of-code/tree/devel/python/mllogregression/iris.py>`_
