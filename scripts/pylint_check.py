@@ -65,7 +65,7 @@ def main():
     # Sets default exit status code
     return_code = 0
 
-    myproject = WorkPath('origin/devel')
+    myproject = WorkPath('devel')
     project_changes = myproject.getchanges()
     work_path = myproject.workpath()
 
