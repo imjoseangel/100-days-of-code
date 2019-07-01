@@ -4,14 +4,14 @@
 
 from __future__ import (division, absolute_import, print_function,
                         unicode_literals)
-import imp
+import importlib
 import os
 import sys
 import re
 import subprocess
 
 try:
-    imp.find_module('git')
+    importlib.import_module('git')
     import git
 except ImportError:
     print("GitPython is not installed")
