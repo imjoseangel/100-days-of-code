@@ -39,6 +39,8 @@ class WorkPath:
 
         self.workpath()
         repo = git.Repo()
+        for remote in repo.remotes:
+            remote.fetch()
         for item in repo.index.diff(self.branch):
             yield item.a_path
 
@@ -65,7 +67,7 @@ def main():
     # Sets default exit status code
     return_code = 0
 
-    myproject = WorkPath('devel')
+    myproject = WorkPath('origin/devel')
     project_changes = myproject.getchanges()
     work_path = myproject.workpath()
 
