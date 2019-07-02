@@ -39,7 +39,7 @@ class WorkPath:
 
         self.workpath()
         repo = git.Repo()
-        repo.git.remote('set-branches', 'origin', '--all', self.branch)
+        repo.git.remote('set-branches', 'origin', self.branch)
         for remote in repo.remotes:
             remote.fetch()
         for item in repo.index.diff('origin/{0}'.format(self.branch)):
