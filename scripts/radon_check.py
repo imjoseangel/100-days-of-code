@@ -51,7 +51,7 @@ class WorkPath:
 
 
 def asterisks():
-    """Calculate Screen Size"""
+    # Calculate Screen Size
     rows, columns = os.popen('stty size', 'r').read().split()
     if rows:
         pass
@@ -59,7 +59,7 @@ def asterisks():
 
 
 def main():
-    """Main Function"""
+    # Main Function
 
     # Sets default exit status code
     return_code = 0

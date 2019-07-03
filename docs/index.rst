@@ -852,3 +852,17 @@ Day 57: June 30, 2019
 2. See `Training on GitHub <https://github.com/machinelearningmindset/machine-learning-course>`_
 3. See `Medium Article about LR <https://blog.goodaudience.com/classifying-flowers-using-logistic-regression-in-sci-kit-learn-38262416e4c6>`_
 4. See `Code <https://github.com/imjoseangel/100-days-of-code/tree/devel/python/mllogregression/iris.py>`_
+
+Day 58: July 03, 2019
+----------------------
+
+**Today's Progress:**
+
+1. Improve Linter Scripts
+
+**Thoughts:** Check only uploaded code compared with **devel** branch
+
+**Link to work:**
+
+1. See `pylint_check.py <https://github.com/imjoseangel/100-days-of-code/blob/devel/scripts/pylint_check.py>`_
+2. See `radon_check.py <https://github.com/imjoseangel/100-days-of-code/blob/devel/scripts/radon_check.py>`_
