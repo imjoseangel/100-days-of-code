@@ -66,8 +66,9 @@ class WorkPath:
 
 def asterisks():
     """ Show Line """
+    _, columns = os.popen('stty size', 'r').read().split()
 
-    print('=' * int(78))
+    print('-' * int(columns))
 
 
 def runlinter(binary, args, file):

@@ -52,9 +52,8 @@ class WorkPath:
 
 def asterisks():
     # Calculate Screen Size
-    rows, columns = os.popen('stty size', 'r').read().split()
-    if rows:
-        pass
+    _, columns = os.popen('stty size', 'r').read().split()
+
     print('-' * int(columns))
 
 
