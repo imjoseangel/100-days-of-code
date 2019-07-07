@@ -866,3 +866,16 @@ Day 58: July 03, 2019
 
 1. See `pylint_check.py <https://github.com/imjoseangel/100-days-of-code/blob/devel/scripts/pylint_check.py>`_
 2. See `radon_check.py <https://github.com/imjoseangel/100-days-of-code/blob/devel/scripts/radon_check.py>`_
+
+Day 59: July 07, 2019
+----------------------
+
+**Today's Progress:**
+
+1. Unify Linter Scripts to lint_checker.py
+
+**Thoughts:** Unify linter scripts to have only one with a configuration file. Keeping old ones as reference
+
+**Link to work:**
+
+1. See `lint_checker.py <https://github.com/imjoseangel/100-days-of-code/blob/devel/scripts/lint_checker.py>`_
