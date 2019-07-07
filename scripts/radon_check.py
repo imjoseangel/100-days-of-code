@@ -72,7 +72,7 @@ def main():
         if filename.endswith('.py'):
             pythonfile = os.path.join(work_path, filename)
             try:
-                proc = subprocess.Popen('radon cc %s' % pythonfile,
+                proc = subprocess.Popen('radon cc {0}'.format(pythonfile),
                                         shell=True,
                                         executable="/bin/bash",
                                         stdin=None,

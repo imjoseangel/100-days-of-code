@@ -76,7 +76,7 @@ def main():
             print("Filename: {0}".format(pythonfile))
             asterisks()
 
-            proc = subprocess.Popen('pylint %s' % pythonfile,
+            proc = subprocess.Popen('pylint {0}'.format(pythonfile),
                                     shell=True,
                                     executable="/bin/bash",
                                     stdin=None,
