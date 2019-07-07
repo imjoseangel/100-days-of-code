@@ -11,4 +11,5 @@ install:
 # command to run tests
 script:
   # - pylint -j $(nproc) --rcfile=.pylintrc python scripts
-  - python scripts/lint_checker.py
+  - python scripts/pylint_check.py
+  - python scripts/radon_check.py
