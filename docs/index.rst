@@ -879,3 +879,17 @@ Day 59: July 07, 2019
 **Link to work:**
 
 1. See `lint_checker.py <https://github.com/imjoseangel/100-days-of-code/blob/devel/scripts/lint_checker.py>`_
+
+Day 60: July 11, 2019
+----------------------
+
+**Today's Progress:**
+
+1. AsyncIO in Python
+
+**Thoughts:** First part of this really nice tutorial. I have to study deeply the rand code.
+
+**Link to work:**
+
+1. See `Code <https://github.com/imjoseangel/100-days-of-code/blob/devel/python/concurrency>`_
+2. See `Original Documentation from Real Python <https://realpython.com/async-io-python/>`_
