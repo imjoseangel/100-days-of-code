@@ -20,5 +20,5 @@ repos:
         entry: python hooks/techdebt.py
         pass_filenames: false
         language: system
-        always_run: true
+#         always_run: true
         files: ''
