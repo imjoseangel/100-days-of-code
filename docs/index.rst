@@ -21,7 +21,7 @@ Day 1: March 11, 2019
 
 **Link to work:**
 
-1. See `pylint_check.py <https://github.com/imjoseangel/100-days-of-code/blob/devel/scripts/pylint_check.py>`_
+1. See `pylint_check.py <https://github.com/imjoseangel/100-days-of-code/blob/devel/hooks/pylint_check.py>`_
 2. See `wargames Krypton Level0 -> Level1 <http://overthewire.org/wargames/krypton/krypton0.html>`_
 3. See `WarGames Code <https://github.com/imjoseangel/100-days-of-code/blob/devel/python/wargames/>`_
 
@@ -86,7 +86,7 @@ Check the following code to find matches in lines iterating a list:
 
 **Link to work:**
 
-1. See `pylint_check.py <https://github.com/imjoseangel/100-days-of-code/blob/devel/scripts/pylint_check.py>`_
+1. See `pylint_check.py <https://github.com/imjoseangel/100-days-of-code/blob/devel/hooks/pylint_check.py>`_
 2. See `pre-commit-config <https://github.com/imjoseangel/100-days-of-code/blob/devel/.pre-commit-config.yaml>`_
 3. See `webblocker.py <https://github.com/imjoseangel/100-days-of-code/blob/devel/python/website-blocker/webblocker.py>`_
 
@@ -103,7 +103,7 @@ Day 6: March 17, 2019
 **Link to work:**
 
 1. See `decorators <https://github.com/imjoseangel/100-days-of-code/blob/devel/python/decorators>`_
-2. See `pylint_check.py <https://github.com/imjoseangel/100-days-of-code/blob/devel/scripts/pylint_check.py>`_
+2. See `pylint_check.py <https://github.com/imjoseangel/100-days-of-code/blob/devel/hooks/pylint_check.py>`_
 
 Day 7: March 20, 2019
 ---------------------
@@ -117,7 +117,7 @@ Day 7: March 20, 2019
 
 **Link to work:**
 
-1. See `radon_check.py <https://github.com/imjoseangel/100-days-of-code/blob/devel/scripts/radon_check.py>`_
+1. See `radon_check.py <https://github.com/imjoseangel/100-days-of-code/blob/devel/hooks/radon_check.py>`_
 
 Day 8: March 21, 2019
 ---------------------
@@ -864,8 +864,8 @@ Day 58: July 03, 2019
 
 **Link to work:**
 
-1. See `pylint_check.py <https://github.com/imjoseangel/100-days-of-code/blob/devel/scripts/pylint_check.py>`_
-2. See `radon_check.py <https://github.com/imjoseangel/100-days-of-code/blob/devel/scripts/radon_check.py>`_
+1. See `pylint_check.py <https://github.com/imjoseangel/100-days-of-code/blob/devel/hooks/pylint_check.py>`_
+2. See `radon_check.py <https://github.com/imjoseangel/100-days-of-code/blob/devel/hooks/radon_check.py>`_
 
 Day 59: July 07, 2019
 ----------------------
@@ -878,7 +878,7 @@ Day 59: July 07, 2019
 
 **Link to work:**
 
-1. See `lint_checker.py <https://github.com/imjoseangel/100-days-of-code/blob/devel/scripts/lint_checker.py>`_
+1. See `lint_checker.py <https://github.com/imjoseangel/100-days-of-code/blob/devel/hooks/lint_checker.py>`_
 
 Day 60: July 11, 2019
 ----------------------
@@ -893,3 +893,21 @@ Day 60: July 11, 2019
 
 1. See `Code <https://github.com/imjoseangel/100-days-of-code/blob/devel/python/concurrency>`_
 2. See `Original Documentation from Real Python <https://realpython.com/async-io-python/>`_
+
+Day 61: July 21, 2019
+----------------------
+
+**Today's Progress:**
+
+1. AsyncIO in Python
+2. Adding Technical Debt in Python
+
+**Thoughts:** Second part of this really nice tutorial. I have to study deeply the rand code. Spending Three days on
+technical debt for pre-commit. See also pre-commit config.
+
+**Link to work:**
+
+1. See `Code <https://github.com/imjoseangel/100-days-of-code/blob/devel/python/concurrency>`_
+2. See `Code <https://github.com/imjoseangel/100-days-of-code/blob/devel/hooks/techdebt.py>`_
+3. See `pre-commit config <https://github.com/imjoseangel/100-days-of-code/blob/devel/.pre-commit-config.yaml>`_
+4. See `Original Documentation from Real Python <https://realpython.com/async-io-python/>`_
