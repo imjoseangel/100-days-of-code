@@ -8,6 +8,7 @@ import argparse
 import glob
 import os
 import re
+import sys
 import git
 
 FALLBACK_ARGS = dict(file='technicaldebt.md', searchtext='TODO')
@@ -22,16 +23,29 @@ class TechnicalDebt():
 
         self.repo = git.Repo(search_parent_directories=True)
         self._work_path = self.repo.git.rev_parse("--show-toplevel")
-        self.markdown = open(self.args.file, 'w')
+
+        try:
+            self.markdown = open(
+                self._work_path + '/{0}/'.format(self.args.dir) +
+                self.args.file, 'w')
+        except FileNotFoundError:
+            print('Unable to create file. Check if path exists')
+            sys.exit(1)
 
         self.mainfunc()
 
         self.markdown.close()
 
         if self.args.stdout:
-            markdown = open(self.args.file, 'r')
-            for line in markdown:
-                print(line, end='')
+            try:
+                markdown = open(
+                    self._work_path + '/{0}/'.format(self.args.dir) +
+                    self.args.file, 'r')
+                for line in markdown:
+                    print(line, end='')
+            except FileNotFoundError:
+                print('Unable to read file. Check if path exists')
+                sys.exit(1)
 
     def includebyext(self):
         '''Add extension pattern'''
@@ -108,6 +122,10 @@ class TechnicalDebt():
                             '-s',
                             help='print output to stdout',
                             action='store_true')
+        parser.add_argument('--dir',
+                            '-d',
+                            help='path to store file. default: current',
+                            default='')
 
         args_inexclude = parser.add_mutually_exclusive_group()
         args_inexclude.add_argument(
