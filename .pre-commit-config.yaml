@@ -15,8 +15,8 @@ repos:
         language: python
         files: \.(py)$
       - id: techdebt
-        name: Generate Technical Debt Markdown
-        description: This hook will autogenerate a techdebt.md
+        name: Generate technical debt markdown document
+        description: This hook will autogenerate a techdebt.md file
         entry: python hooks/techdebt.py -d docs
         pass_filenames: false
         language: system
