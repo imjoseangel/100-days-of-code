@@ -65,29 +65,13 @@ class TechnicalDebt():
     def mainfunc(self):
         ''' Main Func'''
         if self.args.include:
-            includefiles = self.includebyext()
-            self.createmdheader()
-            for file in includefiles:
-                with open(file, 'r') as fileread:
-                    filetitle = False
-                    for num, line in enumerate(fileread, 1):
-                        if self.args.text + ': ' in line and not filetitle:
-                            self.markdown.write('### **{0}**\n\n'.format(
-                                file.replace(self._work_path + '/', '')))
-                            filetitle = True
-                            self.markdown.write('(line {0}) : {1}\n'.format(
-                                num,
-                                re.sub(r'^.*' + self.args.text + r':\s', '',
-                                       line)))
-                        elif self.args.text + ': ' in line and filetitle:
-                            self.markdown.write('(line {0}) : {1}\n'.format(
-                                num,
-                                re.sub(r'^.*' + self.args.text + r':\s', '',
-                                       line)))
+            filestomanage = self.includebyext()
         elif self.args.exclude:
-            excludefiles = self.excludebyext()
-            self.createmdheader()
-            for file in excludefiles:
+            filestomanage = self.excludebyext()
+
+        self.createmdheader()
+        for file in filestomanage:
+            try:
                 with open(file, 'r') as fileread:
                     filetitle = False
                     for num, line in enumerate(fileread, 1):
@@ -104,6 +88,8 @@ class TechnicalDebt():
                                 num,
                                 re.sub(r'^.*' + self.args.text + r':\s', '',
                                        line)))
+            except UnicodeDecodeError:
+                pass
 
     def parse_arguments(self):
         '''argument parser'''
