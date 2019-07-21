@@ -899,11 +899,10 @@ Day 61: July 21, 2019
 
 **Today's Progress:**
 
-1. AsyncIO in Python
+1. AsyncIO in Python. Chained Code.
 2. Adding Technical Debt in Python
 
-**Thoughts:** Second part of this really nice tutorial. I have to study deeply the rand code. Spending Three days on
-technical debt for pre-commit. See also pre-commit config.
+**Thoughts:** Second part of this really nice tutorial. Spending Three days on technical debt for pre-commit. See also pre-commit config.
 
 **Link to work:**
 
