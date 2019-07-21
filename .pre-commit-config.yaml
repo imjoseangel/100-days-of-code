@@ -19,5 +19,6 @@ repos:
         description: This hook will autogenerate a techdebt.md file
         entry: python hooks/techdebt.py -d docs
         pass_filenames: false
+        always_run: true
         language: system
         files: ''
