@@ -14,3 +14,9 @@ repos:
         entry: flake8 --statistics
         language: python
         files: \.(py)$
+      - id: techdebt
+        name: Generate Technical Debt Markdown
+        description: This hook will autogenerate a techdebt.md
+        entry: python hooks/techdebt.py -i py
+        language: system
+        files: \.(py)$
