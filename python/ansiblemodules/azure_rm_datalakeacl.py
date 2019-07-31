@@ -1,7 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 # pylint: disable=C0111, R0902, R0903, R0912
-# flake8: noqa: E502
 
 from __future__ import (division, absolute_import, print_function,
                         unicode_literals)
@@ -40,7 +39,7 @@ options:
         required: true
         type: str
     object_id:
-        description: The object if of a user, service principal or security group in AAD for the vault.
+        description: The object if of a user, service principal or security group in AAD for the vault. # noqa: E501
         required: true
         type: str
     permissions:
