@@ -158,8 +158,9 @@ class AzureRMDataLakes(AzureRMModuleBase):
 
     def exec_module(self, **kwargs):
 
-        for key in list(self.module_arg_spec.keys()) + ['tags']:
-            setattr(self, key, kwargs[key])
+        for key in list(self.module_arg_spec.keys()):
+            if hasattr(self, key):
+                setattr(self, key, kwargs[key])
 
         # Access to the data lake
         adl_creds = self.get_adlcreds()
