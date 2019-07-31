@@ -39,7 +39,7 @@ options:
         required: true
         type: str
     object_id:
-        description: The object if of a user, service principal or security group in AAD for the vault. # noqa: E501
+        description: The object if of a user, service principal or security group in AAD for the vault.
         required: true
         type: str
     permissions:
@@ -49,7 +49,7 @@ options:
         choices: [ 'r--', '-w-', '--x', 'rw-', 'r-x', '-wx', 'rwx' ]
     acl_spec:
         description:
-            - The ACL specification to use in modifying/removing the ACL at the path
+            - The ACL specification to use in modifying/removing the ACL at the path # noqa: E501
         required: true
         type: str
         choices: [ 'user', 'group', 'other', 'default:user', 'default:group', 'default:other' ]
