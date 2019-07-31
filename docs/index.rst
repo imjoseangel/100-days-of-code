@@ -899,11 +899,10 @@ Day 61: July 21, 2019
 
 **Today's Progress:**
 
-1. AsyncIO in Python
+1. AsyncIO in Python. Chained Code.
 2. Adding Technical Debt in Python
 
-**Thoughts:** Second part of this really nice tutorial. I have to study deeply the rand code. Spending Three days on
-technical debt for pre-commit. See also pre-commit config.
+**Thoughts:** Second part of this really nice tutorial. Spending Three days on technical debt for pre-commit. See also pre-commit config.
 
 **Link to work:**
 
@@ -911,3 +910,16 @@ technical debt for pre-commit. See also pre-commit config.
 2. See `Code <https://github.com/imjoseangel/100-days-of-code/blob/devel/hooks/techdebt.py>`_
 3. See `pre-commit config <https://github.com/imjoseangel/100-days-of-code/blob/devel/.pre-commit-config.yaml>`_
 4. See `Original Documentation from Real Python <https://realpython.com/async-io-python/>`_
+
+Day 62: July 31, 2019
+----------------------
+
+**Today's Progress:**
+
+1. New Ansible Module for Datalake ACLs
+
+**Thoughts:** Working the whole week to get this module.
+
+**Link to work:**
+
+1. See `Code <https://github.com/imjoseangel/100-days-of-code/blob/devel/python/ansiblemodules/azure_rm_datalakeacl.py>`_
