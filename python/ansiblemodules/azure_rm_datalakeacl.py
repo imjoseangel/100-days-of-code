@@ -1,14 +1,18 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-# pylint: disable=C0111, R0902, R0903, R0912
+# pylint: disable=C0111, R0902, R0903, R0912, C0301, R0801
 
 from __future__ import (division, absolute_import, print_function,
                         unicode_literals)
 
+import re
 from ansible.module_utils.azure_rm_common import AzureRMModuleBase
 
 try:
     from azure.datalake.store import core, lib
+    from azure.common.credentials import ServicePrincipalCredentials
+    from azure.graphrbac import GraphRbacManagementClient
+    from msrestazure.azure_cloud import AZURE_PUBLIC_CLOUD
     from msrestazure.azure_exceptions import CloudError
 except ImportError:
     # This is handled in azure_rm_common
@@ -38,8 +42,8 @@ options:
             - Name of the Datalake directory.
         required: true
         type: str
-    object_id:
-        description: The object if of a user, service principal or security group in AAD for the vault.
+    sp_name:
+        description: Name or object id of the application for the acl.
         required: true
         type: str
     permissions:
@@ -77,23 +81,23 @@ author:
 EXAMPLES = '''
     - name: Create acl for raw dir
       azure_rm_datalakeacl:
-        path: /raw
+        dir_name: /raw
         store_name: mydatalake
-        object_id: myserviceprincipalid
+        sp_name: myserviceprincipalid
         permissions: 'r-x'
         acl_spec: "default:user"
 
     - name: Delete acl for raw dir
       azure_rm_datalakeacl:
-        path: /raw
+        dir_name: /raw
         store_name: mydatalake
-        object_id: myserviceprincipalid
+        sp_name: myserviceprincipalid
         acl_spec: "default:user"
         state:absent
 '''
 
 RETURN = '''
-permissions:
+acl:
   description: Current Directory Permissions
   returned: always
   type: str
@@ -113,10 +117,9 @@ class AzureRMDataLakes(AzureRMModuleBase):
     """Configuration class for an Azure RM Application Gateway resource"""
     def __init__(self):
         self.module_arg_spec = dict(store_name=dict(type='str', required=True),
-                                    dir_name=dict(type='str', required=True),
-                                    object_id=dict(type='str', required=True),
+                                    dir_name=dict(type='path', required=True),
+                                    sp_name=dict(type='str', required=True),
                                     permissions=dict(type='str',
-                                                     required=False,
                                                      choices=[
                                                          'r--', '-w-', '--x',
                                                          'rw-', 'r-x', '-wx',
@@ -130,9 +133,7 @@ class AzureRMDataLakes(AzureRMModuleBase):
                                                       'default:group',
                                                       'default:other'
                                                   ]),
-                                    recursive=dict(type='bool',
-                                                   required=False,
-                                                   default=False),
+                                    recursive=dict(type='bool', default=False),
                                     state=dict(type='str',
                                                default='present',
                                                choices=['present', 'absent']))
@@ -142,14 +143,12 @@ class AzureRMDataLakes(AzureRMModuleBase):
         self.dir_name = None
         self.store_name = None
         self.permissions = None
-        self.object_id = None
+        self.sp_name = None
         self.acl_spec = None
         self.recursive = False
         self.resource = 'https://datalake.azure.net/'
-
-        self.results = dict(changed=False)
         self.state = None
-        self.to_do = Actions.NoAction
+        self.results = dict(changed=False)
 
         super(AzureRMDataLakes,
               self).__init__(derived_arg_spec=self.module_arg_spec,
@@ -162,106 +161,138 @@ class AzureRMDataLakes(AzureRMModuleBase):
             if hasattr(self, key):
                 setattr(self, key, kwargs[key])
 
+        results = dict()
+        changed = False
+
         # Access to the data lake
-        adl_creds = self.get_adlcreds()
+        adl_creds, sp_creds = self.get_adlcreds()
 
-        old_response = None
-        response = None
+        try:
 
-        old_response = self.find_objectid(adl_creds)
+            pattern = re.compile(
+                "[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[34][0-9a-fA-F]{3}-[89ab]\
+                [0-9a-fA-F]{3}-[0-9a-fA-F]{12}")
 
-        if not old_response:
-            self.log("Datalake permission doesn't exist")
-            if self.state == 'absent':
-                self.log("Old permnission didn't exist")
+            if pattern.match(self.sp_name):
+                results['object_id'] = sp_id = self.sp_name
             else:
-                self.to_do = Actions.Create
-        else:
-            self.log("Datalake permission already exists")
+                results['object_id'] = sp_id = self.get_objectid(sp_creds)
+
+            results['acl'] = self.get_acls(adl_creds, sp_id)
+
+            # Key exists and will be deleted
             if self.state == 'absent':
-                self.to_do = Actions.Delete
-            elif self.state == 'present':
-                pass
+                changed = True
 
-        if self.to_do == Actions.Create:
-            self.log("Need to Create / Update the Datalake permission")
+        except TypeError:
+            # AC: doesn't exist
+            if self.state == 'present':
+                changed = True
 
-            if self.check_mode:
-                self.results['changed'] = True
-                self.results['state'] = 'created (check_mode)'
-                return self.results
+        self.results['changed'] = changed
+        self.results['state'] = results
 
-            response = self.create_update_acl(adl_creds)
+        if not self.check_mode:
 
-            if not old_response:
-                self.results['changed'] = True
-                self.results['state'] = 'created'
-            else:
-                self.results['changed'] = old_response.__ne__(response)
-            self.log("Creation / Update done")
-
-        elif self.to_do == Actions.Delete:
-            self.log("Datalake permission deleted")
-            self.results['changed'] = True
-            self.results['state'] = 'deleted'
-
-            if self.check_mode:
-                self.results['state'] = 'deleted (check_mode)'
-                return self.results
-
-            self.remove_acl(adl_creds)
-
+            # Create ACL
+            if self.state == 'present' and changed:
+                results['operation'] = self.create_acl(adl_creds)
+                self.results['state'] = results
+                self.results["permissions"] = "{0}:{1}:{2}".format(
+                    self.acl_spec, self.sp_name, self.permissions)
+                self.results['state']['status'] = 'Created'
+            # Delete ACL
+            elif self.state == 'absent' and changed:
+                self.delete_acl(adl_creds)
+                self.results['state'] = results
+                self.results['permissions'] = "{0}:{1}".format(
+                    self.acl_spec, self.sp_name)
+                self.results['state']['status'] = 'Deleted'
         else:
-            self.log("Datalake permission unchanged")
-            self.results['changed'] = False
-            self.results['state'] = 'unchanged'
-            response = old_response
-
-        if Actions.Create:
-            self.results["permissions"] = "{0}:{1}:{2}".format(
-                self.acl_spec, self.object_id, self.permissions)
-        else:
-            self.results['permissions'] = "{0}:{1}".format(
-                self.acl_spec, self.object_id)
+            if self.state == 'present' and changed:
+                self.results['state']['status'] = 'Created'
+            elif self.state == 'absent' and changed:
+                self.results['state']['status'] = 'Deleted'
 
         return self.results
 
     def get_adlcreds(self):
 
-        try:
-            adl_creds = lib.auth(tenant_id=self.credentials['tenant'],
-                                 client_secret=self.credentials['secret'],
-                                 client_id=self.credentials['client_id'],
-                                 resource=self.resource)
+        if 'client_id' not in self.credentials or 'secret' not in self.credentials or self.credentials[  # noqa: E501
+                'client_id'] is None or self.credentials['secret'] is None:
+            self.fail(
+                'Please specify client_id, secret and tenant to access azure Data Lake.'  # noqa: E501
+            )
 
-            adls_accountname = self.store_name
-            adls_filesystemclient = core.AzureDLFileSystem(
-                adl_creds, store_name=adls_accountname)
+        tenant = self.credentials.get('tenant')
+        if not self.credentials['tenant']:
+            tenant = "common"
 
-        except CloudError as exc:
-            self.log('Error attempting to access to the Data lake instance.')
-            self.fail("Error login to the Data Lake instance: {0}".format(
-                str(exc)))
+        adl_creds = lib.auth(tenant_id=tenant,
+                             client_secret=self.credentials['secret'],
+                             client_id=self.credentials['client_id'],
+                             resource=self.resource)
 
-        return adls_filesystemclient
+        adls_accountname = self.store_name
+        adls_filesystemclient = core.AzureDLFileSystem(
+            adl_creds, store_name=adls_accountname)
 
-    def find_objectid(self, creds):
+        sp_creds = ServicePrincipalCredentials(
+            client_id=self.credentials['client_id'],
+            secret=self.credentials['secret'],
+            tenant=tenant,
+            resource="https://graph.windows.net")
+
+        graph_rbac_client = GraphRbacManagementClient(
+            sp_creds,
+            tenant,
+            base_url=AZURE_PUBLIC_CLOUD.endpoints.
+            active_directory_graph_resource_id)
+
+        return adls_filesystemclient, graph_rbac_client
+
+    def get_acls(self, creds, sp_id):
 
         acl_status = creds.get_acl_status(self.dir_name)
 
-        acl_match = [
-            object_id for object_id in acl_status['entries']
-            if self.object_id in object_id
+        if self.state == 'present':
+            match_string = "{0}:{1}:{2}".format(self.acl_spec, sp_id,
+                                                self.permissions)
+        else:
+            match_string = "{0}:{1}".format(self.acl_spec, sp_id)
+
+        acl_matching = [
+            sp_name for sp_name in acl_status['entries']
+            if match_string in sp_name
         ]
 
-        return acl_match
+        if acl_matching:
+            return next(iter(acl_matching))
 
-    def create_update_acl(self, creds):
+        raise TypeError
+
+    def get_objectid(self, creds):
+
+        try:
+            application = next(
+                creds.applications.list(
+                    filter="displayName eq '{}'".format(self.sp_name)))
+
+            service_principal = next(
+                creds.service_principals.list(
+                    filter="appId eq '{}'".format(application.app_id)))
+
+            return service_principal.object_id
+
+        except StopIteration:
+            raise TypeError
+
+    def create_acl(self, creds):
 
         try:
             acl_modify = creds.modify_acl_entries(
                 self.dir_name,
-                "{0}:{1}:{2}".format(self.acl_spec, self.object_id,
+                "{0}:{1}:{2}".format(self.acl_spec, self.sp_name,
                                      self.permissions),
                 recursive=self.recursive)
 
@@ -272,12 +303,12 @@ class AzureRMDataLakes(AzureRMModuleBase):
 
         return acl_modify
 
-    def remove_acl(self, creds):
+    def delete_acl(self, creds):
         try:
             acl_remove = creds.remove_acl_entries(self.dir_name,
                                                   "{0}:{1}".format(
                                                       self.acl_spec,
-                                                      self.object_id),
+                                                      self.sp_name),
                                                   recursive=self.recursive)
 
         except CloudError as exc:
