@@ -923,3 +923,18 @@ Day 62: July 31, 2019
 **Link to work:**
 
 1. See `Code <https://github.com/imjoseangel/100-days-of-code/blob/devel/python/ansiblemodules/azure_rm_datalakeacl.py>`_
+
+Day 63: August 16, 2019
+----------------------
+
+**Today's Progress:**
+
+1. New Ansible Module for SP Creation
+2. Ansible Datalake ACLs improvement
+
+**Thoughts:** Busy with my new project. These last module is the starting point to improve the SP Creation. Other features need to be added as password generation or expiration date.
+
+**Link to work:**
+
+1. See `Code <https://github.com/imjoseangel/100-days-of-code/blob/devel/python/ansiblemodules/azure_rm_datalakeacl.py>`_
+2. See `Code <https://github.com/imjoseangel/100-days-of-code/blob/devel/python/ansiblemodules/azure_rm_appregistration.py>`_
