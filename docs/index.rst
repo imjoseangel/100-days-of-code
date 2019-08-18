@@ -938,3 +938,16 @@ Day 63: August 16, 2019
 
 1. See `Code <https://github.com/imjoseangel/100-days-of-code/blob/devel/python/ansiblemodules/azure_rm_datalakeacl.py>`_
 2. See `Code <https://github.com/imjoseangel/100-days-of-code/blob/devel/python/ansiblemodules/azure_rm_appregistration.py>`_
+
+Day 64: August 18, 2019
+----------------------
+
+**Today's Progress:**
+
+1. New Ansible Module for Datalake directory creation
+
+**Thoughts:** Quick one from the Datalake acl creation.
+
+**Link to work:**
+
+1. See `Code <https://github.com/imjoseangel/100-days-of-code/blob/devel/python/ansiblemodules/azure_rm_datalakedir.py>`_
