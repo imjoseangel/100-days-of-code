@@ -30,7 +30,7 @@ module: azure_rm_dataleakacl
 version_added: 2.8
 short_description: Setup Azure Datalake ACLs
 description:
-    - Create or delete an ACLl within a given directory in a Datalake.
+    - Create or delete an ACL within a given directory in a Datalake.
 options:
     store_name:
         description:
@@ -101,11 +101,11 @@ acl:
   description: Current Directory Permissions
   returned: always
   type: str
-state:
-  description: Current Directory Permissions
+operation:
+  description: ACLs changed over directory
   returned: always
   type: str
-  sample: created
+  sample: user:mytestuser:r-x
 '''
 
 
@@ -153,7 +153,8 @@ class AzureRMDataLakes(AzureRMModuleBase):
         super(AzureRMDataLakes,
               self).__init__(derived_arg_spec=self.module_arg_spec,
                              supports_check_mode=True,
-                             supports_tags=False)
+                             supports_tags=False,
+                             required_if=self.module_required_if)
 
     def exec_module(self, **kwargs):
 
@@ -171,7 +172,7 @@ class AzureRMDataLakes(AzureRMModuleBase):
 
             pattern = re.compile(
                 "[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[34][0-9a-fA-F]{3}-[89ab]\
-                [0-9a-fA-F]{3}-[0-9a-fA-F]{12}")
+                    [0-9a-fA-F]{3}-[0-9a-fA-F]{12}")
 
             if pattern.match(self.sp_name):
                 results['object_id'] = sp_id = self.sp_name
