@@ -938,3 +938,14 @@ Day 63: August 16, 2019
 
 1. See `Code <https://github.com/imjoseangel/100-days-of-code/blob/devel/python/ansiblemodules/azure_rm_datalakeacl.py>`_
 2. See `Code <https://github.com/imjoseangel/100-days-of-code/blob/devel/python/ansiblemodules/azure_rm_appregistration.py>`_
+
+**Today's Progress:**
+
+1. Starting with Go
+
+**Thoughts:** Time to start with Go thinking on cloud developments.
+
+**Link to work:**
+
+1. See `Code <https://github.com/imjoseangel/100-days-of-code/blob/devel/go/>`_
+2. See `Tour <https://tour.golang.org/>`_
