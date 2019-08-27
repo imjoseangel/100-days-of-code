@@ -965,3 +965,17 @@ Day 65: August 25, 2019
 
 1. See `Code <https://github.com/imjoseangel/100-days-of-code/blob/devel/go/>`_
 2. See `Tour <https://tour.golang.org/>`_
+
+Day 66: August 27, 2019
+----------------------
+
+**Today's Progress:**
+
+1. Second Go Lesson. Basics
+
+**Thoughts:** Finishing Variables
+
+**Link to work:**
+
+1. See `Code <https://github.com/imjoseangel/100-days-of-code/blob/devel/go/>`_
+2. See `Tour <https://tour.golang.org/>`_
