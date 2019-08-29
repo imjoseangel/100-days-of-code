@@ -13,7 +13,6 @@ try:
     from azure.common.credentials import ServicePrincipalCredentials
     from azure.graphrbac import GraphRbacManagementClient
     from msrestazure.azure_cloud import AZURE_PUBLIC_CLOUD
-    from msrestazure.azure_exceptions import CloudError
 except ImportError:
     # This is handled in azure_rm_common
     pass
@@ -255,7 +254,12 @@ class AzureRMDataLakes(AzureRMModuleBase):
 
     def get_acls(self, creds, sp_id):
 
-        acl_status = creds.get_acl_status(self.dir_name)
+        try:
+            acl_status = creds.get_acl_status(self.dir_name)
+        except FileNotFoundError as exc:
+            self.log(
+                'Error attempting to update acls to the Data lake instance.')
+            self.fail("Could not find directory: {0}".format(str(exc)))
 
         if self.state == 'present':
             match_string = "{0}:{1}:{2}".format(self.acl_spec, sp_id,
@@ -280,9 +284,17 @@ class AzureRMDataLakes(AzureRMModuleBase):
                 creds.applications.list(
                     filter="displayName eq '{}'".format(self.sp_name)))
 
-            service_principal = next(
-                creds.service_principals.list(
-                    filter="appId eq '{}'".format(application.app_id)))
+            appid_filter = creds.service_principals.list(
+                filter="appId eq '{}'".format(application.app_id))
+
+            if any(True for _ in appid_filter):
+                service_principal = next(
+                    creds.service_principals.list(
+                        filter="appId eq '{}'".format(application.app_id)))
+
+            else:
+                self.fail(
+                    "Could not find service principal to update DataLake ACLs")
 
             return service_principal.object_id
 
@@ -290,18 +302,17 @@ class AzureRMDataLakes(AzureRMModuleBase):
             raise TypeError
 
     def create_acl(self, creds):
-
         try:
+
             acl_modify = creds.modify_acl_entries(
                 self.dir_name,
                 "{0}:{1}:{2}".format(self.acl_spec, self.sp_name,
                                      self.permissions),
                 recursive=self.recursive)
-
-        except CloudError as exc:
+        except FileNotFoundError as exc:
             self.log(
                 'Error attempting to update acls to the Data lake instance.')
-            self.fail("Error updating Data Lake acls: {0}".format(str(exc)))
+            self.fail("Could not find directory: {0}".format(str(exc)))
 
         return acl_modify
 
@@ -313,10 +324,10 @@ class AzureRMDataLakes(AzureRMModuleBase):
                                                       self.sp_name),
                                                   recursive=self.recursive)
 
-        except CloudError as exc:
+        except FileNotFoundError as exc:
             self.log(
-                'Error attempting to removing acls to the Data lake instance.')
-            self.fail("Error removing Data Lake acls: {0}".format(str(exc)))
+                'Error attempting to update acls to the Data lake instance.')
+            self.fail("Could not find directory: {0}".format(str(exc)))
 
         return acl_remove
 
