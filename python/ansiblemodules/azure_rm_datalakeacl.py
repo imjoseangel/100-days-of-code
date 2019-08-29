@@ -280,17 +280,28 @@ class AzureRMDataLakes(AzureRMModuleBase):
     def get_objectid(self, creds):
 
         try:
-            application = next(
-                creds.applications.list(
-                    filter="displayName eq '{}'".format(self.sp_name)))
 
-            appid_filter = creds.service_principals.list(
-                filter="appId eq '{}'".format(application.app_id))
+            app_filter = creds.applications.list(
+                filter="displayName eq '{}'".format(self.sp_name))
 
-            if any(True for _ in appid_filter):
-                service_principal = next(
-                    creds.service_principals.list(
-                        filter="appId eq '{}'".format(application.app_id)))
+            if any(True for _ in app_filter):
+
+                application = next(
+                    creds.applications.list(
+                        filter="displayName eq '{}'".format(self.sp_name)))
+
+                appid_filter = creds.service_principals.list(
+                    filter="appId eq '{}'".format(application.app_id))
+
+                if any(True for _ in appid_filter):
+                    service_principal = next(
+                        creds.service_principals.list(
+                            filter="appId eq '{}'".format(application.app_id)))
+
+                else:
+                    self.fail(
+                        "Could not find service principal to update DataLake \
+                            ACLs")
 
             else:
                 self.fail(
