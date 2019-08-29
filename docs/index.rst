@@ -979,3 +979,16 @@ Day 66: August 27, 2019
 
 1. See `Code <https://github.com/imjoseangel/100-days-of-code/blob/devel/go/>`_
 2. See `Tour <https://tour.golang.org/>`_
+
+Day 67: August 29, 2019
+----------------------
+
+**Today's Progress:**
+
+1. Improving Ansible Module for Datalake ACLs before PRing to Ansible
+
+**Thoughts:** Previous to tests, this module is a good one for Ansible Azure.
+
+**Link to work:**
+
+1. See `Code <https://github.com/imjoseangel/100-days-of-code/blob/devel/python/ansiblemodules/azure_rm_datalakeacl.py>`_
