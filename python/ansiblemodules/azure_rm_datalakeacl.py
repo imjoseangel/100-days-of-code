@@ -101,11 +101,12 @@ acl:
   description: Current Directory Permissions
   returned: always
   type: str
-operation:
-  description: ACLs changed over directory
+  sample: user:mytestuser:r-x
+object_id:
+  description: Object ID of the given service principal name
   returned: always
   type: str
-  sample: user:mytestuser:r-x
+  sample: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxxx
 '''
 
 
@@ -197,7 +198,7 @@ class AzureRMDataLakes(AzureRMModuleBase):
 
             # Create ACL
             if self.state == 'present' and changed:
-                results['operation'] = self.create_acl(adl_creds)
+                self.create_acl(adl_creds)
                 self.results['state'] = results
                 self.results["permissions"] = "{0}:{1}:{2}".format(
                     self.acl_spec, self.sp_name, self.permissions)
@@ -264,7 +265,7 @@ class AzureRMDataLakes(AzureRMModuleBase):
 
         acl_matching = [
             sp_name for sp_name in acl_status['entries']
-            if match_string in sp_name
+            if match_string == sp_name
         ]
 
         if acl_matching:
