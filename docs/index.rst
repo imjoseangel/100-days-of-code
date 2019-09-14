@@ -925,7 +925,7 @@ Day 62: July 31, 2019
 1. See `Code <https://github.com/imjoseangel/100-days-of-code/blob/devel/python/ansiblemodules/azure_rm_datalakeacl.py>`_
 
 Day 63: August 16, 2019
-----------------------
+-----------------------
 
 **Today's Progress:**
 
@@ -940,7 +940,7 @@ Day 63: August 16, 2019
 2. See `Code <https://github.com/imjoseangel/100-days-of-code/blob/devel/python/ansiblemodules/azure_rm_appregistration.py>`_
 
 Day 64: August 18, 2019
-----------------------
+-----------------------
 
 **Today's Progress:**
 
@@ -953,7 +953,7 @@ Day 64: August 18, 2019
 1. See `Code <https://github.com/imjoseangel/100-days-of-code/blob/devel/python/ansiblemodules/azure_rm_datalakedir.py>`_
 
 Day 65: August 25, 2019
-----------------------
+-----------------------
 
 **Today's Progress:**
 
@@ -967,7 +967,7 @@ Day 65: August 25, 2019
 2. See `Tour <https://tour.golang.org/>`_
 
 Day 66: August 27, 2019
-----------------------
+-----------------------
 
 **Today's Progress:**
 
@@ -981,7 +981,7 @@ Day 66: August 27, 2019
 2. See `Tour <https://tour.golang.org/>`_
 
 Day 67: August 29, 2019
-----------------------
+-----------------------
 
 **Today's Progress:**
 
@@ -992,3 +992,17 @@ Day 67: August 29, 2019
 **Link to work:**
 
 1. See `Code <https://github.com/imjoseangel/100-days-of-code/blob/devel/python/ansiblemodules/azure_rm_datalakeacl.py>`_
+
+Day 68: September 14, 2019
+--------------------------
+
+**Today's Progress:**
+
+1. Some go and some python gpu tests
+
+**Thoughts:** Really busy at work but I still have time to do some programming ;)
+
+**Link to work:**
+
+1. See `Code <https://github.com/imjoseangel/100-days-of-code/blob/devel/go/>`_
+2. See `Code <https://github.com/imjoseangel/100-days-of-code/blob/devel/python/gpuvscpu/>`_
