@@ -1006,3 +1006,16 @@ Day 68: September 14, 2019
 
 1. See `Code <https://github.com/imjoseangel/100-days-of-code/blob/devel/go/>`_
 2. See `Code <https://github.com/imjoseangel/100-days-of-code/blob/devel/python/gpuvscpu/>`_
+
+Day 69: September 23, 2019
+--------------------------
+
+**Today's Progress:**
+
+1. Madrid Bicimad Time Series
+
+**Thoughts:** Playing with Bicimad data and getting some cool graphs from it
+
+**Link to work:**
+
+1. See `Code <https://github.com/imjoseangel/100-days-of-code/blob/devel/python/bicimad/>`_
