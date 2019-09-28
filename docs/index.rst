@@ -1019,3 +1019,16 @@ Day 69: September 23, 2019
 **Link to work:**
 
 1. See `Code <https://github.com/imjoseangel/100-days-of-code/blob/devel/python/bicimad/>`_
+
+Day 70: September 28, 2019
+--------------------------
+
+**Today's Progress:**
+
+1. Graph Algorithms from Grokking Algorithms
+
+**Thoughts:** Understanding Graph Algorithms from this great book
+
+**Link to work:**
+
+1. See `Code <https://github.com/imjoseangel/100-days-of-code/blob/devel/python/grokalgorithms/>`_
