@@ -12,7 +12,7 @@ def person_is_seller(name):
 def search(graph, name):
     search_queue = deque()
     search_queue += graph[name]
-    searched = []
+    searched = list()
 
     while search_queue:
         person = search_queue.popleft()
@@ -28,7 +28,7 @@ def search(graph, name):
 
 def main():
 
-    graph = {}
+    graph = dict()
     graph["you"] = ["alice", "bob", "claire"]
     graph["bob"] = ["anuj", "peggy"]
     graph["alice"] = ["peggy"]
