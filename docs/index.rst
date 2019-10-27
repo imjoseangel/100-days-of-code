@@ -1032,3 +1032,42 @@ Day 70: September 28, 2019
 **Link to work:**
 
 1. See `Code <https://github.com/imjoseangel/100-days-of-code/blob/devel/python/grokalgorithms/>`_
+
+Day 71: October 5, 2019
+--------------------------
+
+**Today's Progress:**
+
+1. Greedy Algorithms from Grokking Algorithms
+
+**Thoughts:** Understanding Greedy Algorithms from this great book
+
+**Link to work:**
+
+1. See `Code <https://github.com/imjoseangel/100-days-of-code/blob/devel/python/grokalgorithms/>`_
+
+Day 72: October 26, 2019
+--------------------------
+
+**Today's Progress:**
+
+1. Start Learning PyTest
+
+**Thoughts:** Just realized that I'm not good at all at unit testing. I need to learn how to do good testing with Python. This is the first stage and probably would take over 10 to fully understand it.
+
+**Link to work:**
+
+1. See `Code <https://github.com/imjoseangel/100-days-of-code/blob/devel/python/tests/>`_
+
+Day 73: October 27, 2019
+--------------------------
+
+**Today's Progress:**
+
+1. Continue with PyTest
+
+**Thoughts:** Second PyTest Session. Fixtures
+
+**Link to work:**
+
+1. See `Code <https://github.com/imjoseangel/100-days-of-code/blob/devel/python/pytest_project/>`_
