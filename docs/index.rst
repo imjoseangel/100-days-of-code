@@ -1070,4 +1070,4 @@ Day 73: October 27, 2019
 
 **Link to work:**
 
-1. See `Code <https://github.com/imjoseangel/100-days-of-code/blob/devel/python/tests/>`_
+1. See `Code <https://github.com/imjoseangel/100-days-of-code/blob/devel/python/pytest_project/>`_
