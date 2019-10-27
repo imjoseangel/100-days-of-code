@@ -1066,7 +1066,7 @@ Day 73: October 27, 2019
 
 1. Continue with PyTest
 
-**Thoughts:** Second PyTest Session.
+**Thoughts:** Second PyTest Session. Fixtures
 
 **Link to work:**
 
