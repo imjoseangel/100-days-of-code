@@ -15,15 +15,15 @@ spec:
         app: signal-fg-app
     spec:
       containers:
-      - name: signal-fg-app
-        resources:
-          limits:
-            memory: "128Mi"
-            cpu: "500m"
-        image: imjoseangel/signal-fg-app:latest
-        imagePullPolicy: Always
-        lifecycle:
-          preStop:
-            exec:
-              # SIGTERM triggers a quick exit; gracefully terminate instead
-              command: ["wget","https://webhook.site/06f36d6a-4ba5-4a67-b355-3347e825831a"]
+        - name: signal-fg-app
+          resources:
+            limits:
+              memory: "128Mi"
+              cpu: "500m"
+          image: imjoseangel/signal-fg-app:latest
+          imagePullPolicy: Always
+          lifecycle:
+            preStop:
+              exec:
+                # SIGTERM triggers a quick exit; gracefully terminate instead
+                command: ["wget", "https://webhook.site/06f36d6a-4ba5-4a67-b355-3347e825831a"]
