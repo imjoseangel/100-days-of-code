@@ -1071,3 +1071,16 @@ Day 73: October 27, 2019
 **Link to work:**
 
 1. See `Code <https://github.com/imjoseangel/100-days-of-code/blob/devel/python/pytest_project/>`_
+
+Day 74: October 30, 2019
+--------------------------
+
+**Today's Progress:**
+
+1. Docker Signal Management for K8S
+
+**Thoughts:** Some testing with K8S Configuration, Docker and Python
+
+**Link to work:**
+
+1. See `Code <https://github.com/imjoseangel/100-days-of-code/blob/devel/python/signals/>`_
