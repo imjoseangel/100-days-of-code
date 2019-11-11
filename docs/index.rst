@@ -1084,3 +1084,16 @@ Day 74: October 30, 2019
 **Link to work:**
 
 1. See `Code <https://github.com/imjoseangel/100-days-of-code/blob/devel/python/signals/>`_
+
+Day 75: November 11, 2019
+--------------------------
+
+**Today's Progress:**
+
+1. Continuing with Python Testing
+
+**Thoughts:** Discovered bandit for security flaws testing. Continuing with testing with unittest
+
+**Link to work:**
+
+1. See `Code <https://github.com/imjoseangel/100-days-of-code/blob/devel/python/tests/>`_
