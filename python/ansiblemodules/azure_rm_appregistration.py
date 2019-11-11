@@ -9,8 +9,10 @@ from ansible.module_utils.azure_rm_common import AzureRMModuleBase
 
 try:
     from datetime import datetime
+    from datetime import timedelta
     from datetime import timezone
     import uuid
+    import secrets
     from azure.common.credentials import ServicePrincipalCredentials
     from azure.graphrbac import GraphRbacManagementClient
     from azure.graphrbac.models import ApplicationCreateParameters
@@ -45,6 +47,13 @@ options:
         description: Specifies if is a multitenant application or not.
         type: bool
         default: false
+    resource_access:
+        description: Specifies API permissions for the application.
+        type: list
+    expiredays:
+        description: Number of days until password expiration for service principal.
+        type: integer
+        default: 7300
     state:
         description:
             - Assert the state of the application. Use C(present) to create an application and C(absent) to delete an application. # noqa: E501
@@ -65,6 +74,15 @@ EXAMPLES = '''
     - name: Create application
       azure_rm_appregistration:
         sp_name: myserviceprincipalid
+        resource_access:
+          - resourceAccess:
+            - id: e1fe6dd8-ba31-4d61-89e7-88639da4683d
+              type: Scope
+            resourceAppId: 00000003-0000-0000-c000-000000000000
+          - resourceAccess:
+            - id: 311a71cc-e848-46a1-bdf8-97ff7156d8e6
+              type: Scope
+            resourceAppId: 00000002-0000-0000-c000-000000000000
 
     - name: Delete acl for raw dir
       azure_rm_appregistration:
@@ -107,6 +125,9 @@ class AzureRMServicePrincipal(AzureRMModuleBase):
         self.module_arg_spec = dict(sp_name=dict(type='str', required=True),
                                     multitenant=dict(type='bool',
                                                      default=False),
+                                    resource_access=dict(type='list',
+                                                         default=[]),
+                                    expiredays=dict(type='int', default=7300),
                                     state=dict(type='str',
                                                default='present',
                                                choices=['present', 'absent']))
@@ -115,6 +136,8 @@ class AzureRMServicePrincipal(AzureRMModuleBase):
         self.results = dict(changed=False)
         self.state = None
         self.multitenant = None
+        self.resource_access = None
+        self.expiredays = None
 
         super(AzureRMServicePrincipal,
               self).__init__(derived_arg_spec=self.module_arg_spec,
@@ -201,12 +224,11 @@ class AzureRMServicePrincipal(AzureRMModuleBase):
         try:
             application = next(
                 creds.applications.list(
-                    filter="identifierUris/any(c:c eq 'http://{}.com')".format(
-                        self.sp_name)))
+                    filter="displayName eq '{0}'".format(self.sp_name)))
 
             service_principal = next(
                 creds.service_principals.list(
-                    filter="appId eq '{}'".format(application.app_id)))
+                    filter="appId eq '{0}'".format(application.app_id)))
 
             return application.app_id, application.object_id, \
                 service_principal.object_id
@@ -216,7 +238,7 @@ class AzureRMServicePrincipal(AzureRMModuleBase):
 
     def create_sp(self, creds):
 
-        application_credential = uuid.uuid4()
+        sp_credential = secrets.token_urlsafe(44)
 
         try:
             display_name = self.sp_name
@@ -224,32 +246,36 @@ class AzureRMServicePrincipal(AzureRMModuleBase):
             application = creds.applications.create(
                 parameters=ApplicationCreateParameters(
                     available_to_other_tenants=self.multitenant,
-                    identifier_uris=["http://{}.com".format(display_name)],
-                    display_name=display_name,
-                    password_credentials=[
-                        PasswordCredential(end_date=datetime(
-                            2299, 12, 31, 0, 0, 0, 0, tzinfo=timezone.utc),
-                                           value=application_credential,
-                                           key_id=uuid.uuid4())
-                    ]))
+                    required_resource_access=self.resource_access,
+                    identifier_uris=[
+                        "http://{0}.mycompany.com".format(display_name)
+                    ],
+                    display_name=display_name))
             service_principal = creds.service_principals.create(
-                ServicePrincipalCreateParameters(app_id=application.app_id,
-                                                 account_enabled=True))
+                ServicePrincipalCreateParameters(
+                    app_id=application.app_id,
+                    account_enabled=True,
+                    password_credentials=[
+                        PasswordCredential(
+                            end_date=datetime.now(timezone.utc) +
+                            timedelta(days=self.expiredays),
+                            value=sp_credential,
+                            key_id=uuid.uuid4())
+                    ]))
         except GraphErrorException as rbac_exception:
             if rbac_exception.inner_exception.code == "Request_BadRequest":
                 application = next(
                     creds.applications.list(
-                        filter="identifierUris/any(c:c eq 'http://{}.com')".
-                        format(display_name)))
+                        filter="displayName eq '{0}'".format(self.sp_name)))
 
                 service_principal = next(
                     creds.service_principals.list(
-                        filter="appId eq '{}'".format(application.app_id)))
+                        filter="appId eq '{0}'".format(application.app_id)))
             else:
                 raise rbac_exception
 
         return application.app_id, application.object_id, str(
-            application_credential), service_principal.object_id
+            sp_credential), service_principal.object_id
 
     @staticmethod
     def delete_sp(creds, appobjectid):
