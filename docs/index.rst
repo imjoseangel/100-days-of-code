@@ -1110,3 +1110,16 @@ Day 76: November 17, 2019
 **Link to work:**
 
 1. See `Code <https://github.com/imjoseangel/100-days-of-code/blob/devel/python/mongodb/>`_
+
+Day 77: December 9, 2019
+--------------------------
+
+**Today's Progress:**
+
+1. Add emailcrawler python (Lost source)
+
+**Thoughts:** Study and play with bandit with this Python code. Don't like too much but gives me several ideas.
+
+**Link to work:**
+
+1. See `Code <https://github.com/imjoseangel/100-days-of-code/blob/devel/python/emailcrawler/>`_
