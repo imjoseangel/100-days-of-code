@@ -1123,3 +1123,17 @@ Day 77: December 9, 2019
 **Link to work:**
 
 1. See `Code <https://github.com/imjoseangel/100-days-of-code/blob/devel/python/emailcrawler/>`_
+
+Day 78: December 10, 2019
+----------------------
+
+**Today's Progress:**
+
+1. AsyncIO in Python. areq.py Code.
+
+**Thoughts:** Third part of this really nice tutorial.
+
+**Link to work:**
+
+1. See `Code <https://github.com/imjoseangel/100-days-of-code/blob/devel/python/asyncio>`_
+2. See `Original Documentation from Real Python <https://realpython.com/async-io-python/>`_
