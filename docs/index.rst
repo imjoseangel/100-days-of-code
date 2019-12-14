@@ -1137,3 +1137,17 @@ Day 78: December 10, 2019
 
 1. See `Code <https://github.com/imjoseangel/100-days-of-code/blob/devel/python/asyncio>`_
 2. See `Original Documentation from Real Python <https://realpython.com/async-io-python/>`_
+
+Day 79: December 14, 2019
+----------------------
+
+**Today's Progress:**
+
+1. Python Performance with pytest-benchmark mostly
+
+**Thoughts:** Didn't know about pytest-benchmark with this part, I'm learning also about how to create better python tests.
+
+**Link to work:**
+
+1. See `Code <https://github.com/imjoseangel/100-days-of-code/blob/devel/python/highperf>`_
+2. See `Original Documentation from Packt <https://www.packtpub.com/eu/application-development/python-high-performance-second-edition>`_
