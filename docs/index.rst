@@ -1151,3 +1151,17 @@ Day 79: December 14, 2019
 
 1. See `Code <https://github.com/imjoseangel/100-days-of-code/blob/devel/python/highperf>`_
 2. See `Original Documentation from Packt <https://www.packtpub.com/eu/application-development/python-high-performance-second-edition>`_
+
+Day 80: December 15, 2019
+----------------------
+
+**Today's Progress:**
+
+1. Python Performance: Finding bottlenecks with cProfile
+
+**Thoughts:** Didn't know about cProfiling. Testing different visual tools for debugging and performance
+
+**Link to work:**
+
+1. See `Code <https://github.com/imjoseangel/100-days-of-code/blob/devel/python/highperf>`_
+2. See `Original Documentation from Packt <https://www.packtpub.com/eu/application-development/python-high-performance-second-edition>`_
