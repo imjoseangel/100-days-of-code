@@ -1165,3 +1165,17 @@ Day 80: December 15, 2019
 
 1. See `Code <https://github.com/imjoseangel/100-days-of-code/blob/devel/python/highperf>`_
 2. See `Original Documentation from Packt <https://www.packtpub.com/eu/application-development/python-high-performance-second-edition>`_
+
+Day 81: December 22, 2019
+----------------------
+
+**Today's Progress:**
+
+1. Machine Learning: Detecting Fake News
+
+**Thoughts:** Use scikit learn with Passive Aggressive Classifier
+
+**Link to work:**
+
+1. See `Code <https://github.com/imjoseangel/100-days-of-code/blob/devel/python/fakenews>`_
+2. See `Original Documentation from Data-Flair <https://data-flair.training/blogs/advanced-python-project-detecting-fake-news/>`_
