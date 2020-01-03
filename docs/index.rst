@@ -1179,3 +1179,17 @@ Day 81: December 22, 2019
 
 1. See `Code <https://github.com/imjoseangel/100-days-of-code/blob/devel/python/fakenews>`_
 2. See `Original Documentation from Data-Flair <https://data-flair.training/blogs/advanced-python-project-detecting-fake-news/>`_
+
+Day 82: January 03, 2020
+----------------------
+
+**Today's Progress:**
+
+1. Python Performance: Profiling memory usage with memory_profiler
+
+**Thoughts:** Finding Memory Issues using this module. Also discovered the __slots__ dunder, although it has a drawback: It prevents the addition of attributes other than the ones specified in it.
+
+**Link to work:**
+
+1. See `Code <https://github.com/imjoseangel/100-days-of-code/blob/devel/python/highperf>`_
+2. See `Original Documentation from Packt <https://www.packtpub.com/eu/application-development/python-high-performance-second-edition>`_
