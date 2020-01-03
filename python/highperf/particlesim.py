@@ -92,7 +92,20 @@ def benchmark():
     simulator.evolve(0.1)
 
 
+def benchmark_memory():
+    particles = [
+        Particle(uniform(-1.0, 1.0), uniform(-1.0, 1.0), uniform(-1.0, 1.0))
+        for i in range(100000)
+    ]
+
+    simulator = ParticleSimulator(particles)
+    simulator.evolve(0.001)
+
+
 class Particle:
+
+    __slots__ = ('x', 'y', 'ang_vel')
+
     def __init__(self, x, y, ang_vel):
         self.x = x
         self.y = y
@@ -121,6 +134,18 @@ class ParticleSimulator:
                 p.x += d_x
                 p.y += d_y
                 # 3. repeat for all the time steps
+
+    def evolve_fast(self, dt):
+        timestep = 0.00001
+        nsteps = int(dt / timestep)
+
+        # Loop order is changed
+        for p in self.particles:
+            t_x_ang = timestep * p.ang_vel
+            for _ in range(nsteps):
+                norm = (p.x**2 + p.y**2)**0.5
+                p.x, p.y = (p.x - t_x_ang * p.y / norm,
+                            p.y + t_x_ang * p.x / norm)
 
 
 def main():
