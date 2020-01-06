@@ -1193,3 +1193,17 @@ Day 82: January 03, 2020
 
 1. See `Code <https://github.com/imjoseangel/100-days-of-code/blob/devel/python/highperf>`_
 2. See `Original Documentation from Packt <https://www.packtpub.com/eu/application-development/python-high-performance-second-edition>`_
+
+Day 83: January 6, 2020
+---------------------
+
+**Today's Progress:**
+
+1. Build a Mobile Application With the Kivy Python Framework
+
+**Thoughts:** Easy to implement and understand
+
+**Link to work:**
+
+1. See `Code <https://github.com/imjoseangel/100-days-of-code/tree/devel/python/kivy_project>`_
+2. See `Original Documentation from Real Python <https://realpython.com/mobile-app-kivy-python/>`_
