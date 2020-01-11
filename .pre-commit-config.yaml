@@ -16,7 +16,7 @@ repos:
         always_run: true
         language: system
       - id: detect-secrets
-        name: Yelp detect-secrets
+        name: Detect Secrets
         description: This hook detects and prevents high entropy strings from entering the codebase.
         entry: detect-secrets-hook
         language: system
