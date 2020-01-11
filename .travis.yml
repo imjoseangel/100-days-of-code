@@ -13,3 +13,4 @@ install:
 script:
   # - pylint -j $(nproc) --rcfile=.pylintrc python scripts
   - python hooks/lint_checker.py
+  - detect-secrets-hook
