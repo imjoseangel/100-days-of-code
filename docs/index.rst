@@ -1215,7 +1215,7 @@ Day 84: January 12, 2020
 
 1. Learn object-oriented programming with Python
 
-**Thoughts:** Just Playing with more OO Programing
+**Thoughts:** Just Playing with more OO Programing. Adding Detect-Secrets to Code whether on pre-commit and build
 
 **Link to work:**
 
