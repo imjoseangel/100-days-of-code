@@ -22,7 +22,6 @@ except ImportError:
 
 class WorkPath:
     """ WorkPath Class """
-
     def __init__(self):
         self._path = os.path.dirname(os.path.realpath(__file__))
         self._work_path = os.path.dirname(self._path)
@@ -138,7 +137,7 @@ def main():
             if filename.endswith(tuple(extensions)):
                 file = os.path.join(work_path, filename)
 
-                print("Filename: {0}".format(file))
+                print("[{0}] Filename: {1}".format(section, file))
                 asterisks()
 
                 try:
