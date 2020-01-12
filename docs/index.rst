@@ -1207,3 +1207,17 @@ Day 83: January 6, 2020
 
 1. See `Code <https://github.com/imjoseangel/100-days-of-code/tree/devel/python/kivy_project>`_
 2. See `Original Documentation from Real Python <https://realpython.com/mobile-app-kivy-python/>`_
+
+Day 84: January 12, 2020
+---------------------
+
+**Today's Progress:**
+
+1. Learn object-oriented programming with Python
+
+**Thoughts:** Just Playing with more OO Programing
+
+**Link to work:**
+
+1. See `Code <https://github.com/imjoseangel/100-days-of-code/tree/devel/python/ooppython>`_
+2. See `Original Documentation from OpenSource.com <https://opensource.com/article/19/7/get-modular-python-classes/>`_
