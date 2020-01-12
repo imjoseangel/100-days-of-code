@@ -42,6 +42,9 @@ def main():
         else:
             print("The " + foe[0] + " has " + str(foe[2]) + " HP remaining")
 
+        password = "We1rdP@55"
+        print(password)
+
 
 if __name__ == '__main__':
     main()
