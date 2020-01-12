@@ -1,3 +1,4 @@
+detect-secrets
 GitPython
 pylint
 radon
