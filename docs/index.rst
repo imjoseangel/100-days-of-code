@@ -1221,3 +1221,17 @@ Day 84: January 12, 2020
 
 1. See `Code <https://github.com/imjoseangel/100-days-of-code/tree/devel/python/ooppython>`_
 2. See `Original Documentation from OpenSource.com <https://opensource.com/article/19/7/get-modular-python-classes/>`_
+
+Day 85: February 29, 2020
+---------------------
+
+**Today's Progress:**
+
+1. Discovering Logzero for Logging
+
+**Thoughts:** I love this one. Colourful and easy to use. I'm quite slow finishing this project as other projects are alive
+
+**Link to work:**
+
+1. See `Code <https://github.com/imjoseangel/100-days-of-code/tree/devel/python/logging>`_
+2. See `Original Documentation from OpenSource.com <https://opensource.com/article/20/2/logzero-python>`_
