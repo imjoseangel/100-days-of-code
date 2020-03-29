@@ -1235,3 +1235,17 @@ Day 85: February 29, 2020
 
 1. See `Code <https://github.com/imjoseangel/100-days-of-code/tree/devel/python/logging>`_
 2. See `Original Documentation from OpenSource.com <https://opensource.com/article/20/2/logzero-python>`_
+
+Day 86: March 29, 2020
+---------------------
+
+**Today's Progress:**
+
+1. Playing with email
+
+**Thoughts:** Good to have this code for email. Check documentation attached to this project for reference.
+
+**Link to work:**
+
+1. See `Code <https://github.com/imjoseangel/100-days-of-code/tree/devel/python/smtpimap>`_
+2. See `Original Documentation from DevDungeon.com <https://www.devdungeon.com/content/read-and-send-email-python>`_
