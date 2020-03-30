@@ -1249,3 +1249,17 @@ Day 86: March 29, 2020
 
 1. See `Code <https://github.com/imjoseangel/100-days-of-code/tree/devel/python/smtpimap>`_
 2. See `Original Documentation from DevDungeon.com <https://www.devdungeon.com/content/read-and-send-email-python>`_
+
+Day 87: March 30, 2020
+---------------------
+
+**Today's Progress:**
+
+1. Ansible Plugin and Filter
+
+**Thoughts:** lookup plugin to merge lists from a given key and filter to get a Microsoft SAS Token
+
+**Link to work:**
+
+1. See `Code <https://github.com/imjoseangel/100-days-of-code/tree/devel/python/ansibleplugins>`_
+2. See `Ansible Developer Guide <https://docs.ansible.com/ansible/devel/dev_guide/index.html>`_
