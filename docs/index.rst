@@ -1263,3 +1263,18 @@ Day 87: March 30, 2020
 
 1. See `Code <https://github.com/imjoseangel/100-days-of-code/tree/devel/python/ansibleplugins>`_
 2. See `Ansible Developer Guide <https://docs.ansible.com/ansible/devel/dev_guide/index.html>`_
+
+Day 88: April 7, 2020
+---------------------
+
+**Today's Progress:**
+
+1. OpenDNS Updater
+
+**Thoughts:** As the opendns updater doesn't work for macos, I have developed my own. Simple one for now, but
+I will improve it in the future, probably with some UI and logging.
+
+**Link to work:**
+
+1. See `Code <https://github.com/imjoseangel/100-days-of-code/tree/devel/python/opendns>`_
+2. See `OpenDNS API Documentation <https://support.opendns.com/hc/en-us/articles/227986527-FAQ-OpenDNS-Developer-Resources>`_
