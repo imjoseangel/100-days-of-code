@@ -1278,3 +1278,17 @@ I will improve it in the future, probably with some UI and logging.
 
 1. See `Code <https://github.com/imjoseangel/100-days-of-code/tree/devel/python/opendns>`_
 2. See `OpenDNS API Documentation <https://support.opendns.com/hc/en-us/articles/227986527-FAQ-OpenDNS-Developer-Resources>`_
+
+Day 89: April 10, 2020
+---------------------
+
+**Today's Progress:**
+
+1. Simulating Real-World Processes With SimPy
+
+**Thoughts:** Curious Subject I didn't heard of before reading this article from Real Python. Nice to have in the radar.
+
+**Link to work:**
+
+1. See `Code <https://github.com/imjoseangel/100-days-of-code/tree/devel/python/simulation>`_
+2. See `SimPy: Simulating Real-World Processes With Python <https://realpython.com/simulation-with-simpy>`_
