@@ -1292,3 +1292,17 @@ Day 89: April 10, 2020
 
 1. See `Code <https://github.com/imjoseangel/100-days-of-code/tree/devel/python/simulation>`_
 2. See `SimPy: Simulating Real-World Processes With Python <https://realpython.com/simulation-with-simpy>`_
+
+Day 90: April 18, 2020
+---------------------
+
+**Today's Progress:**
+
+1. Replace Conditional with Polymorphism
+
+**Thoughts:** Reading Conditionals from the refactoring guru and playing with the example.
+
+**Link to work:**
+
+1. See `Code <https://github.com/imjoseangel/100-days-of-code/tree/devel/python/polymorphism>`_
+2. See `Replace Conditional with Polymorphism <https://refactoring.guru/replace-conditional-with-polymorphism>`_
