@@ -1306,3 +1306,17 @@ Day 90: April 18, 2020
 
 1. See `Code <https://github.com/imjoseangel/100-days-of-code/tree/devel/python/polymorphism>`_
 2. See `Replace Conditional with Polymorphism <https://refactoring.guru/replace-conditional-with-polymorphism>`_
+
+Day 91: April 23, 2020
+---------------------
+
+**Today's Progress:**
+
+1. ML Titanic with VSCode
+
+**Thoughts:** Test VSCode Jupyter functionality
+
+**Link to work:**
+
+1. See `Code <https://github.com/imjoseangel/100-days-of-code/tree/devel/python/mltitanic>`_
+2. See `Data Science in Visual Studio Code <https://code.visualstudio.com/docs/python/data-science-tutorial>`_
