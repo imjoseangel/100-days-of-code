@@ -1320,3 +1320,18 @@ Day 91: April 23, 2020
 
 1. See `Code <https://github.com/imjoseangel/100-days-of-code/tree/devel/python/mltitanic>`_
 2. See `Data Science in Visual Studio Code <https://code.visualstudio.com/docs/python/data-science-tutorial>`_
+
+Day 92: May 3, 2020
+---------------------
+
+**Today's Progress:**
+
+1. Mocking with Python
+
+**Thoughts:** Learn about db testing mocking with Python
+
+**Link to work:**
+
+1. See `Code <https://github.com/imjoseangel/100-days-of-code/tree/devel/python/mocking>`_
+2. See `Mocking with Python Part I <https://kirankoduru.github.io/python/mocking-with-python-part-1.html>`_
+3. See `Mocking with Python Part II <https://kirankoduru.github.io/python/mocking-with-python-part-2.html>`_
