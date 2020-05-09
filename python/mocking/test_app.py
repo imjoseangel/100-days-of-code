@@ -1,4 +1,6 @@
-# test_app.py
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
 import unittest
 import datetime as dt
 from unittest.mock import Mock, patch
