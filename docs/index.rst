@@ -1335,3 +1335,17 @@ Day 92: May 3, 2020
 1. See `Code <https://github.com/imjoseangel/100-days-of-code/tree/devel/python/mocking>`_
 2. See `Mocking with Python Part I <https://kirankoduru.github.io/python/mocking-with-python-part-1.html>`_
 3. See `Mocking with Python Part II <https://kirankoduru.github.io/python/mocking-with-python-part-2.html>`_
+
+Day 93: May 11, 2020
+---------------------
+
+**Today's Progress:**
+
+1. BDD with Python
+
+**Thoughts:** I had some ideas about BDD and implementing it with Ansible. I also had some ideas about generating infrastructure with NLP or Gherkin. This is the first step and I will come back when playing with it some more time.
+
+**Link to work:**
+
+1. See `Code <https://github.com/imjoseangel/100-days-of-code/tree/devel/python/bdd>`_
+2. See `Test Automation with Python Behave and Ansible <https://phalient.tech/blog/2019-06-18-test-automation-with-python-behave-and-ansible/>`_
