@@ -1344,8 +1344,11 @@ Day 93: May 11, 2020
 1. BDD with Python
 
 **Thoughts:** I had some ideas about BDD and implementing it with Ansible. I also had some ideas about generating infrastructure with NLP or Gherkin. This is the first step and I will come back when playing with it some more time.
+Wanted also to start to understand how distributing software with Torrent as Facebook does. I want to understand the whole Torrent process so I just started decode torrent files.
 
 **Link to work:**
 
 1. See `Code <https://github.com/imjoseangel/100-days-of-code/tree/devel/python/bdd>`_
 2. See `Test Automation with Python Behave and Ansible <https://phalient.tech/blog/2019-06-18-test-automation-with-python-behave-and-ansible/>`_
+3. See `Some Torrent information but not using this approach <https://markuseliasson.se/article/bittorrent-in-python/>`_
+4. See `Bitorrent Code <https://github.com/imjoseangel/100-days-of-code/tree/devel/python/bittorrent>`_
