@@ -1352,3 +1352,16 @@ Wanted also to start to understand how distributing software with Torrent as Fac
 2. See `Test Automation with Python Behave and Ansible <https://phalient.tech/blog/2019-06-18-test-automation-with-python-behave-and-ansible/>`_
 3. See `Some Torrent information but not using this approach <https://markuseliasson.se/article/bittorrent-in-python/>`_
 4. See `Bitorrent Code <https://github.com/imjoseangel/100-days-of-code/tree/devel/python/bittorrent>`_
+
+Day 94: May 17, 2020
+---------------------
+
+**Today's Progress:**
+
+1. azure_rm_privatednszone for Ansible
+
+**Thoughts:** Development of a new module for Ansible Azure.
+
+**Link to work:**
+
+1. See `Code <https://github.com/imjoseangel/100-days-of-code/tree/devel/python/ansiblemodules/azure_rm_privatednszone.py>`_
