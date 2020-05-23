@@ -1365,3 +1365,16 @@ Day 94: May 17, 2020
 **Link to work:**
 
 1. See `Code <https://github.com/imjoseangel/100-days-of-code/tree/devel/python/ansiblemodules/azure_rm_privatednszone.py>`_
+
+Day 95: May 23, 2020
+---------------------
+
+**Today's Progress:**
+
+1. azure_rm_privatednszone_info for Ansible
+
+**Thoughts:** Development of a new module for Ansible Azure.
+
+**Link to work:**
+
+1. See `Code <https://github.com/imjoseangel/100-days-of-code/tree/devel/python/ansiblemodules/azure_rm_privatednszone_info.py>`_
