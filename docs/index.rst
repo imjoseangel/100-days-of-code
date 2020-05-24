@@ -1378,3 +1378,17 @@ Day 95: May 23, 2020
 **Link to work:**
 
 1. See `Code <https://github.com/imjoseangel/100-days-of-code/tree/devel/python/ansiblemodules/azure_rm_privatednszone_info.py>`_
+
+Day 96: May 24, 2020
+---------------------
+
+**Today's Progress:**
+
+1. Web scraping with Python
+
+**Thoughts:** Easy web scrapping with BeautifulSoup
+
+**Link to work:**
+
+1. See `Code <https://github.com/imjoseangel/100-days-of-code/tree/devel/python/scrappingb4s>`_
+2. See `A beginner's guide to web scraping with Python <https://opensource.com/article/20/5/web-scraping-python>`_
