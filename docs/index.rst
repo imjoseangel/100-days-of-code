@@ -1392,3 +1392,17 @@ Day 96: May 24, 2020
 
 1. See `Code <https://github.com/imjoseangel/100-days-of-code/tree/devel/python/scrappingb4s>`_
 2. See `A beginner's guide to web scraping with Python <https://opensource.com/article/20/5/web-scraping-python>`_
+
+Day 97: June 6, 2020
+---------------------
+
+**Today's Progress:**
+
+1. Play with Toga
+
+**Thoughts:** Toga is a Python native, OS native, cross platform GUI toolkit. Toga consists of a library of base components with a shared interface to simplify platform-agnostic GUI development.
+
+**Link to work:**
+
+1. See `Code <https://github.com/imjoseangel/100-days-of-code/tree/devel/python/playwithtoga>`_
+2. See `Toga Documentation <https://toga.readthedocs.io/en/latest/index.html>`_
