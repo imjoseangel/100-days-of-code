@@ -1406,3 +1406,17 @@ Day 97: June 6, 2020
 
 1. See `Code <https://github.com/imjoseangel/100-days-of-code/tree/devel/python/playwithtoga>`_
 2. See `Toga Documentation <https://toga.readthedocs.io/en/latest/index.html>`_
+
+Day 98: June 7, 2020
+---------------------
+
+**Today's Progress:**
+
+1. Mocking External APIs in Python
+
+**Thoughts:** How to test the use of an external API using Python mock objects. Run with `nosetests --verbosity=2 mockingapi` from the Python Directory
+
+**Link to work:**
+
+1. See `Code <https://github.com/imjoseangel/100-days-of-code/tree/devel/python/mockingapi>`_
+2. See `Real Python Tutorial <https://realpython.com/testing-third-party-apis-with-mocks/>`_
