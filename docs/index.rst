@@ -1420,3 +1420,17 @@ Day 98: June 7, 2020
 
 1. See `Code <https://github.com/imjoseangel/100-days-of-code/tree/devel/python/mockingapi>`_
 2. See `Real Python Tutorial <https://realpython.com/testing-third-party-apis-with-mocks/>`_
+
+Day 99: June 14, 2020
+---------------------
+
+**Today's Progress:**
+
+1. API Connection with Go
+
+**Thoughts:** Learn how to GET and POST JSON with GO
+
+**Link to work:**
+
+1. See `Code <https://github.com/imjoseangel/100-days-of-code/tree/devel/go/apiconnect>`_
+2. See `Consume RESTful API Endpoints <https://www.thepolyglotdeveloper.com/2017/07/consume-restful-api-endpoints-golang-application/>`_
