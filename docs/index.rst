@@ -1434,3 +1434,19 @@ Day 99: June 14, 2020
 
 1. See `Code <https://github.com/imjoseangel/100-days-of-code/tree/devel/go/apiconnect>`_
 2. See `Consume RESTful API Endpoints <https://www.thepolyglotdeveloper.com/2017/07/consume-restful-api-endpoints-golang-application/>`_
+
+Day 100: June 20, 2020
+---------------------
+
+**Today's Progress:**
+
+1. API Client Certificates for Python
+
+**Thoughts:** Learn and test possibilities loading client certificates in Python. It can be tested with:
+
+* https://server.cryptomix.com/secure/
+* https://prod.idrix.eu/secure/
+
+**Link to work:**
+
+1. See `Code <https://github.com/imjoseangel/100-days-of-code/tree/devel/python/apiconnect>`_
