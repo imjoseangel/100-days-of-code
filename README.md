@@ -3,7 +3,7 @@
 ## Contents
 
 * [Rules](rules.md)
-* [Log - click here to see my progress](log.md)
+* [Log - click here to see my progress](https://github.com/imjoseangel/100-days-of-code/blob/devel/docs/index.rst)
 * [FAQ](FAQ.md)
 * [Resources](resources.md)
 
