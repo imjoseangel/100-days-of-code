@@ -28,8 +28,8 @@ func makeRange(min, max int) []int {
 
 func sum(array []int) int {
 	result := 0
-	for _, value := range array {
-		result += value
+	for _, numb := range array {
+		result += numb
 	}
 	return result
 }
