@@ -41,6 +41,7 @@ func takeStall() {
 	untaken := makeRange(1, stalls)
 	taken := make([]int, stalls)
 	newStall := math.Floor(float64(sumArray(untaken)) / float64(len(untaken)))
+
 	fmt.Println(emoDoor, emoEmpty, emoTaken, timepeeing, taken, newStall)
 }
 
