@@ -26,7 +26,7 @@ func makeRange(min, max int) []int {
 	return a
 }
 
-func sum(array []int) int {
+func sumArray(array []int) int {
 	result := 0
 	for _, numb := range array {
 		result += numb
@@ -40,7 +40,7 @@ func takeStall() {
 	timepeeing := rand.Intn(maxtimepeeing-mintimepeeing+1) + mintimepeeing
 	untaken := makeRange(1, stalls)
 	taken := make([]int, stalls)
-	newStall := math.Floor(float64(sum(untaken)) / float64(len(untaken)))
+	newStall := math.Floor(float64(sumArray(untaken)) / float64(len(untaken)))
 	fmt.Println(emoDoor, emoEmpty, emoTaken, timepeeing, taken, newStall)
 }
 
