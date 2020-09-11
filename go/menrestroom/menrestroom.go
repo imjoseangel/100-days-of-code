@@ -8,7 +8,7 @@ import (
 	"time"
 )
 
-var stalls int = 11
+var stalls int = 15
 var stallfreq int = 2
 var mintimepeeing int = 1
 var maxtimepeeing int = 10
@@ -34,6 +34,15 @@ func sumArray(array []int) int {
 	return result
 }
 
+func sliceArray(array []int, start int) []int {
+
+	result := []int{}
+	for i := start; i < len(array); i += 2 {
+		result = append(result, array[i])
+	}
+	return result
+}
+
 func takeStall() {
 
 	rand.Seed(time.Now().UnixNano())
@@ -41,8 +50,20 @@ func takeStall() {
 	untaken := makeRange(1, stalls)
 	taken := make([]int, stalls)
 	newStall := int(math.Floor(float64(sumArray(untaken)) / float64(len(untaken))))
-	left := untaken[0 : newStall-1]
-	right := untaken[newStall:]
+	if stalls%2 == 0 {
+		left := sliceArray(untaken[0:newStall-1], 0)
+	} else {
+		left := sliceArray(untaken[0:newStall-1], 1)
+	}
+	right := sliceArray(untaken[newStall:], 1)
+
+	// for _, value := range left {
+	// 	fmt.Println(value)
+	// }
+
+	// for i := 0; i < len(left); i += 2 {
+	// 	fmt.Println(left[i])
+	// }
 
 	fmt.Println(emoDoor, emoEmpty, emoTaken, timePeeing, taken, newStall, left, right)
 }
