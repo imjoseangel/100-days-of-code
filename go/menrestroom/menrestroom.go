@@ -97,6 +97,6 @@ func takeStall() ([]int, []int, []string) {
 func main() {
 
 	takeStall()
-	fmt.Println(stallPrint, taken, untaken)
+	fmt.Println(stallPrint)
 
 }
