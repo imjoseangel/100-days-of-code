@@ -44,7 +44,7 @@ func sliceArray(array []int, start int) []int {
 	return result
 }
 
-func takeStall() {
+func initVars() {
 
 	rand.Seed(time.Now().UnixNano())
 	timePeeing := rand.Intn(maxtimepeeing-mintimepeeing+1) + mintimepeeing
@@ -65,5 +65,5 @@ func takeStall() {
 
 func main() {
 
-	takeStall()
+	initVars()
 }
