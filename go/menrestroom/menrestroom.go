@@ -68,7 +68,7 @@ func init() {
 
 }
 
-func takeStall() {
+func takeStall() ([]int, []int, []string) {
 	if len(untaken) > 0 {
 		if len(taken) == 0 {
 			stall = newStall
@@ -91,6 +91,8 @@ func takeStall() {
 		taken = append(taken, stall)
 	}
 	fmt.Println(untaken[len(untaken)-1])
+
+	return untaken, taken, stallPrint
 }
 func main() {
 
