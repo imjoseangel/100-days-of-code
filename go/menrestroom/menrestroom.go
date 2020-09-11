@@ -20,7 +20,7 @@ var newStall int
 var left []int
 var right []int
 var stall int
-var stallPrint string
+var stallPrint []string
 
 const emoEmpty string = "\U0001F6BD"
 const emoTaken string = "\U0001F6B6"
@@ -64,7 +64,7 @@ func init() {
 		left = sliceArray(untaken[0:newStall-1], 1)
 	}
 	right = sliceArray(untaken[newStall:], 1)
-	stallPrint = strings.Repeat(emoEmpty, stalls) + emoDoor
+	stallPrint = []string{strings.Repeat(emoEmpty, stalls) + emoDoor}
 
 }
 
@@ -87,12 +87,14 @@ func takeStall() {
 				stall = untaken[randomIndex]
 			}
 		}
+		untaken = append(untaken[:stall-1], untaken[stall:]...)
 		taken = append(taken, stall)
 	}
+	fmt.Println(untaken[len(untaken)-1])
 }
 func main() {
 
 	takeStall()
-	fmt.Println(stallPrint)
+	fmt.Println(stallPrint, taken, untaken)
 
 }
