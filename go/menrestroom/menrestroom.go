@@ -19,6 +19,7 @@ var timePeeing int
 var newStall int
 var left []int
 var right []int
+var stall int
 
 const emoEmpty string = "\U0001F6BD"
 const emoTaken string = "\U0001F6B6"
@@ -76,16 +77,20 @@ func takeStall() {
 		} else {
 			if len(left) > 0 {
 				randomIndex := rand.Intn(len(left))
-				stall := left[randomIndex]
+				stall = left[randomIndex]
 				left = append(left[:randomIndex], left[randomIndex+1:]...)
-				fmt.Println(randomIndex, left, stall)
 			} else if len(right) > 0 {
 				randomIndex := rand.Intn(len(right))
-				stall := right[randomIndex]
+				stall = right[randomIndex]
 				right = append(right[:randomIndex], right[randomIndex+1:]...)
-				fmt.Println(randomIndex, right, stall)
+
+			} else {
+				randomIndex := rand.Intn(len(untaken))
+				stall = untaken[randomIndex]
 			}
 		}
+		taken = append(taken, stall)
+		fmt.Println(taken)
 	}
 }
 func main() {
