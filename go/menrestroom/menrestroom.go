@@ -64,8 +64,7 @@ func init() {
 		left = sliceArray(untaken[0:newStall-1], 1)
 	}
 	right = sliceArray(untaken[newStall:], 1)
-	stallPrint = []string{strings.Repeat(emoEmpty, stalls) + emoDoor}
-
+	stallPrint = strings.SplitN(strings.Repeat(emoEmpty, stalls)+emoDoor, "", stalls+1)
 }
 
 func takeStall() ([]int, []int, []string) {
@@ -90,7 +89,8 @@ func takeStall() ([]int, []int, []string) {
 		untaken = append(untaken[:stall-1], untaken[stall:]...)
 		taken = append(taken, stall)
 	}
-	fmt.Println(untaken[len(untaken)-1])
+	stallPrint[taken[len(taken)-1]-1] = emoTaken
+	//fmt.Println(untaken[len(untaken)-1])
 
 	return untaken, taken, stallPrint
 }
