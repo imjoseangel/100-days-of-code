@@ -20,6 +20,7 @@ var newStall int
 var left []int
 var right []int
 var stall int
+var stallPrint string
 
 const emoEmpty string = "\U0001F6BD"
 const emoTaken string = "\U0001F6B6"
@@ -56,7 +57,6 @@ func init() {
 	rand.Seed(time.Now().UnixNano())
 	timePeeing = rand.Intn(maxtimepeeing-mintimepeeing+1) + mintimepeeing
 	untaken = makeRange(1, stalls)
-	taken = make([]int, stalls)
 	newStall = int(math.Floor(float64(sumArray(untaken)) / float64(len(untaken))))
 	if stalls%2 == 0 {
 		left = sliceArray(untaken[0:newStall-1], 0)
@@ -64,16 +64,14 @@ func init() {
 		left = sliceArray(untaken[0:newStall-1], 1)
 	}
 	right = sliceArray(untaken[newStall:], 1)
-	stallPrint := strings.Repeat(emoEmpty, stalls) + emoDoor
+	stallPrint = strings.Repeat(emoEmpty, stalls) + emoDoor
 
-	fmt.Println(timePeeing, taken, newStall, left, right, stallPrint)
 }
 
 func takeStall() {
 	if len(untaken) > 0 {
 		if len(taken) == 0 {
-			stall := newStall
-			fmt.Println(stall)
+			stall = newStall
 		} else {
 			if len(left) > 0 {
 				randomIndex := rand.Intn(len(left))
@@ -90,11 +88,11 @@ func takeStall() {
 			}
 		}
 		taken = append(taken, stall)
-		fmt.Println(taken)
 	}
 }
 func main() {
 
 	takeStall()
+	fmt.Println(stallPrint)
 
 }
