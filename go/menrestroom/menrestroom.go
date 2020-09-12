@@ -9,10 +9,6 @@ import (
 	"time"
 )
 
-var stalls int = 10
-var stallFreq time.Duration = 2
-var mintimepeeing int = 1
-var maxtimepeeing int = 10
 var untaken []int
 var taken []int
 var timePeeing int
@@ -22,6 +18,10 @@ var right []int
 var stall int
 var stallPrint []string
 
+const stalls int = 10
+const stallFreq time.Duration = 2
+const mintimepeeing int = 1
+const maxtimepeeing int = 10
 const emoEmpty string = "\U0001F6BD"
 const emoTaken string = "\U0001F6B6"
 const emoDoor string = "\U0001F6AA"
