@@ -121,17 +121,21 @@ func leaveStall() ([]int, []int, []string) {
 func main() {
 
 	for len(untaken) > 0 {
-		fmt.Println(untaken, taken)
+		fmt.Println("\033[H\033[2J")
+		for _, item := range stallPrint {
+			fmt.Print(item)
+		}
+
 		time.Sleep(stallFreq * time.Second)
 		takeStall()
 
 	}
 
-	// fmt.Println("\033[H\033[2J")
-	// for _, item := range stallPrint {
-	// 	fmt.Print(item)
-	// }
-	// time.Sleep(stallFreq * time.Second)
-	// fmt.Println()
+	fmt.Println("\033[H\033[2J")
+	for _, item := range stallPrint {
+		fmt.Print(item)
+	}
+
+	fmt.Println()
 
 }
