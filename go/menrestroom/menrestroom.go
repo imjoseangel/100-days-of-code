@@ -10,7 +10,7 @@ import (
 )
 
 var stalls int = 10
-var stallfreq int = 2
+var stallFreq time.Duration = 2
 var mintimepeeing int = 1
 var maxtimepeeing int = 10
 var untaken []int
@@ -110,9 +110,15 @@ func leaveStall() ([]int, []int, []string) {
 
 func main() {
 
-	takeStall()
-	fmt.Println(stallPrint)
-	leaveStall()
-	fmt.Println(stallPrint)
+	// for len(untaken) > 0 {
+
+	// }
+
+	fmt.Println("\033[H\033[2J")
+	for _, item := range stallPrint {
+		fmt.Print(item)
+	}
+	time.Sleep(stallFreq * time.Second)
+	fmt.Println()
 
 }
