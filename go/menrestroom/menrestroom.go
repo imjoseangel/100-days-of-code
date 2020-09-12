@@ -52,6 +52,15 @@ func sliceArray(array []int, start int) []int {
 	return result
 }
 
+func index(slice []int, item int) int {
+	for result := range slice {
+		if slice[result] == item {
+			return result
+		}
+	}
+	return -1
+}
+
 func init() {
 
 	rand.Seed(time.Now().UnixNano())
@@ -86,7 +95,8 @@ func takeStall() ([]int, []int, []string) {
 				stall = untaken[randomIndex]
 			}
 		}
-		untaken = append(untaken[:stall-1], untaken[stall:]...)
+		stallIndex := index(untaken, stall)
+		untaken = append(untaken[:stallIndex], untaken[stallIndex+1:]...)
 		taken = append(taken, stall)
 	}
 	stallPrint[taken[len(taken)-1]-1] = emoTaken
@@ -110,15 +120,18 @@ func leaveStall() ([]int, []int, []string) {
 
 func main() {
 
-	// for len(untaken) > 0 {
+	for len(untaken) > 0 {
+		fmt.Println(untaken, taken)
+		time.Sleep(stallFreq * time.Second)
+		takeStall()
 
-	// }
-
-	fmt.Println("\033[H\033[2J")
-	for _, item := range stallPrint {
-		fmt.Print(item)
 	}
-	time.Sleep(stallFreq * time.Second)
-	fmt.Println()
+
+	// fmt.Println("\033[H\033[2J")
+	// for _, item := range stallPrint {
+	// 	fmt.Print(item)
+	// }
+	// time.Sleep(stallFreq * time.Second)
+	// fmt.Println()
 
 }
