@@ -11,7 +11,7 @@ import (
 
 var untaken []int
 var taken []int
-var timePeeing int
+var timePeeing time.Duration
 var newStall int
 var left []int
 var right []int
@@ -64,7 +64,7 @@ func index(slice []int, item int) int {
 func init() {
 
 	rand.Seed(time.Now().UnixNano())
-	timePeeing = rand.Intn(maxtimepeeing-mintimepeeing+1) + mintimepeeing
+	timePeeing = time.Duration(rand.Intn(maxtimepeeing-mintimepeeing+1) + mintimepeeing)
 	untaken = makeRange(1, stalls)
 	newStall = int(math.Floor(float64(sumArray(untaken)) / float64(len(untaken))))
 	if stalls%2 == 0 {
@@ -114,7 +114,8 @@ func leaveStall() ([]int, []int, []string) {
 		taken = append(taken[:0], taken[1:]...)
 		untaken = append(untaken, oldStall)
 		stallPrint[oldStall-1] = emoEmpty
-		timePeeing = rand.Intn(maxtimepeeing-mintimepeeing+1) + mintimepeeing
+		timePeeing = time.Duration(rand.Intn(maxtimepeeing-mintimepeeing+1) + mintimepeeing)
+		time.Sleep(timePeeing * time.Second)
 	}
 
 	return untaken, taken, stallPrint
