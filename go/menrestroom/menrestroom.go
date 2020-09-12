@@ -77,6 +77,7 @@ func init() {
 }
 
 func takeStall() ([]int, []int, []string) {
+
 	if len(untaken) > 0 {
 		if len(taken) == 0 {
 			stall = newStall
@@ -100,6 +101,7 @@ func takeStall() ([]int, []int, []string) {
 		taken = append(taken, stall)
 	}
 	stallPrint[taken[len(taken)-1]-1] = emoTaken
+	time.Sleep(stallFreq * time.Second)
 	//fmt.Println(untaken[len(untaken)-1])
 
 	return untaken, taken, stallPrint
@@ -122,13 +124,12 @@ func main() {
 
 	for len(untaken) > 0 {
 		fmt.Println("\033[H\033[2J")
+
 		for _, item := range stallPrint {
 			fmt.Print(item)
 		}
 
-		time.Sleep(stallFreq * time.Second)
 		takeStall()
-
 	}
 
 	fmt.Println("\033[H\033[2J")
