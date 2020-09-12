@@ -102,8 +102,6 @@ func takeStall() ([]int, []int, []string) {
 		taken = append(taken, stall)
 	}
 	stallPrint[taken[len(taken)-1]-1] = emoTaken
-	time.Sleep(stallFreq * time.Second)
-	//fmt.Println(untaken[len(untaken)-1])
 
 	return untaken, taken, stallPrint
 }
@@ -131,7 +129,6 @@ func main() {
 			fmt.Print(item)
 		}
 		time.Sleep(stallFreq * time.Second)
-		go leaveStall()
 		go takeStall()
 
 	}
