@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"math"
 	"math/rand"
+	"sort"
 	"strings"
 	"time"
 )
@@ -19,8 +20,8 @@ var stall int
 var stallPrint []string
 
 const stalls int = 10
-const stallFreq time.Duration = 2
-const mintimepeeing int = 1
+const stallFreq time.Duration = 1
+const mintimepeeing int = 5
 const maxtimepeeing int = 10
 const emoEmpty string = "\U0001F6BD"
 const emoTaken string = "\U0001F6B6"
@@ -77,7 +78,7 @@ func init() {
 
 }
 
-func takeStall() ([]int, []int, []string) {
+func takeStall() []string {
 
 	if len(untaken) > 0 {
 		if len(taken) == 0 {
@@ -103,21 +104,23 @@ func takeStall() ([]int, []int, []string) {
 	}
 	stallPrint[taken[len(taken)-1]-1] = emoTaken
 
-	return untaken, taken, stallPrint
+	return stallPrint
 }
 
-func leaveStall() ([]int, []int, []string) {
+func leaveStall() []string {
+
+	time.Sleep(timePeeing)
 
 	if len(taken) > 0 {
 		oldStall := taken[0]
 		taken = append(taken[:0], taken[1:]...)
 		untaken = append(untaken, oldStall)
+		sort.Ints(untaken)
 		stallPrint[oldStall-1] = emoEmpty
 		timePeeing = time.Duration(rand.Intn(maxtimepeeing-mintimepeeing+1)+mintimepeeing) * 1000000000
-		time.Sleep(timePeeing * time.Second)
 	}
 
-	return untaken, taken, stallPrint
+	return stallPrint
 }
 
 func main() {
@@ -128,9 +131,10 @@ func main() {
 		for _, item := range stallPrint {
 			fmt.Print(item)
 		}
+
 		time.Sleep(stallFreq * time.Second)
 		go takeStall()
-
+		go leaveStall()
 	}
 
 	fmt.Println("\033[H\033[2J")
