@@ -94,9 +94,25 @@ func takeStall() ([]int, []int, []string) {
 
 	return untaken, taken, stallPrint
 }
+
+func leaveStall() ([]int, []int, []string) {
+
+	if len(taken) > 0 {
+		oldStall := taken[0]
+		taken = append(taken[:0], taken[1:]...)
+		untaken = append(untaken, oldStall)
+		stallPrint[oldStall-1] = emoEmpty
+		timePeeing = rand.Intn(maxtimepeeing-mintimepeeing+1) + mintimepeeing
+	}
+
+	return untaken, taken, stallPrint
+}
+
 func main() {
 
 	takeStall()
+	fmt.Println(stallPrint)
+	leaveStall()
 	fmt.Println(stallPrint)
 
 }
