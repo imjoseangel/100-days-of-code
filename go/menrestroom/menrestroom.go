@@ -64,7 +64,7 @@ func index(slice []int, item int) int {
 func init() {
 
 	rand.Seed(time.Now().UnixNano())
-	timePeeing = time.Duration(rand.Intn(maxtimepeeing-mintimepeeing+1) + mintimepeeing)
+	timePeeing = time.Duration(rand.Intn(maxtimepeeing-mintimepeeing+1)+mintimepeeing) * 1000000000
 	untaken = makeRange(1, stalls)
 	newStall = int(math.Floor(float64(sumArray(untaken)) / float64(len(untaken))))
 	if stalls%2 == 0 {
@@ -74,6 +74,7 @@ func init() {
 	}
 	right = sliceArray(untaken[newStall:], 1)
 	stallPrint = strings.SplitN(strings.Repeat(emoEmpty, stalls)+emoDoor, "", stalls+1)
+
 }
 
 func takeStall() ([]int, []int, []string) {
@@ -114,7 +115,7 @@ func leaveStall() ([]int, []int, []string) {
 		taken = append(taken[:0], taken[1:]...)
 		untaken = append(untaken, oldStall)
 		stallPrint[oldStall-1] = emoEmpty
-		timePeeing = time.Duration(rand.Intn(maxtimepeeing-mintimepeeing+1) + mintimepeeing)
+		timePeeing = time.Duration(rand.Intn(maxtimepeeing-mintimepeeing+1)+mintimepeeing) * 1000000000
 		time.Sleep(timePeeing * time.Second)
 	}
 
@@ -129,8 +130,10 @@ func main() {
 		for _, item := range stallPrint {
 			fmt.Print(item)
 		}
+		time.Sleep(stallFreq * time.Second)
+		go leaveStall()
+		go takeStall()
 
-		takeStall()
 	}
 
 	fmt.Println("\033[H\033[2J")
