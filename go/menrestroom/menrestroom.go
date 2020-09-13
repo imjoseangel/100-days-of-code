@@ -136,6 +136,7 @@ func main() {
 		takeTimer := time.NewTimer(stallFreq * time.Second)
 		<-takeTimer.C
 		go takeStall()
+		//time.Sleep(stallFreq * time.Second)
 		go leaveStall()
 	}
 
