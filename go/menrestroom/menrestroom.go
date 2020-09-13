@@ -109,7 +109,8 @@ func takeStall() []string {
 
 func leaveStall() []string {
 
-	time.Sleep(timePeeing)
+	leaveTimer := time.NewTimer(timePeeing)
+	<-leaveTimer.C
 
 	if len(taken) > 0 {
 		oldStall := taken[0]
@@ -132,7 +133,8 @@ func main() {
 			fmt.Print(item)
 		}
 
-		time.Sleep(stallFreq * time.Second)
+		takeTimer := time.NewTimer(stallFreq * time.Second)
+		<-takeTimer.C
 		go takeStall()
 		go leaveStall()
 	}
