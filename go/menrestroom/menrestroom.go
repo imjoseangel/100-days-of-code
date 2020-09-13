@@ -131,13 +131,16 @@ func main() {
 
 		for _, item := range stallPrint {
 			fmt.Print(item)
+
 		}
 
 		takeTimer := time.NewTimer(stallFreq * time.Second)
 		<-takeTimer.C
+
 		go takeStall()
 		//time.Sleep(stallFreq * time.Second)
 		go leaveStall()
+
 	}
 
 	fmt.Println("\033[H\033[2J")
