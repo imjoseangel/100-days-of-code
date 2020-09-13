@@ -130,7 +130,7 @@ func main() {
 		fmt.Println("\033[H\033[2J")
 
 		for _, item := range stallPrint {
-			fmt.Print(item)
+			fmt.Print(item + " ")
 
 		}
 
@@ -145,7 +145,7 @@ func main() {
 
 	fmt.Println("\033[H\033[2J")
 	for _, item := range stallPrint {
-		fmt.Print(item)
+		fmt.Print(item + " ")
 	}
 
 	fmt.Println()
