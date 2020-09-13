@@ -80,6 +80,9 @@ func init() {
 
 func takeStall() []string {
 
+	takeTimer := time.NewTimer(stallFreq * time.Second)
+	<-takeTimer.C
+
 	if len(untaken) > 0 {
 		if len(taken) == 0 {
 			stall = newStall
@@ -136,9 +139,9 @@ func main() {
 
 		takeTimer := time.NewTimer(stallFreq * time.Second)
 		<-takeTimer.C
+		//time.Sleep(stallFreq * time.Second)
 
 		go takeStall()
-		//time.Sleep(stallFreq * time.Second)
 		go leaveStall()
 
 	}
