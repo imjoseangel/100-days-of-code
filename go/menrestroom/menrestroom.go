@@ -103,8 +103,10 @@ func takeStall() []string {
 		}
 		stallIndex := index(untaken, stall)
 		untaken = append(untaken[:stallIndex], untaken[stallIndex+1:]...)
-		taken = append(taken, stall)
 	}
+
+	taken = append(taken, stall)
+
 	stallPrint[taken[len(taken)-1]-1] = emoTaken
 
 	return stallPrint
