@@ -80,9 +80,6 @@ func init() {
 
 func takeStall() []string {
 
-	takeTimer := time.NewTimer(stallFreq * time.Second)
-	<-takeTimer.C
-
 	if len(untaken) > 0 {
 		if len(taken) == 0 {
 			stall = newStall
@@ -109,14 +106,20 @@ func takeStall() []string {
 
 	stallPrint[taken[len(taken)-1]-1] = emoTaken
 
+	// leaveTimer := time.NewTimer(timePeeing)
+	// <-leaveTimer.C
+	// time.Sleep(timePeeing)
+	leaveTimer := time.NewTimer(timePeeing)
+
+	select {
+	case <-leaveTimer.C:
+		leaveStall()
+	}
+
 	return stallPrint
 }
 
 func leaveStall() {
-
-	// leaveTimer := time.NewTimer(timePeeing)
-	// <-leaveTimer.C
-	time.Sleep(timePeeing)
 
 	if len(taken) > 0 {
 		oldStall := taken[0]
@@ -132,6 +135,9 @@ func leaveStall() {
 
 func main() {
 
+	//takeTicker := time.NewTicker(stallFreq * time.Second)
+	//leaveTicker := time.NewTicker(timePeeing)
+
 	for len(untaken) > 0 {
 		fmt.Println("\033[H\033[2J")
 
@@ -140,13 +146,17 @@ func main() {
 
 		}
 
-		// takeTimer := time.NewTimer(stallFreq * time.Second)
-		// <-takeTimer.C
+		takeTimer := time.NewTimer(stallFreq * time.Second)
 
-		time.Sleep(stallFreq * time.Second)
+		select {
+		case <-takeTimer.C:
+			go takeStall()
+		}
 
-		go takeStall()
-		go leaveStall()
+		//time.Sleep(stallFreq * time.Second)
+
+		//go takeStall()
+		//go leaveStall()
 
 	}
 
