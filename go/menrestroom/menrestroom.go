@@ -110,10 +110,11 @@ func takeStall() []string {
 	return stallPrint
 }
 
-func leaveStall() []string {
+func leaveStall() {
 
-	leaveTimer := time.NewTimer(timePeeing)
-	<-leaveTimer.C
+	// leaveTimer := time.NewTimer(timePeeing)
+	// <-leaveTimer.C
+	time.Sleep(timePeeing)
 
 	if len(taken) > 0 {
 		oldStall := taken[0]
@@ -124,7 +125,7 @@ func leaveStall() []string {
 		timePeeing = time.Duration(rand.Intn(maxtimepeeing-mintimepeeing+1)+mintimepeeing) * 1000000000
 	}
 
-	return stallPrint
+	return
 }
 
 func main() {
@@ -137,9 +138,10 @@ func main() {
 
 		}
 
-		takeTimer := time.NewTimer(stallFreq * time.Second)
-		<-takeTimer.C
-		//time.Sleep(stallFreq * time.Second)
+		// takeTimer := time.NewTimer(stallFreq * time.Second)
+		// <-takeTimer.C
+
+		time.Sleep(stallFreq * time.Second)
 
 		go takeStall()
 		go leaveStall()
