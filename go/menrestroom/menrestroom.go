@@ -22,7 +22,7 @@ var stallPrint []string
 const stalls int = 10
 const stallFreq time.Duration = 1
 const mintimepeeing int = 1
-const maxtimepeeing int = 10
+const maxtimepeeing int = 5
 const emoEmpty string = "\U0001F6BD"
 const emoTaken string = "\U0001F6B6"
 const emoDoor string = "\U0001F6AA"
@@ -103,18 +103,7 @@ func takeStall() []string {
 	}
 
 	taken = append(taken, stall)
-
 	stallPrint[taken[len(taken)-1]-1] = emoTaken
-
-	// leaveTimer := time.NewTimer(timePeeing)
-	// <-leaveTimer.C
-	// time.Sleep(timePeeing)
-	leaveTimer := time.NewTimer(timePeeing * time.Second)
-
-	select {
-	case <-leaveTimer.C:
-		leaveStall()
-	}
 
 	return stallPrint
 }
@@ -135,29 +124,37 @@ func leaveStall() {
 
 func main() {
 
-	//takeTicker := time.NewTicker(stallFreq * time.Second)
-	//leaveTicker := time.NewTicker(timePeeing)
+	uptimeTicker := time.NewTicker(stallFreq * time.Second)
 
 	for len(untaken) > 0 {
 		fmt.Println("\033[H\033[2J")
 
+		// takeTicker := time.NewTicker(stallFreq * time.Second)
+		// leaveTicker := time.NewTicker(timePeeing * time.Second)
+
 		for _, item := range stallPrint {
 			fmt.Print(item + " ")
-
 		}
 
-		takeTimer := time.NewTimer(stallFreq * time.Second)
+		dateTicker := time.NewTicker(timePeeing * time.Second)
 
-		select {
-		case <-takeTimer.C:
-			go takeStall()
+		for {
+			select {
+			case <-uptimeTicker.C:
+				fmt.Println("Take")
+				fmt.Println(stallFreq)
+				takeStall()
+				//fmt.Println("\033[H\033[2J")
+				for _, item := range stallPrint {
+					fmt.Print(item + " ")
+				}
+			case <-dateTicker.C:
+				fmt.Println("Leave")
+				fmt.Println(timePeeing)
+				leaveStall()
+				dateTicker.Reset(timePeeing * time.Second)
+			}
 		}
-
-		//time.Sleep(stallFreq * time.Second)
-
-		//go takeStall()
-		//go leaveStall()
-
 	}
 
 	fmt.Println("\033[H\033[2J")
