@@ -65,7 +65,7 @@ func index(slice []int, item int) int {
 func init() {
 
 	rand.Seed(time.Now().UnixNano())
-	timePeeing = time.Duration(rand.Intn(maxtimepeeing-mintimepeeing+1)+mintimepeeing) * 1000000000
+	timePeeing = time.Duration(rand.Intn(maxtimepeeing-mintimepeeing+1) + mintimepeeing)
 	untaken = makeRange(1, stalls)
 	newStall = int(math.Floor(float64(sumArray(untaken)) / float64(len(untaken))))
 	if stalls%2 == 0 {
@@ -109,7 +109,7 @@ func takeStall() []string {
 	// leaveTimer := time.NewTimer(timePeeing)
 	// <-leaveTimer.C
 	// time.Sleep(timePeeing)
-	leaveTimer := time.NewTimer(timePeeing)
+	leaveTimer := time.NewTimer(timePeeing * time.Second)
 
 	select {
 	case <-leaveTimer.C:
@@ -127,7 +127,7 @@ func leaveStall() {
 		untaken = append(untaken, oldStall)
 		sort.Ints(untaken)
 		stallPrint[oldStall-1] = emoEmpty
-		timePeeing = time.Duration(rand.Intn(maxtimepeeing-mintimepeeing+1)+mintimepeeing) * 1000000000
+		timePeeing = time.Duration(rand.Intn(maxtimepeeing-mintimepeeing+1) + mintimepeeing)
 	}
 
 	return
