@@ -20,7 +20,7 @@ var stall int
 var stallPrint []string
 
 const stalls int = 10
-const stallFreq time.Duration = 2
+const stallFreq time.Duration = 1
 const mintimepeeing int = 1
 const maxtimepeeing int = 10
 const emoEmpty string = "\U0001F6BD"
@@ -67,9 +67,9 @@ func init() {
 	rand.Seed(time.Now().UnixNano())
 	timePeeing = time.Duration(rand.Intn(maxtimepeeing-mintimepeeing+1) + mintimepeeing)
 	untaken = makeRange(1, stalls)
-	newStall = int(math.Floor(float64(sumArray(untaken)) / float64(len(untaken))))
+	newStall = int(math.Ceil(float64(sumArray(untaken)) / float64(len(untaken))))
 	if stalls%2 == 0 {
-		left = sliceArray(untaken[0:newStall-1], 0)
+		left = sliceArray(untaken[0:newStall-1], 1)
 	} else {
 		left = sliceArray(untaken[0:newStall-1], 1)
 	}
