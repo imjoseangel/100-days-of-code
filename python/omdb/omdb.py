@@ -8,19 +8,23 @@ import os
 import requests
 
 APIKEY = "&apikey=" + os.environ['OMDB_API']  # pragma: allowlist secret
-MOVIES = ['scream', 'terminator 2']
+MOVIETITLES = ['scream', 'terminator 2']
 BASEURL = "http://omdbapi.com/?t="
+MOVIES = list()
 
 
 def main():
 
-    for movieTitle in MOVIES:
-        response = requests.get(BASEURL + movieTitle + APIKEY)
-        if response.status_code == 200:
-            movie = json.loads(response.text)
-            print(movie)
-        else:
-            raise ValueError("Bad request!")
+    for movie in MOVIETITLES:
+        try:
+            response = requests.get(BASEURL + movie + APIKEY)
+            if response.status_code == 200:
+                MOVIES.append(json.loads(response.text))
+        except ValueError as error:
+            print("Bad request! {0}".format(error))
+
+    with open('movies.json', 'w') as filehandle:
+        filehandle.writelines("%s\n" % movie for movie in MOVIES)
 
 
 if __name__ == '__main__':
