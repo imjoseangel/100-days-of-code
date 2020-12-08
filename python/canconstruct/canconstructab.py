@@ -5,23 +5,29 @@ from __future__ import (division, absolute_import, print_function,
                         unicode_literals)
 
 
-def canConstruct(target: str, wordBank: list) -> bool:
+def canConstruct(target: str, wordBank: list, memo: dict = None) -> bool:
 
-    table = [False] * (len(target) + 1)
-    table[0] = True
+    if memo is None:
+        memo = {}
 
-    i = 0
-    while i <= len(target):
+    if target in memo:
+        return memo[target]
+
+    if target == "":
+        return True
+
+    for word in wordBank:
         try:
-            if table[i] is True:
-                for word in wordBank:
-                    if target[i: i + len(word)] == word:
-                        table[i + len(word)] = True
-        except IndexError:
+            if target.index(word) == 0:
+                suffix = target[len(word):]
+                if canConstruct(suffix, wordBank, memo) is True:
+                    memo[target] = True
+                    return True
+        except ValueError:
             pass
-        i += 1
 
-    return table[len(target)]
+    memo[target] = False
+    return False
 
 
 def main():

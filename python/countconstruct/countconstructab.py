@@ -5,30 +5,18 @@ from __future__ import (division, absolute_import, print_function,
                         unicode_literals)
 
 
-def countConstruct(target: str, wordBank: list, memo: dict = None) -> int:
+def countConstruct(target: str, wordBank: list) -> int:
+    table = [0] * (len(target) + 1)
+    table[0] = 1
 
-    if memo is None:
-        memo = {}
+    i = 0
+    while i <= len(target):
+        for word in wordBank:
+            if target[i: i + len(word)] == word:
+                table[i + len(word)] += table[i]
+        i += 1
 
-    if target in memo:
-        return memo[target]
-
-    if target == "":
-        return 1
-
-    totalCount = 0
-
-    for word in wordBank:
-        try:
-            if target.index(word) == 0:
-                numWaysForRest = countConstruct(
-                    target[len(word):], wordBank, memo)
-                totalCount += numWaysForRest
-        except ValueError:
-            pass
-
-    memo[target] = totalCount
-    return totalCount
+    return table[len(target)]
 
 
 def main():
