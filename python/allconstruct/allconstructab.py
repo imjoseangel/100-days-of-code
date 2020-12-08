@@ -14,7 +14,7 @@ def allConstruct(target: str, wordBank: list) -> list:
         for word in wordBank:
             if target[i: i + len(word)] == word:
                 newCombinations = list(
-                    map(lambda subArray, wrd=word: [*subArray, wrd], table[i]))
+                    map(lambda subArray, wrd=word: [wrd, *subArray], table[i]))
                 table[i + len(word)].extend(newCombinations)
         i += 1
 
