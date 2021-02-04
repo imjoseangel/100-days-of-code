@@ -85,7 +85,7 @@ class SyslogStats():
         getapps = [item.group(3)
                    for line in self.fileread if (item := self.regex.search(line))]
 
-        # Use counter to count the apps
+        # Use counter to count the apps and sorted to sort alphabetically
         numberofapps = sorted((Counter(getapps)).items())
 
         # Output results
