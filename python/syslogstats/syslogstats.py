@@ -12,6 +12,9 @@ import sys
 from collections import Counter
 
 
+FALLBACK_ARGS = dict(filename='/var/log/syslog')
+
+
 class SyslogStats():
 
     def __init__(self):
@@ -29,6 +32,11 @@ class SyslogStats():
         '''argument parser'''
         parser = argparse.ArgumentParser(
             description='Read Syslog file')
+
+        parser.add_argument('--filename',
+                            '-f',
+                            help='choose filename',
+                            default=FALLBACK_ARGS['filename'])
         args_inexclude = parser.add_mutually_exclusive_group()
         args_inexclude.add_argument(
             '--minute',
@@ -51,7 +59,7 @@ class SyslogStats():
 
         # Open File
         try:
-            syslogfile = open('syslog', 'r')
+            syslogfile = open(self.args.filename, 'r')
         except FileNotFoundError as fileerror:
             logging.error(f"{fileerror}")
             sys.exit(1)
@@ -66,9 +74,9 @@ class SyslogStats():
 
         # Go to specific method depending on args
         if self.args.minute:
-            self.application()
-        else:
             self.events()
+        else:
+            self.application()
 
     def application(self):
         '''Application Function'''
@@ -78,7 +86,7 @@ class SyslogStats():
                    for line in self.fileread if (item := self.regex.search(line))]
 
         # Use counter to count the apps
-        numberofapps = (Counter(getapps)).items()
+        numberofapps = sorted((Counter(getapps)).items())
 
         # Output results
         for app in numberofapps:
