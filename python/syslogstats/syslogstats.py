@@ -15,13 +15,13 @@ from collections import Counter
 class SyslogStats():
 
     def __init__(self):
-        # Parse arguments passed at cli
 
+        # Parse arguments passed at cli
         self.parse_arguments()
+
+        # Configure Logging
         logging.basicConfig(format="%(asctime)s %(levelname)s: %(message)s",
                             datefmt="%d-%b-%y %H:%M:%S", stream=sys.stdout, level=logging.INFO)
-
-        self.fileread = None
 
         self.mainfunc()
 
