@@ -1,18 +1,32 @@
-def sequence(c, seq=0):
-    while True:
-        yield seq
-        seq = seq ** 2 + c
+import matplotlib.pyplot as plt
+import numpy as np
+
+np.warnings.filterwarnings("ignore")
 
 
-def mandelbrot(candidate):
-    return sequence(seq=0, c=candidate)
+def is_stable(candidate, num_iterations):
+    z = 0
+    for _ in range(num_iterations):
+        z = z ** 2 + candidate
+    return abs(z) <= 2
 
 
-def julia(candidate, parameter):
-    return sequence(seq=candidate, c=parameter)
+def complex_matrix(xmin, xmax, ymin, ymax, pixel_density):
+    re = np.linspace(xmin, xmax, int((xmax - xmin) * pixel_density))
+    im = np.linspace(ymin, ymax, int((ymax - ymin) * pixel_density))
+    return re[np.newaxis, :] + im[:, np.newaxis] * 1j
 
 
-for n, z in enumerate(sequence(c=1)):
-    print(f"mandelbrot({n}) = {z}")
-    if n >= 9:
-        break
+def get_members(candidate, num_iterations):
+    mask = is_stable(candidate, num_iterations)
+    return candidate[mask]
+
+
+c = complex_matrix(-2, 0.5, -1.5, 1.5, pixel_density=21)
+members = get_members(c, num_iterations=20)
+
+plt.scatter(members.real, members.imag, color="black", marker=",", s=1)
+plt.gca().set_aspect("equal")
+plt.axis("off")
+plt.tight_layout()
+plt.show()
